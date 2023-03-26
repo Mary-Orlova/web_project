@@ -56,6 +56,7 @@
     .ac-trigger {
       color: var(--black);
     }
+
   </style>
 </head>
 
@@ -352,7 +353,7 @@
       </div>
     </section>
 
-    <!-- <section class="gallery" id="gallery">
+    <section class="gallery" id="gallery">
       <div class="container gallery__container">
         <div class="gallery__content-wrapper">
           <div class="gallery__left">
@@ -364,12 +365,154 @@
                   <option value="drawing">Рисунок</option>
                   <option value="sculpture">Скульптура</option>
                 </select>
+
+                <div class="gallery__checkbox">
+                  <form class="gallery__wrapper flex century" action="/">
+                      <label class="gallery__label centery__label" for="XIX">
+                        <input class="gallery__input visually-hidden" type="checkbox" name="XIX" id="XIX">
+                        <span class="gallery__visible-checkbox"></span>
+                        <span class="gallery__text">XIX век</span>
+                      </label>
+
+                      <label class="gallery__label centery__label" for="XX">
+                        <input class="gallery__input visually-hidden" type="checkbox" name="XX" id="XX">
+                        <span class="gallery__visible-checkbox"></span>
+                        <span class="gallery__text">XX век</span>
+                      </label>
+
+                      <label class="gallery__label centery__label" for="here_and_now">
+                        <input class="gallery__input visually-hidden" type="checkbox" name="here_and_now" id="here_and_now">
+                        <span class="gallery__visible-checkbox"></span>
+                        <span class="gallery__text">Современность</span>
+                      </label>
+                    </form>
+                </div>
+              </div>
+
+              <div class="gallery__swiper">
+                <div class="gallery__nav">
+                  <button class="nav-btn gallery__prev" aria-label="К предыдущему слайду"></button>
+                  <div class="gallery-pagination"></div>
+                  <button class="nav-btn gallery__next" aria-label="К следующему слайду"></button>
+                </div>
+
+                <div class="swiper__container slides-container">
+                  <div class="swiper__wrapper gallery__swiper-wrapper">
+                    <a class="swiper__slide gallery-slide" data-modal-target="#torso" aria-label="Картина Казимир Малевич-Торс">
+                      <picture>
+                        <source srcset="img/gallery-slide-1@320.jpg" media="(max-width: 320px)">
+                        <source srcset="img/gallery-slide-1@768.jpg" media="(max-width: 768px)">
+                        <source srcset="img/gallery-slide-1@1024.jpg" media="(max-width: 1024px)">
+                        <img class="gallery-image" src="img/gallery-slide-1@1920.jpg" alt="Картина Казимир Малевич-Торс">
+                      </picture>
+                    </a>
+
+                    <a class="swiper-slide gallery-slide" data-modal-target="#wooman_rake" aria-label="Картина Казимира Малевича-Женщина с граблями">
+                      <picture>
+                        <source srcset="img/gallery-slide-2@320.jpg" media="(max-width: 320px)">
+                        <source srcset="img/gallery-slide-2@768.jpg" media="(max-width: 768px)">
+                        <source srcset="img/gallery-slide-2@1024.jpg" media="(max-width: 1024px)">
+                        <img class="gallery-image" src="img/gallery-slide-2@1920.jpg" alt="Картина Казимира Малевича-Женщина с граблями">
+                      </picture>
+                    </a>
+
+                    <a class="swiper-slide gallery-slide" data-modal-target="#harvest" aria-label="Картина Казимира Малевича-Сбор урожая">
+                      <picture>
+                        <source srcset="img/gallery-slide-3@320.jpg" media="(max-width: 320px)">
+                        <source srcset="img/gallery-slide-3@768.jpg" media="(max-width: 768px)">
+                        <source srcset="img/gallery-slide-3@1024.jpg" media="(max-width: 1024px)">
+                        <img class="gallery-image" src="img/gallery-slide-3@1920.jpg" alt="Картина Казимира Малевича-Сбор урожая">
+                      </picture>
+                    </a>
+
+                    <a class="swiper-slide gallery-slide" href="#" aria-label="Картина Казимира Малевича-Супрематизм">
+                      <picture>
+                        <source srcset="img/gallery-slide-4@320.jpg" media="(max-width: 320px)">
+                        <source srcset="img/gallery-slide-4@768.jpg" media="(max-width: 768px)">
+                        <source srcset="img/gallery-slide-4@1024.jpg" media="(max-width: 1024px)">
+                        <img class="gallery-image" src="img/gallery-slide-4@1920.jpg" alt="Картина Казмира Малевича-Супрематизм">
+                      </picture>
+                    </a>
+
+                    <a class="swiper-slide gallery-slide" href="#" aria-label="Картина Казимира Малевича-Женщина с вёдрами">
+                      <picture>
+                        <source srcset="img/gallery-slide-5@320.jpg" media="(max-width: 320px)">
+                        <source srcset="img/gallery-slide-5@768.jpg" media="(max-width: 768px)">
+                        <source srcset="img/gallery-slide-5@1024.jpg" media="(max-width: 1024px)">
+                        <img class="gallery-image" src="img/gallery-slide-5@1920.jpg" alt="Картина Казимира Малевича-Женщина с вёдрами">
+                      </picture>
+                    </a>
+
+                    <a class="swiper-slide gallery-slide" href="#" aria-label="Картина Казимира Малевича-Супрематическая конструкция">
+                      <picture>
+                        <source srcset="img/gallery-slide-6@320.jpg" media="(max-width: 320px)">
+                        <source srcset="img/gallery-slide-6@768.jpg" media="(max-width: 768px)">
+                        <source srcset="img/gallery-slide-6@1024.jpg" media="(max-width: 1024px)">
+                        <img class="gallery-image" src="img/gallery-slide-6@1920.jpg" alt="Картина Казимира Малевича-Супрематическая конструкция">
+                      </picture>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal flex" id="torso">
+            <div class="modal-wrapper flex">
+              <picture>
+                <source srcset="img/gallery-modal-1@320.jpg" media="(max-width: 620px)">
+                <source srcset="img/gallery-modal-1@768.jpg" media="(max-width: 768px)">
+                <source srcset="img/img/gallery-modal-1@1024.jpg" media="(max-width: 1368px)">
+                <img class="modal-img" src="img/gallery-modal-1@1920.jpg" alt>
+              </picture>
+              <div class="modal-content flex">
+                <button class="modal-close btn-reset" data-close-button>&times;</button>
+                <h4 class="modal-title">Казимир Малевич</h4>
+                <h5 class="modal-painting">«Торс»</h5>
+                <span class="modal-time">1928–1929</span>
+                <p class="modal-descr">Эти странные безликие &laquo;полуобразы&raquo; (так называл подобные работы сам художник), зашифрованные в&nbsp;женских фигурах и&nbsp;торсах, существуют по&nbsp;мысли К.Малевича, в&nbsp;параллельном мире, в&nbsp;пределах вымышленного художником Космоса, в&nbsp;пространстве без времени. Произведение вызывает ассоциации и&nbsp;с&nbsp;пластикой архаической скульптуры, и&nbsp;с&nbsp;деревянной игрушкой, и&nbsp;с&nbsp;модернистским манекеном.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal flex" id="wooman_rake">
+            <div class="modal-wrapper flex">
+              <picture>
+                <source srcset="img/gallery-modal-2@320.jpg" media="(max-width: 620px)">
+                <source srcset="img/gallery-modal-2@768.jpg" media="(max-width: 768px)">
+                <source srcset="img/gallery-modal-2@1024.jpg" media="(max-width: 1368px)">
+                <img class="modal-img" src="img/gallery-modal-2@1920.jpg" alt>
+              </picture>
+              <div class="modal-content flex">
+                <button class="modal-close btn-reset" data-close-button>&times;</button>
+                <h4 class="modal-title">Казимир Малевич</h4>
+                <h5 class="modal-painting">«Женщина с граблями»</h5>
+                <span class="modal-time">1931–1932</span>
+                <p class="modal-descr">Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за&nbsp;её&nbsp;создание в&nbsp;1930&ndash;1931&nbsp;годах, после того, как первый цикл был утерян после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal flex" id="harvest">
+            <div class="modal-wrapper flex">
+              <picture>
+                <source srcset="img/gallery-modal-3@320.jpg" media="(max-width: 620px)">
+                <source srcset="img/gallery-modal-3@768.jpg" media="(max-width: 768px)">
+                <source srcset="img/gallery-modal-3@1024.jpg" media="(max-width: 1368px)">
+                <img class="modal-img" src="img/gallery-modal-3@1920.jpg" alt>
+              </picture>
+              <div class="modal-content flex">
+                <button class="modal-close btn-reset" data-close-button>&times;</button>
+                <h4 class="modal-title">Казимир Малевич</h4>
+                <h5 class="modal-painting">"Сбор урожая"</h5>
+                <span class="modal-time">1912</span>
+                <p class="modal-descr">Эта картина Казимира Севериновича Малевича была написана в&nbsp;1912&nbsp;году. Работа выполнена маслом на&nbsp;холсте. Произведение находится в&nbsp;Стеделик музеум, Амстердам.</p>
             </div>
           </div>
         </div>
       </div>
-
-    </section> -->
+    </section>
 
   </main>
 </body>
