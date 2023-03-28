@@ -56,7 +56,6 @@
     .ac-trigger {
       color: var(--black);
     }
-
   </style>
 </head>
 
@@ -106,7 +105,7 @@
 
     <div class="header__bottom">
       <div class="header__container container flex">
-        <ul class="reset-list header__bottom-list">
+        <ul class="list-reset header__bottom-list">
           <li class="header__bottom-item">
             <button class="header__bottom-btn link js-header-dropdown-btn" data-path="one">
               <strong class="header__bottom-btn-text link__text">Реализм</strong>
@@ -115,7 +114,7 @@
 
             <div class="header__dropdown js-header-drop" data-target="one">
               <div class="header__dropdown-wrap" data-simplebar>
-                <ul class="header__dropdown-list reset-list">
+                <ul class="header__dropdown-list list-reset">
                   <li class="header__dropdown-item">
                     <a class="header__dropdown-link" href="#" style="background-image: url('img/Tintoretto.jpg')">
                       <span class="header__dropdown-link-text">Тинторетто</span>
@@ -149,7 +148,7 @@
 
             <div class="header__dropdown js-header-drop" data-target="two">
               <div class="header__dropdown-wrap" data-simplebar>
-                <ul class="header__dropdown-list reset-list">
+                <ul class="header__dropdown-list list-reset">
                   <li class="header__dropdown-item">
                     <a class="header__dropdown-link" href="#" style="background-image: url('img/Monet.jpg')">
                       <span class="header__dropdown-link-text">Моне</span>
@@ -183,7 +182,7 @@
 
             <div class="header__dropdown js-header-drop" data-target="three">
               <div class="header__dropdown-wrap" data-simplebar>
-                <ul class="header__dropdown-list reset-list">
+                <ul class="header__dropdown-list list-reset">
                   <li class="header__dropdown-item">
                     <a class="header__dropdown-link" href="#" style="background-image: url('img/VanGogh.jpg')">
                       <span class="header__dropdown-link-text">Ван Гог</span>
@@ -217,7 +216,7 @@
 
             <div class="header__dropdown js-header-drop" data-target="four">
               <div class="header__dropdown-wrap" data-simplebar>
-                <ul class="header__dropdown-list reset-list">
+                <ul class="header__dropdown-list list-reset">
                   <li class="header__dropdown-item">
                     <a class="header__dropdown-link" href="#" style="background-image: url('img/Kandinsky.jpg')">
                       <span class="header__dropdown-link-text">Кандинский</span>
@@ -251,7 +250,7 @@
 
             <div class="header__dropdown js-header-drop" data-target="five">
               <div class="header__dropdown-wrap" data-simplebar>
-                <ul class="header__dropdown-list reset-list">
+                <ul class="header__dropdown-list list-reset">
                   <li class="header__dropdown-item">
                     <a class="header__dropdown-link" href="#" style="background-image: url('img/Carra.jpg')">
                       <span class="header__dropdown-link-text">Карра</span>
@@ -359,158 +358,616 @@
           <div class="gallery__left">
             <h2 class="section-title gallery__title">Галерея</h2>
             <div class="gallery__select" name="select">
-                <h3 class="gallery__select-title">Фильтр:</h3>
-                <select class="choice">
-                  <option value="painting">Живопись</option>
-                  <option value="drawing">Рисунок</option>
-                  <option value="sculpture">Скульптура</option>
-                </select>
+              <h3 class="gallery__select-title">Фильтр:</h3>
+              <select class="choice">
+                <option value="painting">Живопись</option>
+                <option value="drawing">Рисунок</option>
+                <option value="sculpture">Скульптура</option>
+              </select>
 
-                <div class="gallery__checkbox">
-                  <form class="gallery__wrapper flex century" action="/">
-                      <label class="gallery__label centery__label" for="XIX">
-                        <input class="gallery__input visually-hidden" type="checkbox" name="XIX" id="XIX">
-                        <span class="gallery__visible-checkbox"></span>
-                        <span class="gallery__text">XIX век</span>
-                      </label>
+              <div class="gallery__checkbox">
+                <form class="gallery__wrapper flex century" action="/">
+                  <label class="gallery__label centery__label" for="XIX">
+                    <input class="gallery__input visually-hidden" type="checkbox" name="XIX" id="XIX">
+                    <span class="gallery__visible-checkbox"></span>
+                    <span class="gallery__text">XIX век</span>
+                  </label>
 
-                      <label class="gallery__label centery__label" for="XX">
-                        <input class="gallery__input visually-hidden" type="checkbox" name="XX" id="XX">
-                        <span class="gallery__visible-checkbox"></span>
-                        <span class="gallery__text">XX век</span>
-                      </label>
+                  <label class="gallery__label centery__label" for="XX">
+                    <input class="gallery__input visually-hidden" type="checkbox" name="XX" id="XX">
+                    <span class="gallery__visible-checkbox"></span>
+                    <span class="gallery__text">XX век</span>
+                  </label>
 
-                      <label class="gallery__label centery__label" for="here_and_now">
-                        <input class="gallery__input visually-hidden" type="checkbox" name="here_and_now" id="here_and_now">
-                        <span class="gallery__visible-checkbox"></span>
-                        <span class="gallery__text">Современность</span>
-                      </label>
-                    </form>
-                </div>
-              </div>
-
-              <div class="gallery__swiper">
-                <div class="gallery__nav">
-                  <button class="nav-btn gallery__prev" aria-label="К предыдущему слайду"></button>
-                  <div class="gallery-pagination"></div>
-                  <button class="nav-btn gallery__next" aria-label="К следующему слайду"></button>
-                </div>
-
-                <div class="swiper__container slides-container">
-                  <div class="swiper__wrapper gallery__swiper-wrapper">
-                    <a class="swiper__slide gallery-slide" data-modal-target="#torso" aria-label="Картина Казимир Малевич-Торс">
-                      <picture>
-                        <source srcset="img/gallery-slide-1@320.jpg" media="(max-width: 320px)">
-                        <source srcset="img/gallery-slide-1@768.jpg" media="(max-width: 768px)">
-                        <source srcset="img/gallery-slide-1@1024.jpg" media="(max-width: 1024px)">
-                        <img class="gallery-image" src="img/gallery-slide-1@1920.jpg" alt="Картина Казимир Малевич-Торс">
-                      </picture>
-                    </a>
-
-                    <a class="swiper-slide gallery-slide" data-modal-target="#wooman_rake" aria-label="Картина Казимира Малевича-Женщина с граблями">
-                      <picture>
-                        <source srcset="img/gallery-slide-2@320.jpg" media="(max-width: 320px)">
-                        <source srcset="img/gallery-slide-2@768.jpg" media="(max-width: 768px)">
-                        <source srcset="img/gallery-slide-2@1024.jpg" media="(max-width: 1024px)">
-                        <img class="gallery-image" src="img/gallery-slide-2@1920.jpg" alt="Картина Казимира Малевича-Женщина с граблями">
-                      </picture>
-                    </a>
-
-                    <a class="swiper-slide gallery-slide" data-modal-target="#harvest" aria-label="Картина Казимира Малевича-Сбор урожая">
-                      <picture>
-                        <source srcset="img/gallery-slide-3@320.jpg" media="(max-width: 320px)">
-                        <source srcset="img/gallery-slide-3@768.jpg" media="(max-width: 768px)">
-                        <source srcset="img/gallery-slide-3@1024.jpg" media="(max-width: 1024px)">
-                        <img class="gallery-image" src="img/gallery-slide-3@1920.jpg" alt="Картина Казимира Малевича-Сбор урожая">
-                      </picture>
-                    </a>
-
-                    <a class="swiper-slide gallery-slide" href="#" aria-label="Картина Казимира Малевича-Супрематизм">
-                      <picture>
-                        <source srcset="img/gallery-slide-4@320.jpg" media="(max-width: 320px)">
-                        <source srcset="img/gallery-slide-4@768.jpg" media="(max-width: 768px)">
-                        <source srcset="img/gallery-slide-4@1024.jpg" media="(max-width: 1024px)">
-                        <img class="gallery-image" src="img/gallery-slide-4@1920.jpg" alt="Картина Казмира Малевича-Супрематизм">
-                      </picture>
-                    </a>
-
-                    <a class="swiper-slide gallery-slide" href="#" aria-label="Картина Казимира Малевича-Женщина с вёдрами">
-                      <picture>
-                        <source srcset="img/gallery-slide-5@320.jpg" media="(max-width: 320px)">
-                        <source srcset="img/gallery-slide-5@768.jpg" media="(max-width: 768px)">
-                        <source srcset="img/gallery-slide-5@1024.jpg" media="(max-width: 1024px)">
-                        <img class="gallery-image" src="img/gallery-slide-5@1920.jpg" alt="Картина Казимира Малевича-Женщина с вёдрами">
-                      </picture>
-                    </a>
-
-                    <a class="swiper-slide gallery-slide" href="#" aria-label="Картина Казимира Малевича-Супрематическая конструкция">
-                      <picture>
-                        <source srcset="img/gallery-slide-6@320.jpg" media="(max-width: 320px)">
-                        <source srcset="img/gallery-slide-6@768.jpg" media="(max-width: 768px)">
-                        <source srcset="img/gallery-slide-6@1024.jpg" media="(max-width: 1024px)">
-                        <img class="gallery-image" src="img/gallery-slide-6@1920.jpg" alt="Картина Казимира Малевича-Супрематическая конструкция">
-                      </picture>
-                    </a>
-                  </div>
-                </div>
+                  <label class="gallery__label centery__label" for="here_and_now">
+                    <input class="gallery__input visually-hidden" type="checkbox" name="here_and_now" id="here_and_now">
+                    <span class="gallery__visible-checkbox"></span>
+                    <span class="gallery__text">Современность</span>
+                  </label>
+                </form>
               </div>
             </div>
-          </div>
 
-          <div class="modal flex" id="torso">
-            <div class="modal-wrapper flex">
-              <picture>
-                <source srcset="img/gallery-modal-1@320.jpg" media="(max-width: 620px)">
-                <source srcset="img/gallery-modal-1@768.jpg" media="(max-width: 768px)">
-                <source srcset="img/img/gallery-modal-1@1024.jpg" media="(max-width: 1368px)">
-                <img class="modal-img" src="img/gallery-modal-1@1920.jpg" alt>
-              </picture>
-              <div class="modal-content flex">
-                <button class="modal-close btn-reset" data-close-button>&times;</button>
-                <h4 class="modal-title">Казимир Малевич</h4>
-                <h5 class="modal-painting">«Торс»</h5>
-                <span class="modal-time">1928–1929</span>
-                <p class="modal-descr">Эти странные безликие &laquo;полуобразы&raquo; (так называл подобные работы сам художник), зашифрованные в&nbsp;женских фигурах и&nbsp;торсах, существуют по&nbsp;мысли К.Малевича, в&nbsp;параллельном мире, в&nbsp;пределах вымышленного художником Космоса, в&nbsp;пространстве без времени. Произведение вызывает ассоциации и&nbsp;с&nbsp;пластикой архаической скульптуры, и&nbsp;с&nbsp;деревянной игрушкой, и&nbsp;с&nbsp;модернистским манекеном.
-                </p>
+            <div class="gallery__swiper">
+              <div class="gallery__nav">
+                <button class="nav-btn gallery__prev" aria-label="К предыдущему слайду"></button>
+                <div class="gallery__pagination"></div>
+                <button class="nav-btn gallery__next" aria-label="К следующему слайду"></button>
               </div>
-            </div>
-          </div>
 
-          <div class="modal flex" id="wooman_rake">
-            <div class="modal-wrapper flex">
-              <picture>
-                <source srcset="img/gallery-modal-2@320.jpg" media="(max-width: 620px)">
-                <source srcset="img/gallery-modal-2@768.jpg" media="(max-width: 768px)">
-                <source srcset="img/gallery-modal-2@1024.jpg" media="(max-width: 1368px)">
-                <img class="modal-img" src="img/gallery-modal-2@1920.jpg" alt>
-              </picture>
-              <div class="modal-content flex">
-                <button class="modal-close btn-reset" data-close-button>&times;</button>
-                <h4 class="modal-title">Казимир Малевич</h4>
-                <h5 class="modal-painting">«Женщина с граблями»</h5>
-                <span class="modal-time">1931–1932</span>
-                <p class="modal-descr">Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за&nbsp;её&nbsp;создание в&nbsp;1930&ndash;1931&nbsp;годах, после того, как первый цикл был утерян после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.</p>
+              <div class="swiper__container slides-container">
+                <div class="swiper__wrapper gallery__swiper-wrapper">
+                  <a class="swiper__slide gallery-slide" data-modal-target="#torso"
+                    aria-label="Картина Казимир Малевич-Торс">
+                    <picture>
+                      <source srcset="img/gallery-slide-1@320.jpg" media="(max-width: 320px)">
+                      <source srcset="img/gallery-slide-1@768.jpg" media="(max-width: 768px)">
+                      <source srcset="img/gallery-slide-1@1024.jpg" media="(max-width: 1024px)">
+                      <img class="gallery-image" src="img/gallery-slide-1@1920.jpg" alt="Картина Казимир Малевич-Торс">
+                    </picture>
+                  </a>
+
+                  <a class="swiper-slide gallery-slide" data-modal-target="#wooman_rake"
+                    aria-label="Картина Казимира Малевича-Женщина с граблями">
+                    <picture>
+                      <source srcset="img/gallery-slide-2@320.jpg" media="(max-width: 320px)">
+                      <source srcset="img/gallery-slide-2@768.jpg" media="(max-width: 768px)">
+                      <source srcset="img/gallery-slide-2@1024.jpg" media="(max-width: 1024px)">
+                      <img class="gallery-image" src="img/gallery-slide-2@1920.jpg"
+                        alt="Картина Казимира Малевича-Женщина с граблями">
+                    </picture>
+                  </a>
+
+                  <a class="swiper-slide gallery-slide" data-modal-target="#harvest"
+                    aria-label="Картина Казимира Малевича-Сбор урожая">
+                    <picture>
+                      <source srcset="img/gallery-slide-3@320.jpg" media="(max-width: 320px)">
+                      <source srcset="img/gallery-slide-3@768.jpg" media="(max-width: 768px)">
+                      <source srcset="img/gallery-slide-3@1024.jpg" media="(max-width: 1024px)">
+                      <img class="gallery-image" src="img/gallery-slide-3@1920.jpg"
+                        alt="Картина Казимира Малевича-Сбор урожая">
+                    </picture>
+                  </a>
+
+                  <a class="swiper-slide gallery-slide" href="#" aria-label="Картина Казимира Малевича-Супрематизм">
+                    <picture>
+                      <source srcset="img/gallery-slide-4@320.jpg" media="(max-width: 320px)">
+                      <source srcset="img/gallery-slide-4@768.jpg" media="(max-width: 768px)">
+                      <source srcset="img/gallery-slide-4@1024.jpg" media="(max-width: 1024px)">
+                      <img class="gallery-image" src="img/gallery-slide-4@1920.jpg"
+                        alt="Картина Казмира Малевича-Супрематизм">
+                    </picture>
+                  </a>
+
+                  <a class="swiper-slide gallery-slide" href="#"
+                    aria-label="Картина Казимира Малевича-Женщина с вёдрами">
+                    <picture>
+                      <source srcset="img/gallery-slide-5@320.jpg" media="(max-width: 320px)">
+                      <source srcset="img/gallery-slide-5@768.jpg" media="(max-width: 768px)">
+                      <source srcset="img/gallery-slide-5@1024.jpg" media="(max-width: 1024px)">
+                      <img class="gallery-image" src="img/gallery-slide-5@1920.jpg"
+                        alt="Картина Казимира Малевича-Женщина с вёдрами">
+                    </picture>
+                  </a>
+
+                  <a class="swiper-slide gallery-slide" href="#"
+                    aria-label="Картина Казимира Малевича-Супрематическая конструкция">
+                    <picture>
+                      <source srcset="img/gallery-slide-6@320.jpg" media="(max-width: 320px)">
+                      <source srcset="img/gallery-slide-6@768.jpg" media="(max-width: 768px)">
+                      <source srcset="img/gallery-slide-6@1024.jpg" media="(max-width: 1024px)">
+                      <img class="gallery-image" src="img/gallery-slide-6@1920.jpg"
+                        alt="Картина Казимира Малевича-Супрематическая конструкция">
+                    </picture>
+                  </a>
+                </div>
               </div>
-            </div>
-          </div>
-
-          <div class="modal flex" id="harvest">
-            <div class="modal-wrapper flex">
-              <picture>
-                <source srcset="img/gallery-modal-3@320.jpg" media="(max-width: 620px)">
-                <source srcset="img/gallery-modal-3@768.jpg" media="(max-width: 768px)">
-                <source srcset="img/gallery-modal-3@1024.jpg" media="(max-width: 1368px)">
-                <img class="modal-img" src="img/gallery-modal-3@1920.jpg" alt>
-              </picture>
-              <div class="modal-content flex">
-                <button class="modal-close btn-reset" data-close-button>&times;</button>
-                <h4 class="modal-title">Казимир Малевич</h4>
-                <h5 class="modal-painting">"Сбор урожая"</h5>
-                <span class="modal-time">1912</span>
-                <p class="modal-descr">Эта картина Казимира Севериновича Малевича была написана в&nbsp;1912&nbsp;году. Работа выполнена маслом на&nbsp;холсте. Произведение находится в&nbsp;Стеделик музеум, Амстердам.</p>
             </div>
           </div>
         </div>
+
+        <div class="modal flex" id="torso">
+          <div class="modal-wrapper flex">
+            <picture>
+              <source srcset="img/gallery-modal-1@320.jpg" media="(max-width: 620px)">
+              <source srcset="img/gallery-modal-1@768.jpg" media="(max-width: 768px)">
+              <source srcset="img/img/gallery-modal-1@1024.jpg" media="(max-width: 1368px)">
+              <img class="modal-img" src="img/gallery-modal-1@1920.jpg" alt>
+            </picture>
+            <div class="modal-content flex">
+              <button class="modal-close btn-reset" data-close-button>&times;</button>
+              <h4 class="modal-title">Казимир Малевич</h4>
+              <h5 class="modal-painting">«Торс»</h5>
+              <span class="modal-time">1928–1929</span>
+              <p class="modal-descr">Эти странные безликие &laquo;полуобразы&raquo; (так называл подобные работы сам
+                художник), зашифрованные в&nbsp;женских фигурах и&nbsp;торсах, существуют по&nbsp;мысли К.Малевича,
+                в&nbsp;параллельном мире, в&nbsp;пределах вымышленного художником Космоса, в&nbsp;пространстве без
+                времени. Произведение вызывает ассоциации и&nbsp;с&nbsp;пластикой архаической скульптуры,
+                и&nbsp;с&nbsp;деревянной игрушкой, и&nbsp;с&nbsp;модернистским манекеном.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal flex" id="wooman_rake">
+          <div class="modal-wrapper flex">
+            <picture>
+              <source srcset="img/gallery-modal-2@320.jpg" media="(max-width: 620px)">
+              <source srcset="img/gallery-modal-2@768.jpg" media="(max-width: 768px)">
+              <source srcset="img/gallery-modal-2@1024.jpg" media="(max-width: 1368px)">
+              <img class="modal-img" src="img/gallery-modal-2@1920.jpg" alt>
+            </picture>
+            <div class="modal-content flex">
+              <button class="modal-close btn-reset" data-close-button>&times;</button>
+              <h4 class="modal-title">Казимир Малевич</h4>
+              <h5 class="modal-painting">«Женщина с граблями»</h5>
+              <span class="modal-time">1931–1932</span>
+              <p class="modal-descr">Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник
+                принялся за&nbsp;её&nbsp;создание в&nbsp;1930&ndash;1931&nbsp;годах, после того, как первый цикл был
+                утерян после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal flex" id="harvest">
+          <div class="modal-wrapper flex">
+            <picture>
+              <source srcset="img/gallery-modal-3@320.jpg" media="(max-width: 620px)">
+              <source srcset="img/gallery-modal-3@768.jpg" media="(max-width: 768px)">
+              <source srcset="img/gallery-modal-3@1024.jpg" media="(max-width: 1368px)">
+              <img class="modal-img" src="img/gallery-modal-3@1920.jpg" alt>
+            </picture>
+            <div class="modal-content flex">
+              <button class="modal-close btn-reset" data-close-button>&times;</button>
+              <h4 class="modal-title">Казимир Малевич</h4>
+              <h5 class="modal-painting">"Сбор урожая"</h5>
+              <span class="modal-time">1912</span>
+              <p class="modal-descr">Эта картина Казимира Севериновича Малевича была написана в&nbsp;1912&nbsp;году.
+                Работа выполнена маслом на&nbsp;холсте. Произведение находится в&nbsp;Стеделик музеум, Амстердам.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog" id="catalog">
+      <div class="container">
+        <h2 class="section-title catalog__title">Каталог</h2>
+        <p class="section-descr galery__descr">
+          Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
+          политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь всего
+          лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и&nbsp;по&nbsp;сей
+          день остаются уделом либералов, которые жаждут быть функционально разнесены на&nbsp;независимые элементы.
+        </p>
+
+        <div class="catalog__wrap js-tabs-wrap">
+          <div class="catalog__content">
+            <div class="catalog__painter active js-tab-content" data-target="domenico">
+              <picture>
+                <source srcset="img/Domenico@320.jpg" media="(max-width: 320px)">
+                <source srcset="img/Domenico@768.jpg" media="(max-width: 768px)">
+                <source srcset="img/Domenico@1024.jpg" media="(max-width: 1024px)">
+                <img class="catalog__img" src="img/Domenico@1920.jpg" alt>
+              </picture>
+              <h3 class="catalog__name">Доменико Гирландайо</h3>
+              <span class="catalog__years">2 июня 1448–11 января 1494</span>
+              <p class="catalog__descr">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).1</p>
+            </div>
+
+            <div class="catalog__painter js-tab-content" data-target="benedetto">
+              <picture>
+                <source srcset="img/catalog-empty@320.jpg" media="(max-width: 420px)">
+                <source srcset="img/catalog-empty@768.jpg" media="(max-width: 970px)">
+                <source srcset="img/catalog-empty@1024.jpg" media="(max-width: 1280px)">
+                <img class="catalog__img" src="img/catalog-empty@1920.jpg" alt="Изображение отсутствует">
+              </picture>
+              <h3 class="catalog__name">Бенедетто ди Биндо</h3>
+              <span class="catalog__years"> ок. 1380—85 — 19 сентября 1417</span>
+              <p class="catalog__descr">Итальянский живописец сиенской школы итало-византийского и&nbsp;готического искусства. Родился в&nbsp;местечке Кастильоне ди&nbsp;Вальдорчиа, близ Сиены около 1385&nbsp;года.</p>
+            </div>
+
+          <div class="catalog__painter js-tab-content" data-target="bergognone">
+            <picture>
+              <source srcset="img/catalog-empty@320.jpg" media="(max-width: 420px)">
+              <source srcset="img/catalog-empty@768.jpg" media="(max-width: 970px)">
+              <source srcset="img/catalog-empty@1024.jpg" media="(max-width: 1280px)">
+              <img class="catalog__img" src="img/catalog-empty@1920.jpg" alt="Изображение отсутствует">
+            </picture>
+            <h3 class="catalog__name">Бергоньоне, Амброджо</h3>
+            <span class="catalog__years"> 1453 -  1523</span>
+            <p class="catalog__descr">Амброджо Бергоньоне или Боргоньоне, настоящее имя&nbsp;&mdash; Амброджо да&nbsp;Фоссано &nbsp;&mdash; итальянский художник ломбардской школы.</p>
+          </div>
+
+
+        <div class="catalog__painter js-tab-content" data-target="bissolo">
+          <picture>
+            <source srcset="img/catalog-empty@320.jpg" media="(max-width: 420px)">
+            <source srcset="img/catalog-empty@768.jpg" media="(max-width: 970px)">
+            <source srcset="img/catalog-empty@1024.jpg" media="(max-width: 1280px)">
+            <img class="catalog__img" src="img/catalog-empty@1920.jpg" alt="Изображение отсутствует">
+          </picture>
+          <h3 class="catalog__name">Биссоло, Франческо</h3>
+          <span class="catalog__years">1470 или 1472 — 20 апреля 1554</span>
+          <p class="catalog__descr">Франческо Биссоло известный также, как Пьетро Франческо Биссоло&nbsp;&mdash; итальянский художник венецианской школы живописи</p>
+        </div>
+
+
+          <div class="catalog__painter js-tab-content" data-target="empty">
+            <picture>
+              <source srcset="img/catalog-empty@320.jpg" media="(max-width: 420px)">
+              <source srcset="img/catalog-empty@768.jpg" media="(max-width: 970px)">
+              <source srcset="img/catalog-empty@1024.jpg" media="(max-width: 1280px)">
+              <img class="catalog__img" src="img/catalog-empty@1920.jpg" alt="Изображение отсутствует">
+            </picture>
+            <h3 class="catalog__name">Что мы&nbsp;о&nbsp;нём знаем?</h3>
+            <p class="catalog__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</p>
+            <a class="empty-gallery-btn" href="#gallery" aria-label="Переход в галлерею">В галерею</a>
+          </div>
+        </div>
+
+          <ul class="catalog__accordion accordion list-reset js-accordion-container">
+            <li class="accordion__question ac">
+              <h3 class="accordion__item-title">
+                <button class="btn-reset accordion__btn ac-trigger">
+                  C 1400 по 1499 гг.
+                </button>
+              </h3>
+
+              <div class="accordion__content ac-panel">
+                <div class="accordion__content-wrap">
+                  <ul class="accordion__tabs-list list-reset">
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="benedetto" onclick="scrollToTarget()">
+                        <span class="link__text">Бенедетто ди Биндо</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="bergognone" onclick="scrollToTarget()">
+                        <span class="link__text">Бергоньоне, Амброджо</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="bissolo" onclick="scrollToTarget()">
+                        <span class="link__text">Биссоло, Франческо</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="empty" onclick="scrollToTarget()">
+                        <span class="link__text">Больтраффио, Джованни</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="empty" onclick="scrollToTarget()">
+                        <span class="link__text">Бонсиньори, Франческо</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="empty" onclick="scrollToTarget()">
+                        <span class="link__text">Боттичини, Рафаэлло</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="empty" onclick="scrollToTarget()">
+                        <span class="link__text">Брамантино</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="empty" onclick="scrollToTarget()">
+                        <span class="link__text">Бреа, Людовико</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="domenico" onclick="scrollToTarget()">
+                        <span class="link__text">Бьяджо д’Антонио Туччи</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="empty" onclick="scrollToTarget()">
+                        <span class="link__text">Веккьетта</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="empty" onclick="scrollToTarget()">
+                        <span class="link__text">Андреа Верроккьо</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn  active" href="#"
+                        data-path="domenico" onclick="scrollToTarget()">
+                        <span class="link__text">Доменико Гирландайо</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="empty" onclick="scrollToTarget()">
+                        <span class="link__text">Беноццо Гоццоли</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="empty" onclick="scrollToTarget()">
+                        <span class="link__text">Граначчи, Франческо</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="empty" onclick="scrollToTarget()">
+                        <span class="link__text">Грегорио ди Чекко</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="empty" onclick="scrollToTarget()">
+                        <span class="link__text">Джованни да Удине</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="domenico" onclick="scrollToTarget()">
+                        <span class="link__text">Джованни ди Паоло</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="domenico" onclick="scrollToTarget()">
+                        <span class="link__text">Джорджоне</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="empty" onclick="scrollToTarget()">
+                        <span class="link__text">Парентино, Бернардо</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="empty" onclick="scrollToTarget()">
+                        <span class="link__text">Пезеллино</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="empty" onclick="scrollToTarget()">
+                        <span class="link__text">Пьетро Перуджино</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="empty" onclick="scrollToTarget()">
+                        <span class="link__text">Перуцци, Бальдассаре</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="empty" onclick="scrollToTarget()">
+                        <span class="link__text">Пизанелло</span>
+                      </a>
+                    </li>
+                    <li class="accordion__tabs-item">
+                      <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
+                        data-path="empty" onclick="scrollToTarget()">
+                        <span class="link__text">Пинтуриккьо</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li class="accordion__question ac">
+              <h3 class="accordion__item-title">
+                <button class="btn-reset accordion__btn ac-trigger">
+                  C 1500 по 1599 гг.
+                </button>
+              </h3>
+              <div class="accordion__content ac-panel">
+                <div class="accordion__content-wrap accordion__content-wrap--empty">
+                </div>
+              </div>
+            </li>
+
+            <li class="accordion__question ac">
+              <h3 class="accordion__item-title">
+                <button class="btn-reset accordion__btn ac-trigger">
+                  C 1600 по 1699 гг.
+                </button>
+              </h3>
+              <div class="accordion__content ac-panel">
+                <div class="accordion__content-wrap accordion__content-wrap--empty">
+                </div>
+              </div>
+            </li>
+
+            <li class="accordion__question ac">
+              <h3 class="accordion__item-title">
+                <button class="btn-reset accordion__btn ac-trigger">
+                  C 1700 по 1799 гг.
+                </button>
+              </h3>
+              <div class="accordion__content ac-panel">
+                <div class="accordion__content-wrap accordion__content-wrap--empty">
+                </div>
+              </div>
+            </li>
+
+            <li class="accordion__question ac">
+              <h3 class="accordion__item-title">
+                <button class="btn-reset accordion__btn ac-trigger">
+                  C 1800 по 1899 гг.
+                </button>
+              </h3>
+              <div class="accordion__content ac-panel">
+                <div class="accordion__content-wrap accordion__content-wrap--empty">
+                </div>
+              </div>
+            </li>
+
+            <li class="accordion__question ac">
+              <h3 class="accordion__item-title">
+                <button class="btn-reset accordion__btn ac-trigger">
+                  C 1900 по 1999 гг.
+                </button>
+              </h3>
+              <div class="accordion__content ac-panel">
+                <div class="accordion__content-wrap accordion__content-wrap--empty">
+                </div>
+              </div>
+            </li>
+
+            <li class="accordion__question ac">
+              <h3 class="accordion__item-title">
+                <button class="btn-reset accordion__btn ac-trigger">
+                  C 2000 г.
+                </button>
+              </h3>
+              <div class="accordion__content ac-panel">
+                <div class="accordion__content-wrap accordion__content-wrap--empty">
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="events" id="events">
+      <div class="container">
+        <h2 class="section-title events__title">События</h2>
+
+          <div class="events__swiper js-events-swiper flex">
+            <button class="nav-btn nav-btn_next" aria-label="К предыдущему слайду"></button>
+
+            <div class="events__swiper-wrapper js-events-swiper-wrapper">
+              <div class="events__swiper-slide slide-1 active flex">
+                <article class="events__article article flex">
+                  <picture>
+                    <source srcset="img/catalog-slider-one@320.jpg" media="(max-width: 320px)">
+                    <source srcset="img/catalog-slider-one@768.jpg" media="(max-width: 768px)">
+                    <source srcset="img/catalog-slider-one@1024.jpg" media="(max-width: 1024px)">
+                    <img class="article__img" src="img/catalog-slider-one@1920.jpg" alt="Музей им. Щусева">
+                  </picture>
+                  <div class="article__content flex">
+                    <span class="article__location">
+                      Музей им. Щусева
+                    </span>
+                    <span class="article__time">
+                      с&nbsp;20&nbsp;марта по&nbsp;30&nbsp;апреля
+                    </span>
+                    <h3 class="article__title">Книжная гравюра в&nbsp;живом восприятии </h3>
+                    <p class="article__descr">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо</p>
+                    <a class="article__link" href="#">Подробнее</a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="events__swiper-slide slide-2 flex">
+                <article class="events__article article flex">
+                  <picture>
+                    <source srcset="img/catalog-slider-two@320.jpg" media="(max-width: 320px)">
+                    <source srcset="img/catalog-slider-two@768.jpg" media="(max-width: 768px)">
+                    <source srcset="img/catalog-slider-two@1024.jpg" media="(max-width: 1024px)">
+                    <img class="article__img" src="img/catalog-slider-two@1920.jpg" alt="ММОМА">
+                  </picture>
+                  <div class="article__content flex">
+                    <span class="article__location">
+                      ММОМА
+                  </span>
+                  <span class="article__time">
+                    24&nbsp;марта 19:00
+                  </span>
+                  <h3 class="article__title">&laquo;Открытая дискуссия&raquo;. Дмитрий Петров и&nbsp;Сергей Ильин.</h3>
+                  <p class="article__descr">Высокий уровень вовлечения представителей целевой аудитории является
+                    чётким доказательством простого факта</p>
+                  <a class="article__link" href="#">Подробнее</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="events__swiper-slide slide-3 flex">
+              <article class="events__article article flex">
+                <picture>
+                  <source srcset="img/catalog-slider-three@320.jpg" media="(max-width: 320px)">
+                  <source srcset="img/catalog-slider-three@768.jpg" media="(max-width: 768px)">
+                  <source srcset="img/catalog-slider-three@1024.jpg" media="(max-width: 1024px)">
+                  <img class="article__img" src="img/catalog-slider-three@1920.jpg" alt="Еврейский музей">
+                </picture>
+                <div class="article__content flex">
+                  <span class="article__location">
+                    Еврейский музей
+                  </span>
+                  <span class="article__time">
+                    с&nbsp;31&nbsp;марта по&nbsp;21&nbsp;апреля
+                  </span>
+                  <h3 class="article__title">Выставка &laquo;Формация 2020&raquo;</h3>
+                  <p class="article__descr">Идейные соображения высшего порядка, а&nbsp;также современная методология разработки играет важную роль в&nbsp;формировании глубокомысленных рассуждений</p>
+                  <a class="article__link" href="#">Подробнее</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="events__swiper-slide slide-4 flex">
+              <article class="events__article article flex">
+                <picture>
+                  <source srcset="img/catalog-slider-four@320.jpg" media="(max-width: 320px)">
+                  <source srcset="img/catalog-slider-four@768.jpg" media="(max-width: 768px)">
+                  <source srcset="img/catalog-slider-four@1024.jpg" media="(max-width: 1024px)">
+                  <img class="article__img" src="img/catalog-slider-four@1920.jpg" alt="ММАМ">
+                </picture>
+                <div class="article__content flex">
+                  <span class="article__location">
+                    ММАМ
+                  </span>
+                  <span class="article__time">
+                    с&nbsp;8&nbsp;апреля по&nbsp;20&nbsp;мая
+                  </span>
+                  <h3 class="article__title">Джон Винзор. Фотографии из&nbsp;серии &laquo;Метафора&raquo;</h3>
+                  <p class="article__descr">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо</p>
+                  <a class="article__link" href="#">Подробнее</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="events__swiper-slide slide-5 flex">
+              <article class="events__article article flex">
+                <picture>
+                  <source srcset="img/catalog-slider-five@320.jpg" media="(max-width: 320px)">
+                  <source srcset="img/catalog-slider-five@768.jpg" media="(max-width: 768px)">
+                  <source srcset="img/catalog-slider-five@1024.jpg" media="(max-width: 1024px)">
+                  <img class="article__img" src="img/catalog-slider-five@1920.jpg" alt="Третьяковка на Крымском валу">
+                </picture>
+                <div class="article__content flex">
+                  <span class="article__location">
+                    Третьяковка на&nbsp;Крымском валу
+                  </span>
+                  <span class="article__time">
+                    с&nbsp;30&nbsp;марта по&nbsp;30&nbsp;апреля
+                  </span>
+                  <h3 class="article__title">XXIV Международная биеннале молодого искусства</h3>
+                  <p class="article__descr">Внезапно, реплицированные с&nbsp;зарубежных источников, современные исследования</p>
+                  <a class="article__link" href="#">Подробнее</a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="events__slider-pagination swiper-pagination js-events-pagination"></div>
+        </div>
+        <button class="nav-btn nav-btn_next" aria-label="К следующему слайду"></button>
       </div>
     </section>
 
