@@ -1,15 +1,18 @@
 :root {
   /* Шрифт */
   --regular: 400;
+  --semibold: 600;
   --bold: 700;
   --dafault-fs: 18px;
   --default-lh: 24.5px;
+
 
   /* Цвет */
   --black: #000000;
   --dark: #333333;
   --dark-gray: #666666;
   --gray: #999999;
+  --gray-dropdown:  rgba(0, 0, 0, 0.5);
   --light-gray: #CACACA;
   --fog: #ECECEC;
   --light-lavender: #D1A9F0;
@@ -23,8 +26,8 @@
 
   /* Размеры*/
   --body--min-width: 320px;
-  --container-max-width: 1600px;
-  --container-padding: 160px;
+  --container-max-width: 1700px;
+  --container-padding: 50px;
 
   /* Анимация */
   --short: 0.3s;

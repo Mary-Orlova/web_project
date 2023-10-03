@@ -60,35 +60,35 @@
 </head>
 
 <body>
-  <h1 class="visually-hidden">Сайт Blanchard художественная галлерея</h1>
+  <h1 class="visually-hidden">Сайт Blanchard художественная галерея</h1>
   <header class="header">
     <div class="header__top">
-      <div class="header__container container flex">
-        <button class="header__burger btn-reset hamburger--3dx hamburger js-burger" data-burger
+      <div class="container header__container flex">
+        <button class="btn-reset header__burger hamburger--3dx hamburger js-burger" data-burger
           aria-label="Открыть меню" aria-expanded="false">
           <span class="hamburger__box">
             <span class="hamburger__inner"></span>
           </span>
         </button>
 
-        <a class="header__logo flex" href="/">
-          <img src="img/logo.svg" alt="Логотип Blanchard"></a>
+        <a class="header__logo flex">
+          <img class="header__logo-img" src="img/logo.svg" alt="Логотип Blanchard"></a>
         <nav class="header__nav menu-nav flex">
           <div class="header__menu-wrap js-menu-wrap flex">
             <ul class="header__menu list-reset flex">
               <li class="header__menu-item visually-hidden"><a class="header__menu-link" href="#">Главная</a></li>
-              <li class="header__menu-item"><a class="header__menu-link" href="#about">О нас</a></li>
-              <li class="header__menu-item"><a class="header__menu-link" href="#gallery">Галлерея</a></li>
-              <li class="header__menu-item"><a class="header__menu-link" href="#catalog">Каталог</a></li>
-              <li class="header__menu-item"><a class="header__menu-link" href="#events">События</a></li>
-              <li class="header__menu-item"><a class="header__menu-link" href="#projects">Проекты</a></li>
-              <li class="header__menu-item"><a class="header__menu-link" href="#contacts">Контакты</a></li>
+              <li class="header__menu-item"><a class="header__menu-link" href="#about" aria-label="Перейти в раздел: О нас">О нас</a></li>
+              <li class="header__menu-item"><a class="header__menu-link" href="#gallery" aria-label="Перейти в раздел: Галерея">Галерея</a></li>
+              <li class="header__menu-item"><a class="header__menu-link" href="#catalog" aria-label="Перейти в раздел: Каталог">Каталог</a></li>
+              <li class="header__menu-item"><a class="header__menu-link" href="#events" aria-label="Перейти в раздел: События">События</a></li>
+              <li class="header__menu-item"><a class="header__menu-link" href="#projects" aria-label="Перейти в раздел: Проекты">Проекты</a></li>
+              <li class="header__menu-item"><a class="header__menu-link" href="#contacts" aria-label="Перейти в раздел: Контакты">Контакты</a></li>
             </ul>
           </div>
 
           <div class="header__links-login">
-            <a class="header__login link" href="#">
-              <span class="header__login-content link__text">
+            <a class="header__login link" href="#" aria-label="Кнопка входа в личный кабинет">
+              <span class="header__login-content link__text flex">
                 <svg class="header__login-arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -104,11 +104,11 @@
     </div>
 
     <div class="header__bottom">
-      <div class="header__container container flex">
-        <ul class="list-reset header__bottom-list">
+      <div class="container header__bottom-container flex">
+        <ul class="list-reset header__bottom-list flex">
           <li class="header__bottom-item">
-            <button class="header__bottom-btn link js-header-dropdown-btn" data-path="one">
-              <strong class="header__bottom-btn-text link__text">Реализм</strong>
+            <button class="header__bottom-btn link js-header-dropdown-btn" data-path="one" aria-label="Кнопка открытия под-меню: Реализм">
+              <span class="header__bottom-btn-text link__text">Реализм</span>
               <span class="header__bottom-item"></span>
             </button>
 
@@ -141,8 +141,8 @@
           </li>
 
           <li class="header__bottom-item">
-            <button class="header__bottom-btn link js-header-dropdown-btn" data-path="two">
-              <strong class="header__bottom-btn-text link__text">Импрессионизм</strong>
+            <button class="header__bottom-btn link js-header-dropdown-btn" data-path="two" aria-label="Кнопка открытия под-меню: Импрессионизм">
+              <span class="header__bottom-btn-text link__text">Импрессионизм</span>
               <span class="header__bottom-item"></span>
             </button>
 
@@ -175,8 +175,8 @@
           </li>
 
           <li class="header__bottom-item">
-            <button class="header__bottom-btn link js-header-dropdown-btn" data-path="three">
-              <strong class="header__bottom-btn-text link__text">Постимпрессионизм</strong>
+            <button class="header__bottom-btn link js-header-dropdown-btn" data-path="three" aria-label="Кнопка открытия под-меню: Постимпрессионизм">
+              <span class="header__bottom-btn-text link__text">Постимпрессионизм</span>
               <span class="header__bottom-item"></span>
             </button>
 
@@ -209,8 +209,8 @@
           </li>
 
           <li class="header__bottom-item">
-            <button class="header__bottom-btn link js-header-dropdown-btn" data-path="four">
-              <strong class="header__bottom-btn-text link__text">Авангард</strong>
+            <button class="header__bottom-btn link js-header-dropdown-btn" data-path="four" aria-label="Кнопка открытия под-меню: Авангард">
+              <span class="header__bottom-btn-text link__text">Авангард</span>
               <span class="header__bottom-item"></span>
             </button>
 
@@ -244,7 +244,7 @@
 
           <li class="header__bottom-item">
             <button class="header__bottom-btn link js-header-dropdown-btn" data-path="five">
-              <strong class="header__bottom-btn-text link__text">Футуризм</strong>
+              <span class="header__bottom-btn-text link__text">Футуризм</span>
               <span class="header__bottom-item"></span>
             </button>
 
@@ -277,7 +277,7 @@
           </li>
         </ul>
 
-        <a class="header__search-btn btn-reset js-open-search" href="#" aria-label="Кнопка поиска">
+        <a class="header__search-btn btn-reset js-open-search flex" href="#" aria-label="Кнопка поиска">
           <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="6.8678" height="1.71695"
               transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="currentColor" />
@@ -286,9 +286,9 @@
               fill="white" />
           </svg>
         </a>
-        <form class="header__search-form js-form" action="/" method="GET">
+        <form class="header__search-form js-form flex" action="/" method="GET">
           <input class="header__search-input" type="text" placeholder="Поиск по сайту">
-          <a class="header__search-btn btn-reset header__search-btn--right" href="#" type="submit"
+          <a class="header__search-btn btn-reset header__search-btn--right flex" href="#" type="submit"
             aria-label="Кнопка активации поиска">
             <svg class="link__text link__icon" width="23" height="22" viewBox="0 0 23 22" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -319,7 +319,7 @@
       <div class="container">
         <div class="hero__wrapper">
           <div class="hero__content flex">
-            <h2 class="hero__title">Прикоснитесь к&nbsp;прекрасному</h2>
+            <h2 class="section-title hero__title">Прикоснитесь к&nbsp;прекрасному</h2>
             <p class="hero__text">Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых
               заданий создаёт предпосылки для новых предложений</p>
             <button class="btn-reset btn btn--big">Подписаться на рассылку</button>
@@ -610,7 +610,7 @@
               <h3 class="catalog__name">Что мы&nbsp;о&nbsp;нём знаем?</h3>
               <p class="catalog__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что
                 посмотреть!</p>
-              <a class="empty-gallery-btn" href="#gallery" aria-label="Переход в галлерею">В галерею</a>
+              <a class="empty-gallery-btn" href="#gallery" aria-label="Переход в галерею">В галерею</a>
             </div>
           </div>
 
@@ -1023,7 +1023,7 @@
           очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершённой неузнаваемости.
           Подробнее: <a class="projects__link" href="#projects">blanchard-art.ru/projects</a>
         </p>
-      </div>
+
 
       <h3 class="section-title projects__slider-title">Партнёры проектов:</h3>
         <div class="projects__slider-wrap partners-slider">
@@ -1062,6 +1062,7 @@
         </div>
         <button class="nav-btn projects__btn-next " aria-label="К следующему слайду"></button>
       </div>
+    </div>
     </section>
 
     <section class="contacts" id="contacts">
