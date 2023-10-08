@@ -46,7 +46,7 @@
     openBtnClass: "js-open-search", // класс кнопки открытия
     closeBtnClass: "js-close-search", // класс кнопки закрытия
     searchClass: "js-form", // класс формы поиска
-    activeClass: "is-open", // класс открытого состояния
-    hiddenClass: "is-close" // класс закрывающегося состояния (удаляется сразу после закрытия)
+    activeClass: "is-opened", // класс открытого состояния
+    hiddenClass: "is-closed" // класс закрывающегося состояния (удаляется сразу после закрытия)
   });
 })();

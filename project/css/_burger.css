@@ -1,119 +1,115 @@
 .burger {
   position: relative;
-  z-index: 2;
-  width: 36px;
-  height: 28px;
-  padding: 0;
-  border: none;
-  background-color: transparent;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  z-index: 100;
+  overflow: visible;
+  margin: 0;
+  border: 0;
+  font: inherit;
+  text-transform: none;
   cursor: pointer;
+  transition-timing-function: linear;
+  transition-duration: .15s;
+  transition-property: opacity, filter;
+
 }
 
-.burger__line {
-  position: absolute;
-  top: calc(50% - var(--burger-line) / 2);
-  left: 0;
-  width: 100%;
-  height: var(--burger-line);
-  background-color: var(--white);
-  transform: scaleX(calc(28 / 36));
-  transform-origin: left;
-  transition: background-color var(--short), opacity var(--short);
+.burger:focus{
+  outline-offset: 3px;
 }
 
-.burger::before,
-.burger::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: var(--white);
-  transform-origin: left;
-  transition: background-color var(--short);
-}
-
-.burger::before {
-  top: 0;
-}
-
-.burger::after {
-  bottom: 0;
-  transform: scaleX(calc(24 / 36));
-}
-
-.burger:hover .burger__line,
-.burger:hover::before,
-.burger:hover::after {
-  background-color: var(--light-violet);
-}
-
-.burger:focus {
+.burger:active {
   outline: none;
 }
 
-.burger:focus .burger__line,
-.burger:focus::before,
-.burger:focus::after {
-  background-color: var(--violet);
+.burger.is-active:hover:not(:active) {
+  opacity: .7;
 }
 
-.burger.is-opened .burger__line,
-.burger.is-closed .burger__line {
-  opacity: 0;
+.burger.is-active .burger__inner,
+.burger.is-active .burger__inner::before,
+.burger.is-active .burger__inner::after {
+  background-color: var(--white);
 }
 
-.is-opened.burger::before,
-.is-opened.burger::after,
-.is-closed.burger::before,
-.is-closed.burger::after {
-  transform-origin: center;
+.burger__box {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 23px;
 }
 
-.is-opened.burger::before {
-  top: calc(50% - var(--burger-line) / 2);
-  transform: rotate(45deg);
-  animation-name: burger-before-open;
-  animation-duration: var(--middle);
+.burger__inner {
+  top: 50%;
+  display: block;
+  margin-top: -2px;
+  width: 25px;
 }
 
-.is-opened.burger::after {
-  bottom: calc(50% - var(--burger-line) / 2);
-  transform: scaleX(1) rotate(-45deg);
-  animation-name: burger-after-open;
-  animation-duration: var(--middle);
+.burger__inner,
+.burger__inner::before,
+.burger__inner::after {
+  position: absolute;
+  height: 3px;
+  border-radius: 4px;
+
+  background-color: var(--white);
+  transition-timing-function: ease;
+  transition-duration: .15s;
+  transition-property: transform;
 }
 
-.is-closed.burger::before {
-  top: calc(50% - var(--burger-line) / 2);
-  transform: rotate(45deg);
-  animation-name: burger-before-close;
-  animation-duration: var(--middle);
+.burger__inner::before,
+.burger__inner::after {
+  content: "";
+  display: block;
 }
 
-.is-closed.burger::after {
-  bottom: calc(50% - var(--burger-line) / 2);
-  transform: scaleX(1) rotate(-45deg);
-  animation-name: burger-after-close;
-  animation-duration: var(--middle);
+.burger__inner::before {
+  top: -10px;
+  width: 30px;
 }
 
-@media (max-width: 610px) {
-  :root {
-    --burger-line: 2px;
+.burger__inner::after {
+  bottom: -10px;
+  width: 15px;
+}
+
+/*
+   * 3DX
+   */
+.burger--3dx .burger__box {
+  perspective: 80px;
+}
+
+.burger--3dx .burger__inner {
+  transition: transform .15s cubic-bezier(.645, .045, .355, 1), background-color 0s .1s cubic-bezier(.645, .045, .355, 1);
+}
+
+.burger--3dx .burger__inner::before,
+.burger--3dx .burger__inner::after {
+  transition: transform 0s .1s cubic-bezier(.645, .045, .355, 1);
+}
+
+.burger--3dx.is-active .burger__inner {
+  background-color: transparent !important;
+  transform: rotateY(180deg);
+}
+
+.burger--3dx.is-active .burger__inner::before {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+  width: 30px;
+}
+
+.burger--3dx.is-active .burger__inner::after {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+  width: 30px;
+}
+
+@media (any-hover: hover) {
+  .burger:hover:not(:active) {
+    opacity: .7;
   }
-
-  .burger {
-    width: 25px;
-    height: 18px;
-  }
-
-  .burger__line {
-    transform: scaleX(calc(16 / 25));
-  }
-
-  .burger::after {
-    transform: scaleX(calc(10 / 25));
-  }
-
 }

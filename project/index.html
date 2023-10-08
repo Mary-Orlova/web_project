@@ -68,8 +68,11 @@
   <header class="header">
     <div class="header__top">
       <div class="container header__container flex">
-        <button class="btn-reset burger">
-          <span></span>
+        <button class="header__burger btn-reset burger--3dx burger js-burger" data-burger aria-label="Открыть меню" aria-expanded="false">
+          <span class="burger__box">
+            <span class="burger__inner">
+            </span>
+          </span>
         </button>
 
         <a class="header__logo flex">
@@ -112,7 +115,6 @@
           <li class="header__bottom-item">
             <button class="header__bottom-btn js-header-dropdown-btn" data-path="one" aria-label="Кнопка открытия под-меню: Реализм">
               <span class="header__bottom-btn-text">Реализм</span>
-              <span class="header__bottom-icon"></span>
             </button>
 
             <div class="header__dropdown js-header-drop" data-target="one">
@@ -175,7 +177,6 @@
           <li class="header__bottom-item">
             <button class="header__bottom-btn js-header-dropdown-btn" data-path="two" aria-label="Кнопка открытия под-меню: Импрессионизм">
               <span class="header__bottom-btn-text">Импрессионизм</span>
-              <span class="header__bottom-icon"></span>
             </button>
 
             <div class="header__dropdown js-header-drop" data-target="two">
@@ -209,7 +210,6 @@
           <li class="header__bottom-item">
             <button class="header__bottom-btn link js-header-dropdown-btn" data-path="three" aria-label="Кнопка открытия под-меню: Постимпрессионизм">
               <span class="header__bottom-btn-text">Постимпрессионизм</span>
-              <span class="header__bottom-icon"></span>
             </button>
 
             <div class="header__dropdown js-header-drop" data-target="three">
@@ -243,7 +243,6 @@
           <li class="header__bottom-item">
             <button class="header__bottom-btn js-header-dropdown-btn" data-path="four" aria-label="Кнопка открытия под-меню: Авангард">
               <span class="header__bottom-btn-text">Авангард</span>
-              <span class="header__bottom-icon"></span>
             </button>
 
             <div class="header__dropdown js-header-drop" data-target="four">
@@ -274,10 +273,10 @@
             </div>
           </li>
 
+
           <li class="header__bottom-item">
             <button class="header__bottom-btn js-header-dropdown-btn" data-path="five">
               <span class="header__bottom-btn-text">Футуризм</span>
-              <span class="header__bottom-icon"></span>
             </button>
 
             <div class="header__dropdown js-header-drop" data-target="five">
@@ -309,45 +308,33 @@
           </li>
         </ul>
 
-        <a class="btn-reset header__search-btn header__search-open js-open-search flex" href="#" aria-label="Кнопка поиска">
-          <svg class="link__text link__icon" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="6.8678" height="1.71695"
-              transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="currentColor" />
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M12.0967 18C7.53016 18 3.99668 14.3229 3.99668 10C3.99668 5.67715 7.53016 2 12.0967 2C16.6632 2 20.1967 5.67715 20.1967 10C20.1967 14.3229 16.6632 18 12.0967 18ZM12.0967 20C6.57383 20 2.09668 15.5228 2.09668 10C2.09668 4.47715 6.57383 0 12.0967 0C17.6195 0 22.0967 4.47715 22.0967 10C22.0967 15.5228 17.6195 20 12.0967 20Z"
-              fill="white" />
-          </svg>
-        </a>
-        <form class="header__search-form js-form flex" action="/" method="GET">
-          <input class="header__search-input" type="text" placeholder="Поиск по сайту">
-          <a class="btn-reset header__search-btn header__search-btn--right flex" href="#" type="submit"
-            aria-label="Кнопка активации поиска">
-            <svg class="link__text link__icon" width="23" height="22" viewBox="0 0 23 22" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <rect width="6.8678" height="1.71695"
-                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="currentColor"></rect>
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M12.0967 18C7.53016 18 3.99668 14.3229 3.99668 10C3.99668 5.67715 7.53016 2 12.0967 2C16.6632 2 20.1967 5.67715 20.1967 10C20.1967 14.3229 16.6632 18 12.0967 18ZM12.0967 20C6.57383 20 2.09668 15.5228 2.09668 10C2.09668 4.47715 6.57383 0 12.0967 0C17.6195 0 22.0967 4.47715 22.0967 10C22.0967 15.5228 17.6195 20 12.0967 20Z"
-                fill="currentColor"></path>
-            </svg>
+        <div class="header__bottom-search flex">
+          <a class="btn-reset header__search-btn js-open-search" href="#" aria-label="Кнопка поиска">
+            <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect  width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="currentColor"/>
+                <path  d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="currentColor" stroke-width="2"/>
+              </svg>
           </a>
-          <button class="btn-reset header__close-btn js-close-search" type="button"
-            aria-label="Кнопка закрыть окно поиска">
-            <svg class="link__text link__icon" width="23" height="23" viewBox="0 0 23 23" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <rect width="29.567" height="2.9567" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.09375 0)"
-                fill="currentColor"></rect>
-              <rect width="29.567" height="2.9567" transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 20.9074)"
-                fill="currentColor"></rect>
-            </svg>
-          </button>
-        </form>
+          <form class="header__search-form js-form" action="/" method="GET">
+            <input class="header__search-input" type="text" placeholder="Поиск по сайту">
+            <a class="btn-reset header__search-btn header__search-btn--right" href="#" type="submit" aria-label="Кнопка активации поиска">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="currentColor"/>
+                    <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+            </a>
+            <button class="btn-reset header__close-btn js-close-search" type="button" aria-label="Кнопка закрыть окно поиска">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8.9541" y="7.30432" width="11.6645" height="2.33291" transform="rotate(45 8.9541 7.30432)" fill="currentColor"/>
+                <rect x="7.30469" y="15.5524" width="11.6645" height="2.33291" transform="rotate(-45 7.30469 15.5524)" fill="currentColor"/>
+                <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </div>
-
   </header>
-
-
 
   <main class="main">
     <section class="hero top-wrapper__hero" id="hero">
