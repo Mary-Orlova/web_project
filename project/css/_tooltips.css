@@ -1,0 +1,50 @@
+.tooltips {
+  width: 16px;
+  height: 16px;
+  padding: 2px 5px;
+  border: 1px solid var(--deep-lavender);
+  border-radius: 50%;
+  background-image: url('../img/project-tooltipe.svg');
+  background-repeat: no-repeat;
+  background-position: 6px 2px;
+  transition: background-color var(--short), background-image;
+}
+
+.tooltips:focus {
+  outline: none;
+  background-color: var(--light-lavender);
+}
+
+.tooltips:hover {
+  background-color: var(--light-lavender);
+}
+
+.tooltips:active {
+  background-color: var(--deep-lavender);
+  background-image: url('../img/project-tooltipe-white.svg');
+}
+
+
+
+.tippy-box[data-theme~='tooltip'] {
+  border-radius: 0;
+  background-color: var(--deep-lavender);
+  color: var(--white);
+  text-align: center;
+}
+
+.tippy-box[data-theme~='tooltip'][data-placement^='top']>.tippy-arrow::before {
+  border-top-color: var(--deep-lavender);
+}
+
+.tippy-box[data-theme~='tooltip'][data-placement^='bottom']>.tippy-arrow::before {
+  border-bottom-color: var(--deep-lavender);
+}
+
+.tippy-box[data-theme~='tooltip'][data-placement^='left']>.tippy-arrow::before {
+  border-left-color: var(--deep-lavender);
+}
+
+.tippy-box[data-theme~='tooltip'][data-placement^='right']>.tippy-arrow::before {
+  border-right-color: var(--deep-lavender);
+}

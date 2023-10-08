@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Сайт Blanchard</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <link href="css/simplebar.css" rel="stylesheet">
 
   <link rel="stylesheet" href="css/choices.min.css">
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
@@ -18,12 +19,15 @@
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
   <script defer src="js/map.js"></script>
 
+  <script  defer src="js/top-wrapper-swiper.js"></script>
+  <script  defer src="js/dropdown.js"></script>
+  <script  defer src="js/form.js"></script>
+  <script defer src="js/burger.js"></script>
   <script defer src="js/swiper-min.js"></script>
   <script defer src="js/hero-slider.js"></script>
   <script defer src="js/tabs.js"></script>
   <script defer src="js/accordion.min.js"></script>
   <script defer src="js/accordion-init.js"></script>
-  <script defer src="js/burger.js"></script>
   <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 
   <script defer src="js/choices.min.js"></script>
@@ -35,7 +39,7 @@
 
   <script defer src="js/popper.js"></script>
   <script defer src="js/tooltip.js"></script>
-  <script defer src="js/form.js"></script>
+
 
   <style>
     .hero__slider {
@@ -64,18 +68,17 @@
   <header class="header">
     <div class="header__top">
       <div class="container header__container flex">
-        <button class="btn-reset header__burger hamburger--3dx hamburger js-burger" data-burger
-          aria-label="Открыть меню" aria-expanded="false">
-          <span class="hamburger__box">
-            <span class="hamburger__inner"></span>
-          </span>
+        <button class="btn-reset burger">
+          <span></span>
         </button>
 
         <a class="header__logo flex">
-          <img class="header__logo-img" src="img/logo.svg" alt="Логотип Blanchard"></a>
+          <img class="header__logo-img" src="img/logo.svg" alt="Логотип Blanchard">
+        </a>
+
         <nav class="header__nav menu-nav flex">
           <div class="header__menu-wrap js-menu-wrap flex">
-            <ul class="header__menu list-reset flex">
+            <ul class="list-reset header__menu flex">
               <li class="header__menu-item visually-hidden"><a class="header__menu-link" href="#">Главная</a></li>
               <li class="header__menu-item"><a class="header__menu-link" href="#about" aria-label="Перейти в раздел: О нас">О нас</a></li>
               <li class="header__menu-item"><a class="header__menu-link" href="#gallery" aria-label="Перейти в раздел: Галерея">Галерея</a></li>
@@ -87,7 +90,7 @@
           </div>
 
           <div class="header__links-login">
-            <a class="header__login link" href="#" aria-label="Кнопка входа в личный кабинет">
+            <a class="header__login" href="#" aria-label="Кнопка входа в личный кабинет">
               <span class="header__login-content link__text flex">
                 <svg class="header__login-arrow" width="18" height="13" viewBox="0 0 18 13" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -107,14 +110,14 @@
       <div class="container header__bottom-container flex">
         <ul class="list-reset header__bottom-list flex">
           <li class="header__bottom-item">
-            <button class="header__bottom-btn link js-header-dropdown-btn" data-path="one" aria-label="Кнопка открытия под-меню: Реализм">
-              <span class="header__bottom-btn-text link__text">Реализм</span>
-              <span class="header__bottom-item"></span>
+            <button class="header__bottom-btn js-header-dropdown-btn" data-path="one" aria-label="Кнопка открытия под-меню: Реализм">
+              <span class="header__bottom-btn-text">Реализм</span>
+              <span class="header__bottom-icon"></span>
             </button>
 
             <div class="header__dropdown js-header-drop" data-target="one">
               <div class="header__dropdown-wrap" data-simplebar>
-                <ul class="header__dropdown-list list-reset">
+                <ul class="list-reset header__dropdown-list">
                   <li class="header__dropdown-item">
                     <a class="header__dropdown-link" href="#" style="background-image: url('img/Tintoretto.jpg')">
                       <span class="header__dropdown-link-text">Тинторетто</span>
@@ -135,20 +138,49 @@
                       <span class="header__dropdown-link-text">Верроккьо</span>
                     </a>
                   </li>
+
+                  <li class="header__dropdown-item">
+                    <a class="header__dropdown-link" href="#" style="background-image: url('img/Verrocchio.jpg')">
+                      <span class="header__dropdown-link-text">Верроккьо</span>
+                    </a>
+                  </li>
+
+                  <li class="header__dropdown-item">
+                    <a class="header__dropdown-link" href="#" style="background-image: url('img/Verrocchio.jpg')">
+                      <span class="header__dropdown-link-text">Верроккьо</span>
+                    </a>
+                  </li>
+
+                  <li class="header__dropdown-item">
+                    <a class="header__dropdown-link" href="#" style="background-image: url('img/Verrocchio.jpg')">
+                      <span class="header__dropdown-link-text">Верроккьо</span>
+                    </a>
+                  </li>
+                  <li class="header__dropdown-item">
+                    <a class="header__dropdown-link" href="#" style="background-image: url('img/Verrocchio.jpg')">
+                      <span class="header__dropdown-link-text">Верроккьо</span>
+                    </a>
+                  </li>
+                  <li class="header__dropdown-item">
+                    <a class="header__dropdown-link" href="#" style="background-image: url('img/Verrocchio.jpg')">
+                      <span class="header__dropdown-link-text">Верроккьо</span>
+                    </a>
+                  </li>
+
                 </ul>
               </div>
             </div>
           </li>
 
           <li class="header__bottom-item">
-            <button class="header__bottom-btn link js-header-dropdown-btn" data-path="two" aria-label="Кнопка открытия под-меню: Импрессионизм">
-              <span class="header__bottom-btn-text link__text">Импрессионизм</span>
-              <span class="header__bottom-item"></span>
+            <button class="header__bottom-btn js-header-dropdown-btn" data-path="two" aria-label="Кнопка открытия под-меню: Импрессионизм">
+              <span class="header__bottom-btn-text">Импрессионизм</span>
+              <span class="header__bottom-icon"></span>
             </button>
 
             <div class="header__dropdown js-header-drop" data-target="two">
               <div class="header__dropdown-wrap" data-simplebar>
-                <ul class="header__dropdown-list list-reset">
+                <ul class="list-reset header__dropdown-list">
                   <li class="header__dropdown-item">
                     <a class="header__dropdown-link" href="#" style="background-image: url('img/Monet.jpg')">
                       <span class="header__dropdown-link-text">Моне</span>
@@ -176,13 +208,13 @@
 
           <li class="header__bottom-item">
             <button class="header__bottom-btn link js-header-dropdown-btn" data-path="three" aria-label="Кнопка открытия под-меню: Постимпрессионизм">
-              <span class="header__bottom-btn-text link__text">Постимпрессионизм</span>
-              <span class="header__bottom-item"></span>
+              <span class="header__bottom-btn-text">Постимпрессионизм</span>
+              <span class="header__bottom-icon"></span>
             </button>
 
             <div class="header__dropdown js-header-drop" data-target="three">
               <div class="header__dropdown-wrap" data-simplebar>
-                <ul class="header__dropdown-list list-reset">
+                <ul class="list-reset header__dropdown-list">
                   <li class="header__dropdown-item">
                     <a class="header__dropdown-link" href="#" style="background-image: url('img/VanGogh.jpg')">
                       <span class="header__dropdown-link-text">Ван Гог</span>
@@ -209,14 +241,14 @@
           </li>
 
           <li class="header__bottom-item">
-            <button class="header__bottom-btn link js-header-dropdown-btn" data-path="four" aria-label="Кнопка открытия под-меню: Авангард">
-              <span class="header__bottom-btn-text link__text">Авангард</span>
-              <span class="header__bottom-item"></span>
+            <button class="header__bottom-btn js-header-dropdown-btn" data-path="four" aria-label="Кнопка открытия под-меню: Авангард">
+              <span class="header__bottom-btn-text">Авангард</span>
+              <span class="header__bottom-icon"></span>
             </button>
 
             <div class="header__dropdown js-header-drop" data-target="four">
               <div class="header__dropdown-wrap" data-simplebar>
-                <ul class="header__dropdown-list list-reset">
+                <ul class="list-reset header__dropdown-list">
                   <li class="header__dropdown-item">
                     <a class="header__dropdown-link" href="#" style="background-image: url('img/Kandinsky.jpg')">
                       <span class="header__dropdown-link-text">Кандинский</span>
@@ -243,9 +275,9 @@
           </li>
 
           <li class="header__bottom-item">
-            <button class="header__bottom-btn link js-header-dropdown-btn" data-path="five">
-              <span class="header__bottom-btn-text link__text">Футуризм</span>
-              <span class="header__bottom-item"></span>
+            <button class="header__bottom-btn js-header-dropdown-btn" data-path="five">
+              <span class="header__bottom-btn-text">Футуризм</span>
+              <span class="header__bottom-icon"></span>
             </button>
 
             <div class="header__dropdown js-header-drop" data-target="five">
@@ -277,8 +309,8 @@
           </li>
         </ul>
 
-        <a class="header__search-btn btn-reset js-open-search flex" href="#" aria-label="Кнопка поиска">
-          <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <a class="btn-reset header__search-btn header__search-open js-open-search flex" href="#" aria-label="Кнопка поиска">
+          <svg class="link__text link__icon" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="6.8678" height="1.71695"
               transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="currentColor" />
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -288,7 +320,7 @@
         </a>
         <form class="header__search-form js-form flex" action="/" method="GET">
           <input class="header__search-input" type="text" placeholder="Поиск по сайту">
-          <a class="header__search-btn btn-reset header__search-btn--right flex" href="#" type="submit"
+          <a class="btn-reset header__search-btn header__search-btn--right flex" href="#" type="submit"
             aria-label="Кнопка активации поиска">
             <svg class="link__text link__icon" width="23" height="22" viewBox="0 0 23 22" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -299,7 +331,7 @@
                 fill="currentColor"></path>
             </svg>
           </a>
-          <button class="header__close-btn btn-reset js-close-search" type="button"
+          <button class="btn-reset header__close-btn js-close-search" type="button"
             aria-label="Кнопка закрыть окно поиска">
             <svg class="link__text link__icon" width="23" height="23" viewBox="0 0 23 23" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -312,10 +344,13 @@
         </form>
       </div>
     </div>
+
   </header>
 
+
+
   <main class="main">
-    <section class="hero">
+    <section class="hero top-wrapper__hero" id="hero">
       <div class="container">
         <div class="hero__wrapper">
           <div class="hero__content flex">
@@ -336,6 +371,14 @@
       </div>
     </section>
 
+    <div class="top-wrapper__slider js-back-slider">
+      <div class="swiper-wrapper">
+        <div class="top-wrapper__slide top-wrapper__slide_one swiper-slide"></div>
+        <div class="top-wrapper__slide top-wrapper__slide_two swiper-slide"></div>
+        <div class="top-wrapper__slide top-wrapper__slide_three swiper-slide"></div>
+      </div>
+    </div>
+
     <section class="about" id="about">
       <div class="container">
         <h2 class="section-title about__title">О&nbsp;нас</h2>
@@ -351,6 +394,7 @@
         </p>
       </div>
     </section>
+
 
     <section class="gallery" id="gallery">
       <div class="container gallery__container">
@@ -610,7 +654,7 @@
               <h3 class="catalog__name">Что мы&nbsp;о&nbsp;нём знаем?</h3>
               <p class="catalog__descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что
                 посмотреть!</p>
-              <a class="empty-gallery-btn" href="#gallery" aria-label="Переход в галерею">В галерею</a>
+              <a class="link empty-gallery-btn" href="#gallery" aria-label="Переход в галерею">В галерею</a>
             </div>
           </div>
 

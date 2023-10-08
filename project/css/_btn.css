@@ -1,4 +1,4 @@
-.btn {
+/* .btn {
   padding: 20px 38px;
   border-radius: 16px;
   font-size: 16px;
@@ -31,10 +31,10 @@
 
 .btn:active {
   background-color: var(--dark-orange);
-}
+} */
 
 
-@media (any-hover: hover) {
+/* @media (any-hover: hover) {
   .btn:hover:not(:active) {
     background-color: var(--transp-orange);
   }
@@ -43,4 +43,4 @@
     color: var(--white);
     background-color: var(--dark-gray);
   }
-}
+} */

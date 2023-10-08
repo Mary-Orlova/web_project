@@ -1,8 +1,27 @@
-@media (max-width:1024px) {
+/* @media (max-width:1024px) {
 
   .header__burger {
     display: inline-block;
   }
 
-}
+} */
 
+/* @media (max-width: 610px) {
+  :root {
+    --burger-line: 2px;
+  }
+
+  .burger {
+    width: 25px;
+    height: 18px;
+  }
+
+  .burger__line {
+    transform: scaleX(calc(16 / 25));
+  }
+
+  .burger::after {
+    transform: scaleX(calc(10 / 25));
+  }
+
+} */

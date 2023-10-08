@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -21,7 +22,7 @@ h5 {
   margin: 0;
 }
 
-input, button, span {
+a, input, button, span {
   outline: none;
 }
 
@@ -37,8 +38,8 @@ svg {
   max-width: 100%;
 }
 
-.html {
-  scroll-behavior: smooth;
+[class*="ground-pane"]{
+  filter: grayscale(1);
 }
 
 .visually-hidden {
@@ -60,7 +61,7 @@ svg {
   font-family: "Open Sans", sans-serif;
   background-color: transparent;
   cursor: pointer;
-  transition: background-color .3s ease-in-out;
+  transition: background-color var(--short) ease-in-out;
 }
 
 .list-reset {
@@ -69,6 +70,10 @@ svg {
   list-style: none;
 }
 
+.input-reset {
+  border: 0;
+  border-color: unset;
+}
 
 body {
   min-width: var(--body--min-width);

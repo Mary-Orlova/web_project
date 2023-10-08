@@ -3,24 +3,42 @@
 ymaps.ready(init);
 function init(){
 // Создание карты.
-    var myMap = new ymaps.Map("Mymap1", {
+    var mapElem = document.querySelector("#map");
+    var myMap = new ymaps.Map("map", {
 // Координаты центра карты.
 // Порядок по умолчанию: «широта, долгота».
 // Чтобы не определять координаты центра карты вручную,
 // воспользуйтесь инструментом Определение координат.
-    center: [48.856663, 2.351556],
+    center: [55.75846806898367, 37.60108849999989],
 // Уровень масштабирования. Допустимые значения:
 // от 0 (весь мир) до 19.
-    zoom: 12
-});
+    zoom: 14,
+    controls: ["geolocationControl", "zoomControl"]
+  },
 
-var myPlacemark = new ymaps.Placemark([48.872185, 2.354224], {}, {
-    iconLayout: 'default#image',
-    iconImageHref: '../img/location.svg',
-    iconImageSize: [30, 42],
-    iconImageOffset: [-3, -42]
+
+  // отвечает за активности слева на карте-масштаб/поиск и тд
+  {
+    suppressMapOpenBlock: true,
+    geolocationControlSize: "large",
+    geolocationControlPosition: { top: "300px", right: "20px" },
+    geolocationControlFloat: "none",
+    zoomControlSize: "small",
+    zoomControlFloat: "none",
+    zoomControlPosition: { top: "200px", right: "20px" }
+  }
+  );
+
+
+// точка расположения
+var myPlacemark = new ymaps.Placemark([55.76048628921842, 37.6150372910766], {}, {
+    iconLayout: "default#image",
+    iconImageHref: './img/Mymap.svg',
+    iconImageSize: [20, 20],
+    iconImageOffset: [-20, -40]
 });
 
 // Размещение геообъекта на карте.
 myMap.geoObjects.add(myPlacemark);
+myMap.container.fitToViewport();
 }

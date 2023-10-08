@@ -1,6 +1,5 @@
-const button = document.querySelector('#button');
-const tooltip = document.querySelector('#tooltip');
-
-Popper.createPopper(button, tooltip, {
-	placement: 'top',
-});
+(() => {
+  tippy('.js-tooltip-btn', {
+    theme: 'tooltip',
+  });
+})();
