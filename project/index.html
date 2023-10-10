@@ -19,7 +19,7 @@
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
   <script defer src="js/map.js"></script>
 
-  <script  defer src="js/top-wrapper-swiper.js"></script>
+
   <script  defer src="js/dropdown.js"></script>
   <script  defer src="js/form.js"></script>
   <script defer src="js/burger.js"></script>
@@ -337,16 +337,17 @@
   </header>
 
   <main class="main">
-    <section class="hero top-wrapper__hero" id="hero">
-      <div class="container">
-        <div class="hero__wrapper">
-          <div class="hero__content flex">
-            <h2 class="section-title hero__title">Прикоснитесь к&nbsp;прекрасному</h2>
-            <p class="hero__text">Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых
-              заданий создаёт предпосылки для новых предложений</p>
-            <button class="btn-reset btn btn--big">Подписаться на рассылку</button>
-          </div>
-          <div class="hero__slider js-hero--slider">
+    <section class="hero" id="hero">
+      <div class="container hero__container">
+        <div class="hero__content flex">
+          <h2 class="section-title hero__title">Прикоснитесь к&nbsp;прекрасному</h2>
+          <p class="hero__text">Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых
+            заданий создаёт предпосылки для новых предложений</p>
+          <button class="btn-reset hero__btn">Подписаться на рассылку</button>
+        </div>
+
+        <div class="hero__slider-wrapper">
+          <div class="hero__slider js-hero--slider hero__slider-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide hero__slide hero__slide--one"></div>
               <div class="swiper-slide hero__slide hero__slide--two"></div>
@@ -354,17 +355,9 @@
             </div>
             <div class="hero__slider-pagination swiper-pagination js-hero-pagination"></div>
           </div>
+          </div>
         </div>
-      </div>
     </section>
-
-    <div class="top-wrapper__slider js-back-slider">
-      <div class="swiper-wrapper">
-        <div class="top-wrapper__slide top-wrapper__slide_one swiper-slide"></div>
-        <div class="top-wrapper__slide top-wrapper__slide_two swiper-slide"></div>
-        <div class="top-wrapper__slide top-wrapper__slide_three swiper-slide"></div>
-      </div>
-    </div>
 
     <section class="about" id="about">
       <div class="container">

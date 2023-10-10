@@ -1,3 +1,125 @@
 .hero {
-  background-image: url('../img/hero-slider-one@1920.jpg');
+  margin-bottom: 50px;
+}
+
+.hero__container {
+  padding-top: 62px;
+  padding-bottom: 150px;
+}
+
+.hero__wrapper {
+  position: relative;
+}
+
+.hero__content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  color: var(--white);
+}
+
+.hero__title {
+  display: inline-block;
+  font-size: var(--fs-72px);
+  font-weight: var(--bold);
+  color: var(--white);
+  max-width: 40%;
+  font-size: var(--fs-72);
+  font-weight: var(--extrabold);
+  line-height: 85px;
+}
+
+.hero__text {
+  color: var(--white);
+  font-size: var(--fs-18px);
+  font-weight: var(--bold);
+  line-height: var(--lh-30);
+  max-width: 36%;
+  margin-bottom: 92px;
+  font-size: 24px;
+}
+
+.hero__btn {
+  padding: 20px 20px;
+  color: var(--white);
+  font-size: var(--fs-18px);
+  font-weight: var(--bold);
+  line-height: var(--lh-30);
+  background-color: var(--deep-lavender);
+  border-radius: 100px;
+  border: 3px solid var(--deep-lavender);
+  text-align: center;
+  max-width: 20%;
+}
+
+.hero__btn:focus:not(:active) {
+  outline: 2px solid var(--lavender);
+  border-color: var(--white);
+}
+
+.hero__btn:active {
+  border-color: var(--light-lavender);
+  background-color: var(--violet);
+}
+
+.hero__slider-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.hero__slide {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--gray);
+  height: 800px;
+}
+
+.hero__slide--one {
+  background-image: url("../img/hero-slider-one@1920.jpg");
+}
+
+.hero__slide--two {
+  background-image: url("../img/hero-slider-two@1920.jpg");
+}
+
+.hero__slide--three {
+  background-image: url("../img/hero-slider-three@1920.jpg");
+}
+
+.hero__slider-pagination.swiper-pagination {
+  width: 10px;
+  height: 10px;
+  background-color: var(--white);
+}
+
+.slider.hero__slider-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-animation-name: resize;
+  animation-name: resize;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@media (any-hover: hover) {
+  .hero__btn:hover {
+    border-color: var(--light-lavender);
+  }
 }

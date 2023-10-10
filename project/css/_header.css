@@ -149,7 +149,7 @@
   -ms-flex-pack: justify;
 
   flex-wrap: wrap;
-  width: calc(1250 / 1600 * 100%);
+  width: calc(1037 / 1600 * 100%);
   color: var(--white);
 }
 
@@ -158,7 +158,6 @@
   color: var(--white);
   padding-top: 23px;
   padding-bottom: 28px;
-  margin-right: 15px;
 }
 
 .header__bottom-btn {

@@ -1,0 +1,46 @@
+/* .btn {
+  padding: 20px 38px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: var(--bold);
+  line-height: 20px;
+  color: var(--white);
+  outline: none;
+  background-color: var(--orange);
+  transition: background-color var(--short);
+  text-align: center;
+}
+
+.btn:focus {
+  background-color: var(--transp-orange);
+}
+
+.btn:active {
+  background-color: var(--dark-orange);
+}
+
+.btn--big {
+  padding: 24px 35px;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.btn:focus {
+  background-color: var(--orange);
+}
+
+.btn:active {
+  background-color: var(--dark-orange);
+} */
+
+
+/* @media (any-hover: hover) {
+  .btn:hover:not(:active) {
+    background-color: var(--transp-orange);
+  }
+
+  .btn--consultation:hover:not(:active) {
+    color: var(--white);
+    background-color: var(--dark-gray);
+  }
+} */
