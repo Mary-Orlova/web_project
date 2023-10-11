@@ -4,9 +4,12 @@
   --semibold: 600;
   --bold: 700;
   --dafault-fs: 18px;
+  --fs-48: 48px;
   --fs-72: 72px;
   --default-lh: 24.5px;
   --lh-30: 30px;
+  --lh-32: 32px;
+  --lh-98: 98px;
 
 
   /* Цвет */
@@ -35,4 +38,5 @@
   /* Анимация */
   --short: 0.3s;
   --medium: 0.5s;
+  --long: 8s;
 }

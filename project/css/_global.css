@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+
   scroll-behavior: smooth;
 }
 
@@ -22,7 +23,10 @@ h5 {
   margin: 0;
 }
 
-a, input, button, span {
+a,
+input,
+button,
+span {
   outline: none;
 }
 
@@ -38,7 +42,7 @@ svg {
   max-width: 100%;
 }
 
-[class*="ground-pane"]{
+[class*="ground-pane"] {
   filter: grayscale(1);
 }
 
@@ -109,16 +113,15 @@ body {
 .section-title {
   margin-top: 0;
   margin-bottom: 16px;
-  font-style: normal;
-  font-weight: var(--regular);
   font-size: 48px;
-  line-height: 65px;
+  font-weight: var(--regular);
 }
 
 .section-descr {
+  max-width: 1080px;
   margin-top: 0;
   font-size: 16px;
-  line-height: 32px;
+  font-weight: var(--regular);
+  line-height: var(--lh-32);
   color: var(--black);
 }
-

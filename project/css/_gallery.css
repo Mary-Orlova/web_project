@@ -1,0 +1,33 @@
+.gallery {
+  background-image: url("../img/gallery__background@1920.jpg");
+}
+
+.gallery__container {
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+.gallery__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: calc(400 / 1600 * 100%);
+}
+
+.gallery__title {
+  color: var(--white);
+}
+
+.gallery__select-label {
+  line-height: var(--lh-32);
+  margin-bottom: 10px;
+  color: var(--white);
+}
+
+
+
+

@@ -72,6 +72,7 @@
     opacity: 0;
     transform: scaleX(0);
   }
+}
 
 @keyframes menu-open {
   from {
@@ -169,12 +170,26 @@
   }
 }
 
-@keyframes resize {
+@-webkit-keyframes resize {
   0% {
+    -webkit-transform: scale(1);
     transform: scale(1);
   }
 
   100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes resize  {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
 }
