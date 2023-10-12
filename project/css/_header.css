@@ -178,8 +178,8 @@
   background-color: transparent;
   cursor: pointer;
   -webkit-transition: all ease-in-out .3s;
-       -o-transition: all ease-in-out .3s;
-          transition: all ease-in-out .3s;
+  -o-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
 }
 
 .header__bottom-btn-text {
@@ -197,16 +197,15 @@
   border-top: 1px solid;
   border-right: 1px solid;
   -webkit-transition: -webkit-transform var(--medium) ease;
-       -o-transition:         transform var(--medium) ease;
-          transition: -webkit-transform var(--medium) ease;
-          transition:         transform var(--medium) ease;
-          transition:         transform var(--medium) ease, -webkit-transform var(--medium) ease;
+  -o-transition:  transform var(--medium) ease;
+  transition: -webkit-transform var(--medium) ease;
+  transition: transform var(--medium) ease;
   -webkit-transform: rotate(135deg);
-      -ms-transform: rotate(135deg);
-          transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
   -webkit-transform-origin: center;
-      -ms-transform-origin: center;
-          transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
 }
 
 .header__bottom-btn.is-active .header__bottom-btn-text::after {
@@ -252,7 +251,7 @@
   display: flex;
   flex-direction: row-reverse;
   animation-name: search-open;
-  animation-duration: .3s;
+  animation-duration: var(--short);
 }
 
 .js-open-search.is-opened .header__search-btn {
@@ -279,7 +278,7 @@
 
 .header__search-form.is-closed {
   animation-name: search-close;
-  animation-duration: .3s;
+  animation-duration: var(--short);
 }
 
 .header__search-input {
@@ -304,6 +303,7 @@
   opacity: 0;
 }
 
+
 /* header__dropdown */
 .header__dropdown {
   position: absolute;
@@ -315,8 +315,8 @@
   background-color: var(--violet-dark);
   background-color: var(--gray-dropdown);
   -webkit-transform: translateY(100%);
-      -ms-transform: translateY(100%);
-          transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
 }
 
 .header__dropdown-wrap {
@@ -328,17 +328,17 @@
 .header__dropdown.is-active {
   display: block;
   -webkit-animation-name: dropdownOpen;
-          animation-name: dropdownOpen;
+  animation-name: dropdownOpen;
   -webkit-animation-duration: var(--medium);
-          animation-duration: var(--medium);
+  animation-duration: var(--medium);
 }
 
 .header__dropdown.is-disabled {
   display: block;
   -webkit-animation-name: dropdownClose;
-          animation-name: dropdownClose;
+  animation-name: dropdownClose;
   -webkit-animation-duration: var(--medium);
-          animation-duration: var(--medium);
+  animation-duration: var(--medium);
 }
 
 .header__dropdown-list {
@@ -369,8 +369,8 @@
   background-origin: border-box;
   background-size: cover;
   -webkit-transition: border-color var(--short) ease;
-       -o-transition: border-color var(--short) ease;
-          transition: border-color var(--short);
+  -o-transition: border-color var(--short) ease;
+  transition: border-color var(--short);
 }
 
 .header__dropdown-link::before {
@@ -382,8 +382,8 @@
   height: 100%;
   opacity: 0;
   -webkit-transition: opacity var(--short) ease;
-       -o-transition: opacity var(--short) ease;
-          transition: opacity var(--short);
+  -o-transition: opacity var(--short) ease;
+  transition: opacity var(--short);
 }
 
 .header__dropdown-link-text {

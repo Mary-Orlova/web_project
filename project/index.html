@@ -21,7 +21,7 @@
 
 
   <script  defer src="js/dropdown.js"></script>
-  <script  defer src="js/form.js"></script>
+  <script  defer src="js/form-search.js"></script>
   <script defer src="js/burger.js"></script>
   <script defer src="js/swiper-min.js"></script>
   <script defer src="js/hero-slider.js"></script>
@@ -45,6 +45,7 @@
     .hero__slider {
       -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
     }
+
 
     .socials__link svg {
       overflow-x: visible;
@@ -341,14 +342,14 @@
       <div class="container hero__container">
         <div class="hero__content flex">
           <h2 class="section-title hero__title">Прикоснитесь к&nbsp;прекрасному</h2>
-          <p class="hero__text">Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых
+          <p class="section-descr hero__text">Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых
             заданий создаёт предпосылки для новых предложений</p>
-          <button class="btn-reset hero__btn">Подписаться на рассылку</button>
+          <a class="btn-reset hero__btn" href="#contacts">Подписаться на рассылку</a>
         </div>
       </div>
 
         <div class="hero__slider-wrapper">
-          <div class="js-hero--slider hero__slider-container hero__slider">
+          <div class="js-hero--slider hero__slider hero__slider-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide  hero__slide--one"></div>
               <div class="swiper-slide  hero__slide--two"></div>
@@ -356,7 +357,7 @@
             </div>
             <div class="hero__slider-pagination swiper-pagination js-hero-pagination"></div>
           </div>
-          </div>
+        </div>
     </section>
 
     <section class="about-us" id="about-us">

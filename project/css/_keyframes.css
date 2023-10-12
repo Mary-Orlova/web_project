@@ -62,7 +62,31 @@
   }
 }
 
+@-webkit-keyframes search-open {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
 @keyframes search-close {
+  from {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+}
+
+@-webkit-keyframes search-close {
   from {
     opacity: 1;
     transform: scaleX(1);

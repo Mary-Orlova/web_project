@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-
   scroll-behavior: smooth;
 }
 
@@ -124,4 +123,8 @@ body {
   font-weight: var(--regular);
   line-height: var(--lh-32);
   color: var(--black);
+}
+
+.section-descr:last-child {
+margin-bottom: 0;
 }
