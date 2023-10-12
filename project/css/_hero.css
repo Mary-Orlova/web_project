@@ -1,14 +1,10 @@
 .hero__container {
-  padding-top: 60px;
-  padding-bottom: 134px;
-}
-
-.hero__wrapper {
   position: relative;
+  padding-top: 62px;
+  padding-bottom: 122px;
 }
 
 .hero__content {
-  max-width: 597px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -17,6 +13,7 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
   color: var(--white);
+  width: 597px;
 }
 
 .hero__title {
@@ -26,6 +23,7 @@
   color: var(--white);
   font-size: var(--fs-72);
   line-height: var(--lh-98);
+
 }
 
 .hero__text {
@@ -68,38 +66,13 @@
   overflow: hidden;
 }
 
-.hero__slide {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: var(--gray);
-  height: 800px;
-}
-
-.hero__slide--one {
-  background-image: url("../img/hero-slider-one@1920.jpg");
-}
-
-.hero__slide--two {
-  background-image: url("../img/hero-slider-two@1920.jpg");
-}
-
-.hero__slide--three {
-  background-image: url("../img/hero-slider-three@1920.jpg");
-}
-
-.hero__slider-pagination.swiper-pagination {
-  width: 10px;
-  height: 10px;
-  background-color: var(--white);
-}
-
 .hero__slider.hero__slider-container {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+
   -webkit-animation-name: resize;
   animation-name: resize;
   -webkit-animation-duration: var(--long);
@@ -108,6 +81,39 @@
   animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
   animation-direction: alternate;
+}
+
+.hero__slider {
+  max-height: 800px;
+}
+
+.hero__slide {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: contain;
+  background-color: var(--gray);
+}
+
+.hero__slide--one {
+  height: 800px;
+  background-image: url("../img/hero-slider-one@1920.jpg");
+}
+
+.hero__slide--two {
+  height: 800px;
+  background-image: url("../img/hero-slider-two@1920.jpg");
+}
+
+.hero__slide--three {
+  height: 800px;
+  background-image: url("../img/hero-slider-three@1920.jpg");
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: var(--white);
 }
 
 @media (any-hover: hover) {
