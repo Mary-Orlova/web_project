@@ -24,7 +24,9 @@
   <script  defer src="js/form-search.js"></script>
   <script defer src="js/burger.js"></script>
   <script defer src="js/swiper-min.js"></script>
-  <script defer src="js/hero-slider.js"></script>
+  <script defer src="js/slider.js"></script>
+  <script defer src="js/choice.js"></script>
+  <script defer src="js/modal.js"></script>
   <script defer src="js/tabs.js"></script>
   <script defer src="js/accordion.min.js"></script>
   <script defer src="js/accordion-init.js"></script>
@@ -46,7 +48,6 @@
       -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
     }
 
-
     .socials__link svg {
       overflow-x: visible;
       overflow-y: visible;
@@ -61,6 +62,7 @@
     .ac-trigger {
       color: var(--black);
     }
+
   </style>
 </head>
 
@@ -376,53 +378,55 @@
       </div>
     </section>
 
-
     <section class="gallery" id="gallery">
       <div class="container gallery__container">
-        <div class="gallery__content-wrapper">
-          <div class="gallery__left">
+        <div class="gallery__content-wrapper flex">
+          <div class="gallery__left flex">
             <h2 class="section-title gallery__title">Галерея</h2>
-            <div class="gallery__select" name="select">
-              <label class="gallery__select-label">Фильтр:</label>
-              <select class="choice">
+
+            <div class="gallery__filter" name="select">
+              <form class="gallery__filter-form flex">
+              <label class="gallery__filter-label">Фильтр:</label>
+              <select class="gallery__filter-select">
                 <option value="painting">Живопись</option>
                 <option value="drawing">Рисунок</option>
                 <option value="sculpture">Скульптура</option>
               </select>
+              </form>
+            </div>
 
-              <div class="gallery__checkbox">
-                <form class="gallery__wrapper flex century" action="/">
-                  <label class="gallery__label centery__label" for="XIX">
-                    <input class="gallery__input visually-hidden" type="checkbox" name="XIX" id="XIX">
-                    <span class="gallery__visible-checkbox"></span>
-                    <span class="gallery__text">XIX век</span>
-                  </label>
+            <form class="gallery__checkbox flex" action="/">
+              <label class="gallery__checkbox-label" for="XIX">
+                <input class="checkbox__item visually-hidden" type="checkbox" name="XIX" id="XIX">
+                <span class="checkbox__visible"></span>
+                <span class="checkbox__text">XIX век</span>
+              </label>
 
-                  <label class="gallery__label centery__label" for="XX">
-                    <input class="gallery__input visually-hidden" type="checkbox" name="XX" id="XX">
-                    <span class="gallery__visible-checkbox"></span>
-                    <span class="gallery__text">XX век</span>
-                  </label>
+               <label class="gallery__checkbox-label" for="XX">
+                <input class="checkbox__item visually-hidden" type="checkbox" name="XX" id="XX">
+                <span class="checkbox__visible"></span>
+                <span class="checkbox__text">XX век</span>
+              </label>
 
-                  <label class="gallery__label centery__label" for="here_and_now">
-                    <input class="gallery__input visually-hidden" type="checkbox" name="here_and_now" id="here_and_now">
-                    <span class="gallery__visible-checkbox"></span>
-                    <span class="gallery__text">Современность</span>
-                  </label>
-                </form>
-              </div>
+              <label class="gallery__checkbox-label" for="here_and_now">
+                <input class="checkbox__item visually-hidden" type="checkbox" name="here_and_now" id="here_and_now">
+                <span class="checkbox__visible"></span>
+                <span class="checkbox__text">Современность</span>
+              </label>
+            </form>
+
             </div>
 
             <div class="gallery__swiper">
               <div class="gallery__nav">
-                <button class="nav-btn gallery__prev" aria-label="К предыдущему слайду"></button>
-                <div class="gallery__pagination"></div>
-                <button class="nav-btn gallery__next" aria-label="К следующему слайду"></button>
+                <button class="navigation-btn navigation-btn_gallery-prev gallery__prev js-gallery-prev" aria-label="К предыдущему слайду"></button>
+                <div class="gallery__pagination js-gallery-pagination"></div>
+                <button class="navigation-btn navigation-btn_gallery-next gallery__next js-gallery-next" aria-label="К следующему слайду"></button>
               </div>
 
-              <div class="swiper__container slides-container">
-                <div class="swiper__wrapper gallery__swiper-wrapper">
-                  <a class="swiper__slide gallery-slide" data-modal-target="#torso"
+              <div class="gallery__slides-container js-gallery-slider">
+                <div class="swiper-wrapper">
+                  <a class="swiper-slide gallery__slide" data-modal-target="#torso"
                     aria-label="Картина Казимир Малевич-Торс">
                     <picture>
                       <source srcset="img/gallery-slide-1@320.jpg" media="(max-width: 320px)">
@@ -432,7 +436,7 @@
                     </picture>
                   </a>
 
-                  <a class="swiper-slide gallery-slide" data-modal-target="#wooman_rake"
+                  <a class="swiper-slide gallery__slide" data-modal-target="#wooman_rake"
                     aria-label="Картина Казимира Малевича-Женщина с граблями">
                     <picture>
                       <source srcset="img/gallery-slide-2@320.jpg" media="(max-width: 320px)">
@@ -443,7 +447,7 @@
                     </picture>
                   </a>
 
-                  <a class="swiper-slide gallery-slide" data-modal-target="#harvest"
+                  <a class="swiper-slide gallery__slide" data-modal-target="#harvest"
                     aria-label="Картина Казимира Малевича-Сбор урожая">
                     <picture>
                       <source srcset="img/gallery-slide-3@320.jpg" media="(max-width: 320px)">
@@ -454,7 +458,7 @@
                     </picture>
                   </a>
 
-                  <a class="swiper-slide gallery-slide" href="#" aria-label="Картина Казимира Малевича-Супрематизм">
+                  <a class="swiper-slide gallery__slide" href="#" aria-label="Картина Казимира Малевича-Супрематизм">
                     <picture>
                       <source srcset="img/gallery-slide-4@320.jpg" media="(max-width: 320px)">
                       <source srcset="img/gallery-slide-4@768.jpg" media="(max-width: 768px)">
@@ -464,7 +468,7 @@
                     </picture>
                   </a>
 
-                  <a class="swiper-slide gallery-slide" href="#"
+                  <a class="swiper-slide gallery__slide" href="#"
                     aria-label="Картина Казимира Малевича-Женщина с вёдрами">
                     <picture>
                       <source srcset="img/gallery-slide-5@320.jpg" media="(max-width: 320px)">
@@ -475,7 +479,7 @@
                     </picture>
                   </a>
 
-                  <a class="swiper-slide gallery-slide" href="#"
+                  <a class="swiper-slide gallery__slide" href="#"
                     aria-label="Картина Казимира Малевича-Супрематическая конструкция">
                     <picture>
                       <source srcset="img/gallery-slide-6@320.jpg" media="(max-width: 320px)">
@@ -496,7 +500,7 @@
             <picture>
               <source srcset="img/gallery-modal-1@320.jpg" media="(max-width: 620px)">
               <source srcset="img/gallery-modal-1@768.jpg" media="(max-width: 768px)">
-              <source srcset="img/img/gallery-modal-1@1024.jpg" media="(max-width: 1368px)">
+              <source srcset="img/gallery-modal-1@1024.jpg" media="(max-width: 1368px)">
               <img class="modal-img" src="img/gallery-modal-1@1920.jpg" alt>
             </picture>
             <div class="modal-content flex">
@@ -552,10 +556,9 @@
             </div>
           </div>
         </div>
-      </div>
     </section>
 
-    <section class="catalog" id="catalog">
+     <!-- <section class="catalog" id="catalog">
       <div class="container">
         <h2 class="section-title catalog__title">Каталог</h2>
         <p class="section-descr galery__descr">
@@ -873,9 +876,9 @@
           </ul>
         </div>
       </div>
-    </section>
+    </section>  -->
 
-    <section class="events" id="events">
+    <!-- <section class="events" id="events">
       <div class="container">
         <h2 class="section-title events__title">События</h2>
 
@@ -1003,9 +1006,9 @@
         </div>
         <button class="nav-btn nav-btn_next" aria-label="К следующему слайду"></button>
       </div>
-    </section>
+    </section> -->
 
-    <section class="projects" id="projects">
+    <!-- <section class="projects" id="projects">
       <div class="container">
         <h2 class="section-title projects__title">Проекты</h2>
         <p class="section-descr projects__descr">
@@ -1088,9 +1091,9 @@
         <button class="nav-btn projects__btn-next " aria-label="К следующему слайду"></button>
       </div>
     </div>
-    </section>
+    </section> -->
 
-    <section class="contacts" id="contacts">
+    <!-- <section class="contacts" id="contacts">
       <div class="container contacts__container">
         <div class="contacts__top flex">
           <div class="contacts__adress">
@@ -1153,9 +1156,9 @@
                   style="width: 100%; height: 700px">
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer__container flex">
         <div class="footer__wrapper">
           <a class="footer__logo" href="#">
@@ -1181,7 +1184,7 @@
           </ul>
         </div>
       </div>
-    </footer>
+    </footer> -->
   </main>
 </body>
 </html>
