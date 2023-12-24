@@ -8,7 +8,7 @@
 }
 
 .catalog__descr {
-  padding-top: 3px;
+  /* padding-top: 7px; */
   font-size: var(--fs-16);
   line-height: 32px;
   margin-bottom: 40px;
@@ -41,9 +41,10 @@
 }
 
 .catalog__years {
+  display: block;
   font-size: var(--fs-12);
   color: var(--gray);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .catalog__painter {
