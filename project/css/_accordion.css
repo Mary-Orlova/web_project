@@ -22,6 +22,19 @@
 
 .accordion__btn {
   position: relative;
+  z-index: 1;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.accordion__item-title:focus:not(:active) {
+  color: var(--white);
+  outline: none;
+}
+
+.accordion__btn {
+  position: relative;
   display: block;
   width: 100%;
   min-height: 110px;
@@ -40,6 +53,10 @@
   color: var(--violet);
 }
 
+.is-active .accordion__item-title {
+  border-bottom: 1px solid var(--violet);
+}
+
 .accordion__btn::after {
   content: "";
   position: absolute;
@@ -53,53 +70,55 @@
 }
 
 .accordion__btn:focus:after {
-  background-image: url("../img/arrow-focus.svg");
+  background-image: url("../img/arrow-up.svg");
 }
 
 .accordion__question:first-child .accordion__item-title {
   border-top: 1px solid var(--light-gray);
 }
 
-/* .accordion__content {
-  overflow: hidden;
-  visibility: hidden;
-  margin-top: -1px;
-  border-bottom: 1px solid transparent;
+.accordion__tabs-list {
+  padding-top: 25px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 600px;
 }
 
-.is-active .accordion__content {
-  visibility: visible;
-  border-color: var(--light-gray);
-} */
+.accordion__tabs-item {
+  max-width: 33%;
+  height: 60px;
+    /* margin: 0; */
+  font-size: 16px;
+  font-weight: var(--regular);
+  line-height: 32px;
+  color: var(--black);
+}
 
 .ac-panel {
-  opacity: 0;
   visibility: hidden;
+  opacity: 0;
   transition: opacity var(--short)ease-in, visibility var(--short) ease-in;
   transition-delay: var(--short);
 }
 
+.is-active .accordion__btn {
+  color: var(--violet);
+  border-top: 1px solid var(--violet);
+}
 .is-active .ac-panel {
   top: 0;
-  margin-bottom: 40px;
-  opacity: 1;
   visibility: visible;
-}
-
-.accordion__text {
-  margin: 0;
-  font-weight: var(--regular);
-  font-size: 16px;
-  line-height: 32px;
+  /* margin-bottom: 40px; */
+  opacity: 1;
 }
 
 .accordion__content-wrap--empty {
+  display: -webkit-box;
+  display: -ms-flexbox;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
-  flex-direction: row;
-  display: -webkit-box;
-  display: -ms-flexbox;
+      flex-direction: row;
 }
 
 @media (any-hover: hover) {
@@ -112,8 +131,6 @@
   }
 
   .accordion__btn:hover:not(:active)::after {
-    background-image: url("../img/arrow-up.svg");
+    background-image: url("../img/arrow-focus.svg");
   }
-
 }
-

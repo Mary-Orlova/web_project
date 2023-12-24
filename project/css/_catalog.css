@@ -8,6 +8,7 @@
 }
 
 .catalog__descr {
+  padding-top: 3px;
   font-size: var(--fs-16);
   line-height: 32px;
   margin-bottom: 40px;
@@ -21,21 +22,28 @@
   justify-content: space-between;
 }
 
+.catalog__content {
+  width: calc(750 / 1600 * 100%);
+}
+
+.catalog__accordion {
+  width: calc(800 / 1600 * 100%);
+}
+
 .catalog__img {
-  margin-bottom: 30px;
-  /* width: 100%; */
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .catalog__name {
   font-size: var(--fs-24);
-  margin-bottom: 6px;
+  font-weight: var(--semibold);
 }
 
 .catalog__years {
   font-size: var(--fs-12);
   color: var(--gray);
-  margin-bottom: 70px;
-  line-height: 0;
+  margin-bottom: 15px;
 }
 
 .catalog__painter {
@@ -47,17 +55,7 @@
   display: block;
   -webkit-animation-name: fade-in;
   animation-name: fade-in;
-  -webkit-animation-name: fade-in;
-  animation-name: fade-in;
   -webkit-animation-duration: var(--medium);
   animation-duration: var(--medium);
-}
-
-.catalog__content {
-  width: calc(750 / 1600 * 100%);
-}
-
-.catalog__accordion {
-  width: calc(800 / 1600 * 100%);
 }
 
