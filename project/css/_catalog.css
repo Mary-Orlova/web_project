@@ -8,10 +8,10 @@
 }
 
 .catalog__descr {
+  margin-bottom: 40px;
   /* padding-top: 7px; */
   font-size: var(--fs-16);
   line-height: 32px;
-  margin-bottom: 40px;
 }
 
 .catalog__wrap {
@@ -31,8 +31,8 @@
 }
 
 .catalog__img {
-  margin-bottom: 20px;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .catalog__name {
@@ -42,9 +42,9 @@
 
 .catalog__years {
   display: block;
+  margin-bottom: 10px;
   font-size: var(--fs-12);
   color: var(--gray);
-  margin-bottom: 10px;
 }
 
 .catalog__painter {
@@ -55,8 +55,15 @@
 .catalog__painter.active {
   display: block;
   -webkit-animation-name: fade-in;
-  animation-name: fade-in;
+          animation-name: fade-in;
   -webkit-animation-duration: var(--medium);
-  animation-duration: var(--medium);
+          animation-duration: var(--medium);
 }
 
+.catalog__name-empty {
+  margin-bottom: 10px;
+}
+
+.catalog__descr-empty {
+  line-height: 0;
+}
