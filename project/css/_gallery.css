@@ -45,6 +45,15 @@
       flex-direction: column;
 }
 
+.choices:focus:not(:active) {
+  background-color: unset;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  background-color: var(--light-white);
+}
+
 .gallery__filter-label {
   position: relative;
   margin-bottom: 10px;
@@ -439,5 +448,9 @@ body {
     -webkit-transition: all var(-short) ease-in-out;
          -o-transition: all var(-short) ease-in-out;
             transition: all var(-short) ease-in-out;
+  }
+
+  .choices:hover {
+    background-color: var(--light-white);
   }
 }
