@@ -25,7 +25,6 @@
   <script defer src="js/burger.js"></script>
   <script defer src="js/swiper-min.js"></script>
   <script defer src="js/slider.js"></script>
-  <script defer src="js/choice.js"></script>
   <script defer src="js/modal.js"></script>
   <script defer src="js/tabs.js"></script>
   <script defer src="js/accordion.min.js"></script>
@@ -959,14 +958,13 @@
     </section>
 
     <section class="events" id="events">
-      <div class="container">
+      <div class="container events__container">
         <h2 class="section-title events__title">События</h2>
 
-        <div class="events__swiper js-events-swiper flex">
-          <button class="nav-btn nav-btn_next" aria-label="К предыдущему слайду"></button>
+        <div class="swiper js-events-swiper flex">
+          <div class="swiper-wrapper js-events-swiper-wrapper">
 
-          <div class="events__swiper-wrapper js-events-swiper-wrapper">
-            <div class="events__swiper-slide slide-1 active flex">
+            <div class="swiper-slide slide-1 active flex">
               <article class="events__article article flex">
                 <picture>
                   <source srcset="img/catalog-slider-one@320.jpg" media="(max-width: 320px)">
@@ -975,13 +973,15 @@
                   <img class="article__img" src="img/catalog-slider-one@1920.jpg" alt="Музей им. Щусева">
                 </picture>
                 <div class="article__content flex">
-                  <span class="article__location">
-                    Музей им. Щусева
+                  <div class="article__content-info">
+                    <span class="article__location">
+                      Музей им. Щусева
+                    </span>
+                    <span class="article__time">
+                      с&nbsp;20&nbsp;марта по&nbsp;30&nbsp;апреля
                   </span>
-                  <span class="article__time">
-                    с&nbsp;20&nbsp;марта по&nbsp;30&nbsp;апреля
-                  </span>
-                  <h3 class="article__title">Книжная гравюра в&nbsp;живом восприятии </h3>
+                </div>
+                  <h3 class="article__title">Книжная гравюра<br> в&nbsp;живом восприятии </h3>
                   <p class="article__descr">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель
                     художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо</p>
                   <a class="article__link" href="#">Подробнее</a>
@@ -989,7 +989,7 @@
               </article>
             </div>
 
-            <div class="events__swiper-slide slide-2 flex">
+            <div class="swiper-slide  slide-2 flex">
               <article class="events__article article flex">
                 <picture>
                   <source srcset="img/catalog-slider-two@320.jpg" media="(max-width: 320px)">
@@ -998,12 +998,14 @@
                   <img class="article__img" src="img/catalog-slider-two@1920.jpg" alt="ММОМА">
                 </picture>
                 <div class="article__content flex">
-                  <span class="article__location">
-                    ММОМА
-                  </span>
-                  <span class="article__time">
-                    24&nbsp;марта 19:00
-                  </span>
+                  <div class="article__content-info">
+                    <span class="article__location">
+                      ММОМА
+                    </span>
+                    <span class="article__time">
+                      24&nbsp;марта 19:00
+                    </span>
+                  </div>
                   <h3 class="article__title">&laquo;Открытая дискуссия&raquo;. Дмитрий Петров и&nbsp;Сергей Ильин.</h3>
                   <p class="article__descr">Высокий уровень вовлечения представителей целевой аудитории является
                     чётким доказательством простого факта</p>
@@ -1012,7 +1014,7 @@
               </article>
             </div>
 
-            <div class="events__swiper-slide slide-3 flex">
+            <div class="swiper-slide  slide-3 flex">
               <article class="events__article article flex">
                 <picture>
                   <source srcset="img/catalog-slider-three@320.jpg" media="(max-width: 320px)">
@@ -1021,12 +1023,14 @@
                   <img class="article__img" src="img/catalog-slider-three@1920.jpg" alt="Еврейский музей">
                 </picture>
                 <div class="article__content flex">
-                  <span class="article__location">
-                    Еврейский музей
-                  </span>
-                  <span class="article__time">
-                    с&nbsp;31&nbsp;марта по&nbsp;21&nbsp;апреля
-                  </span>
+                  <div class="article__content-info">
+                    <span class="article__location">
+                      Еврейский музей
+                    </span>
+                    <span class="article__time">
+                      с&nbsp;31&nbsp;марта по&nbsp;21&nbsp;апреля
+                    </span>
+                  </div>
                   <h3 class="article__title">Выставка &laquo;Формация 2020&raquo;</h3>
                   <p class="article__descr">Идейные соображения высшего порядка, а&nbsp;также современная методология
                     разработки играет важную роль в&nbsp;формировании глубокомысленных рассуждений</p>
@@ -1035,7 +1039,7 @@
               </article>
             </div>
 
-            <div class="events__swiper-slide slide-4 flex">
+            <div class="swiper-slide  slide-4 flex">
               <article class="events__article article flex">
                 <picture>
                   <source srcset="img/catalog-slider-four@320.jpg" media="(max-width: 320px)">
@@ -1044,12 +1048,14 @@
                   <img class="article__img" src="img/catalog-slider-four@1920.jpg" alt="ММАМ">
                 </picture>
                 <div class="article__content flex">
-                  <span class="article__location">
-                    ММАМ
-                  </span>
-                  <span class="article__time">
-                    с&nbsp;8&nbsp;апреля по&nbsp;20&nbsp;мая
-                  </span>
+                  <div class="article__content-info">
+                    <span class="article__location">
+                      ММАМ
+                    </span>
+                    <span class="article__time">
+                      с&nbsp;8&nbsp;апреля по&nbsp;20&nbsp;мая
+                    </span>
+                  </div>
                   <h3 class="article__title">Джон Винзор. Фотографии из&nbsp;серии &laquo;Метафора&raquo;</h3>
                   <p class="article__descr">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель
                     художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо</p>
@@ -1058,7 +1064,7 @@
               </article>
             </div>
 
-            <div class="events__swiper-slide slide-5 flex">
+            <div class="swiper-slide  slide-5 flex">
               <article class="events__article article flex">
                 <picture>
                   <source srcset="img/catalog-slider-five@320.jpg" media="(max-width: 320px)">
@@ -1067,12 +1073,14 @@
                   <img class="article__img" src="img/catalog-slider-five@1920.jpg" alt="Третьяковка на Крымском валу">
                 </picture>
                 <div class="article__content flex">
-                  <span class="article__location">
-                    Третьяковка на&nbsp;Крымском валу
-                  </span>
-                  <span class="article__time">
-                    с&nbsp;30&nbsp;марта по&nbsp;30&nbsp;апреля
-                  </span>
+                  <div class="article__content-info">
+                    <span class="article__location">
+                      Третьяковка на&nbsp;Крымском валу
+                    </span>
+                    <span class="article__time">
+                      с&nbsp;30&nbsp;марта по&nbsp;30&nbsp;апреля
+                    </span>
+                  </div>
                   <h3 class="article__title">XXIV Международная биеннале молодого искусства</h3>
                   <p class="article__descr">Внезапно, реплицированные с&nbsp;зарубежных источников, современные
                     исследования</p>
@@ -1080,11 +1088,28 @@
                 </div>
               </article>
             </div>
-          </div>
-
-          <div class="events__slider-pagination swiper-pagination js-events-pagination"></div>
         </div>
-        <button class="nav-btn nav-btn_next" aria-label="К следующему слайду"></button>
+
+        <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="events__navigation navigation">
+          <button class="events-prev btn-reset" tabindex="0">
+            <svg class="events-prev__icon" width="50" height="50" viewBox="0 0 50 50" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M25 7.09305e-06C11.1929 8.90364e-06 2.54046e-06 11.1929 4.35104e-06 25C6.16163e-06 38.8071 11.1929 50 25 50C38.8071 50 50 38.8071 50 25C50 11.1929 38.8071 5.28247e-06 25 7.09305e-06Z"
+                fill="#ECECEC" stroke="9D5CD0"></path>
+              <path d="M26.6667 16.6667L18.3333 25L26.6667 33.3333" stroke="black"></path>
+            </svg>
+          </button>
+          <button class="events-next btn-reset" tabindex="0">
+            <svg class="events-next__icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M25 2.72191e-06C38.8071 2.11838e-06 50 11.1929 50 25C50 38.8071 38.8071 50 25 50C11.1929 50 -4.89256e-07 38.8071 -1.09278e-06 25C-1.69631e-06 11.1929 11.1929 3.32544e-06 25 2.72191e-06Z" fill="#ECECEC"/>
+              <path d="M25 2.72191e-06C38.8071 2.11838e-06 50 11.1929 50 25C50 38.8071 38.8071 50 25 50C11.1929 50 -4.89256e-07 38.8071 -1.09278e-06 25C-1.69631e-06 11.1929 11.1929 3.32544e-06 25 2.72191e-06Z" stroke="black"/>
+              <path d="M23.3333 16.6667L31.6667 25L23.3333 33.3333" stroke="black"/>
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -1265,6 +1290,11 @@
         </div>
       </div>
     </footer> -->
+
+    <div class id="overlay"></div>
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@5"></script>
+
   </main>
 </body>
 </html>
