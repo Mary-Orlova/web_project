@@ -104,17 +104,50 @@ const gallerySlider = new Swiper(".js-gallery-slider", {
       320: {
         slidesPerView: 1,
         slidesPerGroup: 1,
-        spaceBetween: 20
+        spaceBetween: 40
       },
       680: {
         slidesPerView: 2,
         slidesPerGroup: 2,
-        spaceBetween: 30
+        spaceBetween: 34
       },
       1024: {
         slidesPerView: 3,
         slidesPerGroup: 3,
         spaceBetween: 27
+      },
+      1920: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 50
+      }
+    }
+  });
+})();
+
+(() => {
+  const eventsSlider = new Swiper('.js-partners-slider', {
+    speed: 400,
+    spaceBetween: 50,
+    navigation: {
+      nextEl: ".projects__next",
+      prevEl: ".projects__prev"
+    },
+    autoplay: {
+      delay: 1000,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      },
+      1025: {
+        slidesPerView: 3,
+        spaceBetween: 50
       }
     }
   });

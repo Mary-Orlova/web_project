@@ -1,0 +1,78 @@
+.projects {
+  padding-top: 35px;
+  padding-bottom: 40px;
+}
+
+.projects__title {
+  display: block;
+  margin-bottom: 31px;
+}
+
+.projects__descr {
+  margin-bottom: 20px;
+}
+
+.projects__link {
+  color: var(--deep-lavender);
+}
+
+.projects__slider-title {
+  font-size: var(--ls-24);
+  font-weight: var(--semibold);
+}
+
+.projects__prev,
+.projects__next {
+  position: absolute;
+  z-index: 100;
+  bottom: 40%;
+  transition: all .3s ease-in-out;
+}
+
+.projects__prev {
+  left: 0;
+}
+
+.projects__next {
+  right: 0;
+}
+
+.projects__prev-icon,
+.projects__next-icon {
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--fog);
+  border-radius: 50%;
+  transition: all var(--short) ease-in-out;
+}
+
+.projects__next-icon path:not(:last-child),
+.projects__prev-icon path:not(:last-child) {
+  transition: all var(--short) ease-in-out;
+}
+
+.projects__prev:focus .projects__prev-icon,
+.projects__next:focus .projects__next-icon {
+  border: 2px solid var(--light-lavender);
+  transition: all var(--short) ease-in-out;
+}
+
+.projects__next-icon:hover path:not(:last-child),
+.projects__prev-icon:hover path:not(:last-child) {
+  transition: all var(--short) ease-in-out;
+
+  fill: var(--light-lavender);
+}
+
+.projects__prev:hover .projects-prev__icon,
+.projects__next:hover .projects-next__icon {
+  border: 2px solid var(--light-lavender);
+  transition: all var(--short) ease-in-out;
+}
+
+.projects__next-icon:active path:not(:last-child),
+.projects__prev-icon:active path:not(:last-child) {
+  transition: all var(--short) ease-in-out;
+
+  fill: var(--light-lavender);
+}
