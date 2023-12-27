@@ -136,6 +136,7 @@ const gallerySlider = new Swiper(".js-gallery-slider", {
     autoplay: {
       delay: 1000,
     },
+
     breakpoints: {
       320: {
         slidesPerView: 1,
@@ -145,7 +146,11 @@ const gallerySlider = new Swiper(".js-gallery-slider", {
         slidesPerView: 2,
         spaceBetween: 30
       },
-      1025: {
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 50
+      },
+      1920: {
         slidesPerView: 3,
         spaceBetween: 50
       }

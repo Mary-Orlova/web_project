@@ -232,6 +232,11 @@
   margin-right: 1px;
 }
 
+.header__search-btn:focus,
+.header__close-btn:focus {
+  color: var(--deep-lavender);
+}
+
 .header__search-btn:active,
 .header__close-btn:active {
   color: var(--white);

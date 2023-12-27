@@ -46,6 +46,7 @@
 }
 
 .choices:focus:not(:active) {
+  border-color: var(--deep-lavender);
   background-color: unset;
 }
 
@@ -139,7 +140,7 @@
 }
 
 .checkbox__item:focus:not(:hover) ~ .checkbox__text {
-  border-color: var(--lavender);
+  border-color: var(--deep-lavender);
   color: var(--lavender);
 }
 
@@ -198,13 +199,13 @@
 }
 
 .navigation-btn:focus {
-  border: 2px solid var(--black);
+  border: 2px solid var(--deep-lavender);
   transition: all var(--short) ease-in-out;
 }
 
 .navigation-btn.swiper-button-disabled {
   border: transparent;
-  background-color: rgba(102, 102, 102, .5);
+  background-color: var(--dark-gray);
   cursor: auto;
   transition: all var(--short) ease-in-out;
 }
