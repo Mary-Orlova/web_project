@@ -15,16 +15,10 @@
   background-color: var(--light-lavender);
 }
 
-.tooltips:hover {
-  background-color: var(--light-lavender);
-}
-
 .tooltips:active {
   background-color: var(--deep-lavender);
   background-image: url('../img/project-tooltipe-white.svg');
 }
-
-
 
 .tippy-box[data-theme~='tooltip'] {
   border-radius: 0;
@@ -47,4 +41,10 @@
 
 .tippy-box[data-theme~='tooltip'][data-placement^='right']>.tippy-arrow::before {
   border-right-color: var(--deep-lavender);
+}
+
+@media (any-hover: hover) {
+  .tooltips:hover {
+    background-color: var(--light-lavender);
+  }
 }
