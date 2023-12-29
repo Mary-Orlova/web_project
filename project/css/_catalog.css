@@ -11,7 +11,7 @@
   margin-bottom: 40px;
   /* padding-top: 7px; */
   font-size: var(--fs-16);
-  line-height: 32px;
+  line-height: var(--lh-32);
 }
 
 .catalog__wrap {
@@ -65,7 +65,7 @@
 }
 
 .catalog__descr-empty {
-  line-height: 0;
+  line-height: var(--lh-0);
 }
 
 .accordion-years:active {

@@ -68,6 +68,7 @@
 <body>
   <h1 class="visually-hidden">Сайт Blanchard художественная галерея</h1>
   <header class="header">
+    <div class="header__wrapper-top">
     <div class="header__top">
       <div class="container header__container flex">
         <button class="header__burger btn-reset burger--3dx burger js-burger" data-burger aria-label="Открыть меню" aria-expanded="false">
@@ -108,6 +109,32 @@
             </a>
           </div>
         </nav>
+
+        <div class="header__top-search flex">
+          <a class="btn-reset header__search-btn js-open-search" href="#" aria-label="Кнопка поиска">
+            <svg  class="header__search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect  width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="currentColor"/>
+                <path  d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+          </a>
+          <form class="header__search-form js-form" action="/" method="GET">
+            <input class="header__search-input" type="text" placeholder="Поиск по сайту">
+            <a class="btn-reset header__search-btn header__search-btn--right" href="#" type="submit" aria-label="Кнопка активации поиска">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="currentColor"/>
+                    <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+            </a>
+            <button class="btn-reset header__close-btn js-close-search" type="button" aria-label="Кнопка закрыть окно поиска">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8.9541" y="7.30432" width="11.6645" height="2.33291" transform="rotate(45 8.9541 7.30432)" fill="currentColor"/>
+                <rect x="7.30469" y="15.5524" width="11.6645" height="2.33291" transform="rotate(-45 7.30469 15.5524)" fill="currentColor"/>
+                <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+
       </div>
     </div>
 
@@ -275,7 +302,6 @@
             </div>
           </li>
 
-
           <li class="header__bottom-item">
             <button class="header__bottom-btn js-header-dropdown-btn" data-path="five">
               <span class="header__bottom-btn-text">Футуризм</span>
@@ -312,7 +338,7 @@
 
         <div class="header__bottom-search flex">
           <a class="btn-reset header__search-btn js-open-search" href="#" aria-label="Кнопка поиска">
-            <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg  class="header__search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect  width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="currentColor"/>
                 <path  d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="currentColor" stroke-width="2"/>
               </svg>
@@ -334,8 +360,10 @@
             </button>
           </form>
         </div>
+
       </div>
     </div>
+  </div>
   </header>
 
   <main class="main">
@@ -457,7 +485,7 @@
                     </picture>
                   </a>
 
-                  <a class="swiper-slide gallery__slide" href="#" aria-label="Картина Казимира Малевича-Супрематизм">
+                  <a class="swiper-slide gallery__slide" data-modal-target="#supermathematism" aria-label="Картина Казимира Малевича-Супрематизм">
                     <picture>
                       <source srcset="img/gallery-slide-4@320.jpg" media="(max-width: 320px)">
                       <source srcset="img/gallery-slide-4@768.jpg" media="(max-width: 768px)">
@@ -467,7 +495,7 @@
                     </picture>
                   </a>
 
-                  <a class="swiper-slide gallery__slide" href="#"
+                  <a class="swiper-slide gallery__slide" data-modal-target="#woman_and_buckets"
                     aria-label="Картина Казимира Малевича-Женщина с вёдрами">
                     <picture>
                       <source srcset="img/gallery-slide-5@320.jpg" media="(max-width: 320px)">
@@ -478,7 +506,7 @@
                     </picture>
                   </a>
 
-                  <a class="swiper-slide gallery__slide" href="#"
+                  <a class="swiper-slide gallery__slide" data-modal-target="#suprematist_design"
                     aria-label="Картина Казимира Малевича-Супрематическая конструкция">
                     <picture>
                       <source srcset="img/gallery-slide-6@320.jpg" media="(max-width: 320px)">
@@ -500,7 +528,7 @@
               <source srcset="img/gallery-modal-1@320.jpg" media="(max-width: 620px)">
               <source srcset="img/gallery-modal-1@768.jpg" media="(max-width: 768px)">
               <source srcset="img/gallery-modal-1@1024.jpg" media="(max-width: 1368px)">
-              <img class="modal-img" src="img/gallery-modal-1@1920.jpg" alt>
+              <img class="modal-img" src="img/gallery-modal-1@1920.jpg" alt="Картина Казимир Малевич-Торс">
             </picture>
             <div class="modal-content flex">
               <button class="modal-close btn-reset" data-close-button>&times;</button>
@@ -523,7 +551,7 @@
               <source srcset="img/gallery-modal-2@320.jpg" media="(max-width: 620px)">
               <source srcset="img/gallery-modal-2@768.jpg" media="(max-width: 768px)">
               <source srcset="img/gallery-modal-2@1024.jpg" media="(max-width: 1368px)">
-              <img class="modal-img" src="img/gallery-modal-2@1920.jpg" alt>
+              <img class="modal-img" src="img/gallery-modal-2@1920.jpg" alt="Картина Казимира Малевича-Женщина с граблями">
             </picture>
             <div class="modal-content flex">
               <button class="modal-close btn-reset" data-close-button>&times;</button>
@@ -543,7 +571,7 @@
               <source srcset="img/gallery-modal-3@320.jpg" media="(max-width: 620px)">
               <source srcset="img/gallery-modal-3@768.jpg" media="(max-width: 768px)">
               <source srcset="img/gallery-modal-3@1024.jpg" media="(max-width: 1368px)">
-              <img class="modal-img" src="img/gallery-modal-3@1920.jpg" alt>
+              <img class="modal-img" src="img/gallery-modal-3@1920.jpg" alt="Картина Казимира Малевича-Сбор урожая">
             </picture>
             <div class="modal-content flex">
               <button class="modal-close btn-reset" data-close-button>&times;</button>
@@ -555,6 +583,44 @@
             </div>
           </div>
         </div>
+
+        <div class="modal flex" id="supermathematism">
+          <div class="modal-wrapper flex">
+
+            <div class="modal-content flex">
+              <button class="modal-close btn-reset" data-close-button>&times;</button>
+              <h4 class="modal-title">Казимир Малевич</h4>
+              <h5 class="modal-painting">"Супрематизм"</h5>
+              <span class="modal-time">1917</span>
+              <p class="modal-descr">Супрематизм стал одним из&nbsp;самых влиятельных направлений абстрактного искусства&nbsp;ХХ века. Структура мира в&nbsp;нем выражалась в&nbsp;простых геометрических формах: прямой линии, прямоугольнике, круге или квадрате на&nbsp;светлом фоне, который символизировал бесконечность пространства.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal flex" id="woman_and_buckets">
+          <div class="modal-wrapper flex">
+            <div class="modal-content flex">
+              <button class="modal-close btn-reset" data-close-button>&times;</button>
+              <h4 class="modal-title">Казимир Малевич</h4>
+              <h5 class="modal-painting">"Женщина с вёдрами"</h5>
+              <span class="modal-time">1912</span>
+              <p class="modal-descr">&laquo;Женщина с&nbsp;ведрами&raquo; Казимира Малевича представляет собой выдающееся произведение авангардного искусства. Сейчас произведение можно увидеть в&nbsp;Нью-Йорке.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal flex" id="suprematist_design">
+          <div class="modal-wrapper flex">
+            <div class="modal-content flex">
+              <button class="modal-close btn-reset" data-close-button>&times;</button>
+              <h4 class="modal-title">Казимир Малевич</h4>
+              <h5 class="modal-painting">"Супрематическая конструкция"</h5>
+              <span class="modal-time">1915</span>
+              <p class="modal-descr">&laquo;Супрематическая композиция&raquo;, ставшая любимой работой мастера, имела удивительную историю.</p>
+            </div>
+          </div>
+        </div>
+
     </section>
 
      <section class="catalog" id="catalog">

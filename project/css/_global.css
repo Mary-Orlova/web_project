@@ -61,7 +61,7 @@ svg {
   display: inline-block;
   padding: 0;
   border: none;
-  font-family: "Open Sans", sans-serif;
+  font-family: "OpenSans", sans-serif;
   background-color: transparent;
   cursor: pointer;
   transition: background-color var(--short) ease-in-out;
@@ -80,7 +80,7 @@ svg {
 
 body {
   min-width: var(--body--min-width);
-  font-family: "Open Sans", sans-serif;
+  font-family: "OpenSans", sans-serif;
   font-size: var(--dafault-fs);
   font-weight: var(--regular);
   line-height: var(--default-lh);
