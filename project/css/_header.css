@@ -265,6 +265,7 @@
   display: none;
 }
 
+
 .header__search-form.is-opened .header__search-btn--right {
   display: none;
   margin: 0;
