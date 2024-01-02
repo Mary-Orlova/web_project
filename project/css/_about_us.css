@@ -3,12 +3,12 @@
 }
 
 .about-us__container {
-  padding-top: 100px;
-  padding-bottom: 68px;
+  padding-top: 80px;
+  padding-bottom: 70px;
 }
 
 .about-us__title {
-  padding-bottom: 21px;
+  margin-bottom: 16px;
   font-size: var(--fs-48);
-  font-style: var(--regular);
+  font-weight: var(--regular);
 }

@@ -2,14 +2,19 @@
   background-color: var(--black);
 }
 
+.footer__container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .footer__wrapper {
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .logo__image {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  max-width: 173px;
+  height: 40px;
 }
 
 .footer__social {
@@ -27,21 +32,23 @@
 }
 
 .footer__link {
-  width: 100%;
-  height: 100%;
   align-items: flex-start;
   justify-content: center;
+  width: 100%;
   width: 45px;
+  height: 100%;
   height: 45px;
-  fill: var(--light-gray);
   outline: none;
-  transition: fill var(--short);
   cursor: pointer;
+  transition: fill var(--short);
+
+  fill: var(--light-gray);
 }
 
 .footer__link:hover {
   fill: var(--white);
 }
+
 .footer__link:focus:not(:active) {
   fill: var(--white);
 }

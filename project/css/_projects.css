@@ -1,11 +1,6 @@
-.projects {
-  padding-top: 35px;
-  padding-bottom: 80px;
-}
-
-.projects__title {
-  display: block;
-  margin-bottom: 34px;
+.projects__container {
+  padding-top: 30px;
+  padding-bottom: 78px;
 }
 
 .projects__descr {

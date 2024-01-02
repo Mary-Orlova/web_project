@@ -4,7 +4,7 @@
 
 .gallery__container {
   padding-top: 80px;
-  padding-bottom: 78px;
+  padding-bottom: 80px;
 }
 
 .gallery__content-wrapper {
@@ -57,7 +57,7 @@
 
 .gallery__filter-label {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   font-size: var(--fs-16);
   font-style: var(--semibold);
   line-height: var(--lh-32);
@@ -66,13 +66,21 @@
 .gallery__filter-select {
   min-height: 40px;
   margin-bottom: 176px;
-  padding-left: 14px;
+  padding-left: 16px;
   border-radius: 5px;
   font-size: var(--fs-16);
   font-style: var(--regular);
   line-height: 32px;
   color: var(--white);
   background-color: inherit;
+}
+
+.choices[data-type*=select-one] .choices__inner {
+  padding: 3px 0 4.5px 10px;
+}
+
+.choices__list {
+  align-items: center;
 }
 
 .gallery__checkbox {
@@ -122,9 +130,15 @@
 }
 
 .checkbox__text {
+  margin: 0;
+  padding: 0;
   color: var(--white);
   vertical-align: middle;
   transition: color var(--short);
+}
+
+.checkbox__visible {
+  margin-right: 10px;
 }
 
 .checkbox__item:checked ~ .checkbox__visible {
@@ -211,8 +225,9 @@
 }
 
 .gallery__pagination {
-  margin-right: 20px;
+  margin-right: 14px;
   font-size: var(--fs-16);
+  font-weight: var(--regular);
   line-height: var(--lh-32);
   color: var(--white);
   text-align: center;

@@ -29,8 +29,8 @@
 }
 
 .socials__link:focus:not(:active) {
-  outline: none ;
   opacity: .5;
+  outline: none ;
 }
 
 .socials__link:active {

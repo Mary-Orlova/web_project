@@ -2,6 +2,7 @@
   /* position: relative; */
   z-index: 1;
 }
+
 .hero__container {
   position: relative;
   padding-top: 62px;
@@ -27,27 +28,29 @@
   font-weight: var(--bold);
   line-height: var(--lh-98);
   color: var(--white);
+  letter-spacing: .023em;
 }
 
 .hero__text {
   width: 597px;
-  margin-bottom: 90px;
+  margin-bottom: 92px;
   font-size: var(--dafault-fs);
   font-weight: var(--bold);
   line-height: var(--lh-30);
   color: var(--white);
+  letter-spacing: .023em;
 }
 
 .hero__btn {
-  max-width: 312px;
-  padding: 22px 35px;
-  border: 3px solid var(--deep-lavender);
+  max-width: 314px;
+  padding: 23px 35px;
   border-radius: 100px;
   font-size: var(--fs-18);
   font-weight: var(--bold);
-  color: var(--white);
   text-align: center;
+  letter-spacing: .023em;
   background-color: var(--deep-lavender);
+  transition: box-shadow var(--short);
 }
 
 .hero__btn:focus:not(:active) {

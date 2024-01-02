@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+
   scroll-behavior: smooth;
 }
 
@@ -105,26 +106,25 @@ body {
   border: none;
 }
 
-.visually-hidden {
-  display: none;
-}
-
 .section-title {
+  width: auto;
   margin-top: 0;
   margin-bottom: 16px;
-  font-size: 48px;
+  font-size: var(--fs-48);
   font-weight: var(--regular);
+  line-height: var(--lh-65);
 }
 
 .section-descr {
   max-width: 1080px;
+  height: auto;
   margin-top: 0;
-  font-size: 16px;
+  font-size: var(--fs-16);
   font-weight: var(--regular);
   line-height: var(--lh-32);
   color: var(--black);
 }
 
 .section-descr:last-child {
-margin-bottom: 0;
+  margin-bottom: 0;
 }
