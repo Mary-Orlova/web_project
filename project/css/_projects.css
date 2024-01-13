@@ -10,104 +10,6 @@
   text-align: left;
 }
 
-.tooltip {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  padding: 2px 5px;
-  border: 1px solid var(--deep-lavender);
-  border-radius: 50%;
-  background-image: url(../img/svg/tooltip.svg);
-  background-repeat: no-repeat;
-  background-position: 6px 2px;
-  transition: all var(--short) ease-in-out;
-}
-
-.popper-btn {
-  stroke: var(--black);
-  fill: var(--white);
-}
-
-.popper-btn:focus {
-  stroke: var(--black);
-  fill: var(--white);
-}
-
-.tooltip:focus {
-  outline: none;
-  background-color: var(--light-lavender);
-}
-
-.tooltip:active {
-  background-color: var(--deep-lavender);
-}
-
-.popper-tooltip {
-  position: absolute;
-  z-index: 200;
-  top: -50%;
-  bottom: 10px !important;
-  left: -50%;
-  width: 264px;
-  padding-top: 8px;
-  padding-right: 11px;
-  padding-bottom: 8px;
-  padding-left: 11px;
-  font-size: var(--fs-12);
-  font-weight: var(--semibold);
-  line-height: 16px;
-  color: var(--white);
-  white-space: wrap;
-  word-wrap: nowrap;
-  opacity: 0;
-  background-color: var(--deep-lavender);
-  cursor: var(--white);
-  transition: opacity var(--short) ease-in-out;
-  transform: translate(-50%);
-
-  transform-style: preserve-3d;
-}
-
-.popper-tooltip::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  bottom: -8px;
-  left: 50%;
-  display: block;
-  width: 10px;
-  height: 10px;
-  background-color: var(--deep-lavender);
-  transform: rotate(45deg) translateX(-50%) translateZ(-1px);
-  transform-origin: 50% 50%;
-}
-
-.popper-tooltip::after {
-  content: "";
-  position: absolute;
-  z-index: 400;
-  bottom: -8px;
-  left: 50%;
-  display: block;
-  width: 10px;
-  height: 10px;
-  background-color: var(--deep-lavender);
-  transform: rotate(45deg) translateX(-50%);
-  transform-origin: 50% 50%;
-}
-
-.popper-btn:focus-visible,
-.popper-tooltip:active {
-  display: block;
-
-  stroke: var(--white);
-  fill: var(--deep-lavender);
-}
-
-.popper-btn:focus + .popper-tooltip,
-.popper-tooltip::after {
-  opacity: 1;
-}
 
 .projects__link {
   margin: 0;
@@ -228,21 +130,6 @@
 }
 
 @media (any-hover: hover) {
-  .popper-btn:hover {
-    stroke: var(--white);
-    fill: var(--deep-lavender);
-  }
-
-  .popper-btn:hover + .popper-tooltip {
-    opacity: 1;
-  }
-
-  .popper-btn:focus-visible,
-  .popper-tooltip:hover {
-    fill: var(--white);
-    stroke: var(--black);
-  }
-
   .swiper__partners-slide:hover {
     opacity: 1;
     -webkit-transition: all var(--short);
