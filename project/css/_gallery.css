@@ -99,11 +99,11 @@
   transition: color var(--short);
 }
 
-.gallery__checkbox-label:active .checkbox__text {
+.gallery__checkbox-label:active .gallery__checkbox-text {
   color: var(--lavender);
 }
 
-.checkbox__visible {
+.gallery__checkbox-visible {
   position: relative;
   display: inline-block;
   width: 12px;
@@ -115,7 +115,7 @@
 }
 
 /* точка в чекбоксе*/
-.checkbox__visible::before {
+.gallery__checkbox-visible::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -129,7 +129,7 @@
   transform: translate(-50%, -50%);
 }
 
-.checkbox__text {
+.gallery__checkbox-text {
   margin: 0;
   padding: 0;
   color: var(--white);
@@ -137,23 +137,23 @@
   transition: color var(--short);
 }
 
-.checkbox__visible {
+.gallery__checkbox-visible {
   margin-right: 10px;
 }
 
-.checkbox__item:checked ~ .checkbox__visible {
+.gallery__checkbox-item:checked ~ .gallery__checkbox-visible {
   border-color: var(--lavender);
 }
 
-.checkbox__item:checked ~ .checkbox__visible::before {
+.gallery__checkbox-item:checked ~ .gallery__checkbox-visible::before {
   opacity: 1;
 }
 
-.checkbox__item:focus ~ .checkbox__visible {
+.gallery__checkbox-item:focus ~ .gallery__checkbox-visible {
   border-color: var(--lavender);
 }
 
-.checkbox__item:focus:not(:hover) ~ .checkbox__text {
+.gallery__checkbox-item:focus:not(:hover) ~ .gallery__checkbox-text {
   border-color: var(--deep-lavender);
   color: var(--lavender);
 }

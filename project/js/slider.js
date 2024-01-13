@@ -1,5 +1,5 @@
 (() => {
-  const swiper = new Swiper('.js-hero--slider', {
+  const swiper = new Swiper('.js-hero-slider', {
     // slidesPerView: 1,
     allowTouchMove: false,
     loop: true,

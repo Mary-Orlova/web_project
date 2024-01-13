@@ -62,13 +62,14 @@
   transform: translateY(-50%);
 }
 
+
 .accordion__btn:focus:after {
   background-image: url("../img/arrow-up.svg");
 }
 
-.accordion__question:first-child .accordion__item-title {
+/* .accordion__question:first-child .accordion__item-title {
   border-top: 1px solid var(--light-gray);
-}
+} */
 
 .accordion__tabs-list {
   display: block;
@@ -126,16 +127,48 @@
   padding-top: 60px;
 }
 
+
+.accordion-years:focus{
+  color: var(--white);
+  background-color: var(--deep-lavender);
+  transition: all ease-in-out var(--short);
+}
+
+.accordion-years:active {
+  color: var(--violet);
+  transition: all ease-in-out var(--short);
+}
+
+
+.accordion__painter-link:focus {
+  background-color: var(--deep-lavender);
+  transition: all ease-in-out var(--short);
+}
+
+.accordion__painter-link:active {
+  border-bottom: 1px solid var(--violet);
+  transition: all ease-in-out var(--short);
+}
+
 @media (any-hover: hover) {
-  .accordion__question:hover:not(:active) {
-    border-color: var(--light-lavender);
-  }
+.accordion__painter-link:hover {
+  border-bottom: 1px solid var(--violet);
+  background-color: var(--white);
+  transition: all ease-in-out var(--short);
+}
 
-  .accordion__btn:hover:not(:active) {
-    color: var(--light-lavender);
-  }
+.accordion-years:hover {
+  color: var(--deep-lavender);
+}
+.accordion__question:hover:not(:active) {
+  border-color: var(--deep-lavender);
+}
 
-  .accordion__btn:hover:not(:active)::after {
-    background-image: url("../img/arrow-focus.svg");
-  }
+.empty-gallery-btn:hover:not(:active) {
+  color: var(--light-lavender);
+}
+.accordion__btn:hover:not(:active)::after {
+  background-image: url("../img/arrow-focus.svg");
+}
+
 }

@@ -58,32 +58,3 @@
 .catalog__name-empty {
   margin-bottom: 10px;
 }
-
-.accordion-years:active {
-  color: var(--violet);
-  transition: all ease-in-out var(--short);
-}
-
-.accordion__painter-link:focus {
-  border-bottom: 1px solid var(--violet);
-  background-color: var(--white);
-  transition: all ease-in-out var(--short);
-}
-
-.accordion__painter-link:active {
-  border-bottom: 1px solid var(--violet);
-  transition: all ease-in-out var(--short);
-}
-
-@media (any-hover: hover) {
-  .accordion-years:hover {
-    color: var(--white);
-    background-color: var(--lavender);
-    transition: all ease-in-out var(--short);
-  }
-
-  .accordion__painter-link:hover {
-    background-color: var(--lavender);
-    transition: all ease-in-out var(--short);
-  }
-}

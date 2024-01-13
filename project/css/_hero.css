@@ -22,7 +22,7 @@
 
 .hero__title {
   display: inline-block;
-  width: 597px;
+  max-width: 40%;
   margin-bottom: 0;
   font-size: var(--fs-72);
   font-weight: var(--bold);
@@ -32,7 +32,7 @@
 }
 
 .hero__text {
-  width: 597px;
+  max-width: 36%;
   margin-bottom: 92px;
   font-size: var(--dafault-fs);
   font-weight: var(--bold);
@@ -42,6 +42,7 @@
 }
 
 .hero__btn {
+  position: relative;
   max-width: 314px;
   padding: 23px 35px;
   border-radius: 100px;
@@ -53,13 +54,29 @@
   transition: box-shadow var(--short);
 }
 
-.hero__btn:focus:not(:active) {
-  border-color: var(--white);
-  outline: 2px solid var(--lavender);
+.hero__btn::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  border: 2px solid var(--lavender);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity var(--short);
 }
 
-.hero__btn:active {
-  border-color: var(--light-lavender);
+.hero__btn:focus:focus:not(:hover):not(:active) {
+  outline: none;
+  box-shadow: inset 0 0 0 3px var(--light-lavender);
+}
+
+.hero__btn:focus:not(:hover):not(:active)::after {
+  opacity: 1;
+}
+
+.hero__btn:active:not(:hover):not(:focus) {
   background-color: var(--violet);
 }
 
@@ -96,19 +113,19 @@
   background-size: cover;
 }
 
-.hero__slide--one {
+.hero__slide-one {
   max-height: 800px;
   background-color: var(--black);
   background-image: url("../img/hero-slider-one@1920.jpg");
 }
 
-.hero__slide--two {
+.hero__slide-two {
   max-height: 800px;
   background-color: var(--black);
   background-image: url("../img/hero-slider-two@1920.jpg");
 }
 
-.hero__slide--three {
+.hero__slide-three {
   max-height: 800px;
   background-color: var(--black);
   background-image: url("../img/hero-slider-three@1920.jpg");
@@ -123,6 +140,6 @@
 
 @media (any-hover: hover) {
   .hero__btn:hover {
-    border-color: var(--light-lavender);
+    box-shadow: inset 0 0 0 3px var(--light-lavender);
   }
 }
