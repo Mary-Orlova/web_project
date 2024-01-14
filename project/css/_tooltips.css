@@ -6,7 +6,7 @@
   border-radius: 50%;
   font-size: var(--fs-12);
   font-weight: var(--semibold);
-  background-image: url(../img/tooltip.svg);
+  background-image: url("../img/tooltip.svg");
   background-repeat: no-repeat;
   background-position: center;
   transition: all var(--short) ease-in-out;
@@ -15,7 +15,7 @@
 .tooltip:focus {
   outline: none;
   background-color: var(--deep-lavender);
-  background-image: url(../img/tooltip-active.svg);
+  background-image: url("../img/tooltip-active.svg");
 }
 
 .tooltip:active {
@@ -37,6 +37,6 @@
 @media (any-hover: hover) {
   .tooltip:hover {
     background-color: var(--light-lavender);
-    background-image: url(../img/tooltip-active.svg);
+    background-image: url("../img/tooltip-active.svg");
   }
 }
