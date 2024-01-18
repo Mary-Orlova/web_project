@@ -29,27 +29,106 @@
   }
 }
 
-/* @media (max-width:1280px) {
+@media (max-width:1280px) {
   /* для 1024  */
-  .header__top {
-    padding-top: 29px ;
-  }
 
- .header__wrapper-top{
-    background-color: var(--black);
-    overflow: hidden;
-  }
-
-  .header__container {
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-
-  .burger {
+  .header__burger {
     display: block;
   }
 
+  .header__logo {
+    width: 188px;
+    margin-right: 0;
+  }
+
+  .header__bottom  {
+    display: none;
+  }
+
+  .header__nav {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh;
+    padding-top: 97px;
+    padding-bottom: 50px;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+    background-color: var(--black);
+  }
+
+  .header__menu {
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+    font-size: var(--fs-24px);
+    line-height: 64px;
+  }
+
+  .header__menu-item {
+    margin-right: 0;
+  }
+
+  .header__login {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 257px;
+    padding: 19px;
+    border: 2px solid var(--deep-lavender);
+    border-radius: 100px;
+    transition: background-color var(--short), color var(--short);
+  }
+
+  .header__login::before {
+    display: none;
+  }
+
+  .header__login:focus:not(:hover):not(:active) {
+    background-color: var(--deep-lavender);
+  }
+
+
+  .header__top-search, .header__search-form.is-opened .header__search-btn--right {
+    display: none;
+    display: block;
+  }
+
+  .header__search-form.is-opened .header__search-btn-open {
+    display: none;
+  }
+}
+
+
+
+  /* .header__top {
+    padding-top: 29px ;
+  } */
+
+ /* .header__wrapper-top{
+    background-color: var(--black);
+    overflow: hidden;
+  } */
+
+  /* .header__container {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  } */
+
+  /* .burger {
+    display: block;
+  } */
+/*
   .header__bottom {
     display: none;
   }
@@ -62,15 +141,6 @@
     visibility: visible;
     width: 29px;
     height: 36px;
-  }
-
-  .header__logo {
-    margin: 0;
-    background-size: cover;
-  }
-
-  .header__logo-img {
-    width: 188px;
   }
 
   .header__nav {
@@ -93,13 +163,13 @@
   .burger:focus {
     outline: 2px solid var(--violet);
     outline-offset: 3px;
-  }
+  } */
 
-  .burger::before,
+  /* .burger::before,
   .burger::after {
     content: "";
-  }
-  .burger span,
+  } */
+  /* .burger span,
   .burger::before,
   .burger::after {
     position: absolute;
@@ -115,7 +185,7 @@
     -o-transition: transform 0.2s ease;
     transition: transform 0.2s ease;
     transition: transform 0.2s ease, -webkit-transform 0.2s ease;
-  }
+  } */
 
   /* .burger::before {
     width: 38px;
@@ -134,13 +204,13 @@
     transition: opacity 0.5s ease, transform 0.2s ease,
       -webkit-transform 0.2s ease;
   }
-/* */
+/*
   .burger::after {
     width: 22px;
     -webkit-transform: translateY(calc(100% + 10px));
     -ms-transform: translateY(calc(100% + 10px));
     transform: translateY(calc(100% + 10px));
-  } */
+  }
 
   /* .burger:active {
     color: var(--color-dark-orange);
@@ -209,19 +279,20 @@
     transform: translateX(-100%);
   } */
 
-  .header__menu {
+
+    /* .header__menu {
       display: block;
-      max-height: 60%;
+     max-height: 60%;
       margin: 0;
       overflow-y: auto;
       margin-bottom: auto;
     }
 
     .header__menu-item {
-      margin-bottom: 25px;
-    }
+      margin-bottom: 30px;
+    } */
 
-    .header__menu-wrap.is-opened {
+    /* .header__menu-wrap.is-opened {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -236,21 +307,19 @@
       animation-name: menu-open;
       -webkit-animation-duration: 0.5s;
       animation-duration: 0.5s;
-    }
+    } */
 
-    .header__menu-wrap.is-closed {
+    /* .header__menu-wrap.is-closed {
       -webkit-animation-name: menu-close;
       animation-name: menu-close;
       -webkit-animation-duration: 0.5s;
       animation-duration: 0.5s;
-    }
+    } */
 
-    .header__menu--active {
+    /* .header__menu--active {
       overflow-y: auto;
       padding-bottom: 50px;
-    }
-
-} */
+    } */
 
 
 /* @media (max-width: 610px) {

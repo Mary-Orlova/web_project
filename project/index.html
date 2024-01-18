@@ -114,22 +114,24 @@
         </nav>
 
         <div class="header__top-search flex">
-          <button class="btn-reset header__top-search-btn js-open-search-top" aria-label="Кнопка поиска">
-            <svg  class="header__top-search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <button class="btn-reset header__search-btn header__search-btn-open" aria-label="Кнопка поиска">
+            <svg  class="header__search-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect  width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="currentColor"/>
                 <path  d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="currentColor" stroke-width="2"/>
               </svg>
           </button>
-          <form class="header__top-search-form js-form-top" action="/" method="GET">
-            <input class="header__top-search-input" type="text" placeholder="Поиск по сайту">
-            <button class="btn-reset header__top-search-btn header__top-search-btn--right" type="submit" aria-label="Кнопка активации поиска">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+          <form class="header__search-form header__search-form-top" action="/" method="GET">
+
+            <button class="btn-reset header__search-btn header__search-btn--right" type="submit" aria-label="Кнопка активации поиска">
+                <svg width="23" height="23" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="currentColor"/>
                     <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="currentColor" stroke-width="2"/>
                   </svg>
             </button>
-            <button class="btn-reset header__top-close-btn js-close-search-top" type="button" aria-label="Кнопка закрыть окно поиска">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <input class="header__search-input header__search-input-top" type="text" placeholder="Поиск по сайту">
+            <button class="btn-reset header__search-btn header__close-btn header__close-btn-top"  type="button" aria-label="Кнопка закрыть окно поиска">
+              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="8.9541" y="7.30432" width="11.6645" height="2.33291" transform="rotate(45 8.9541 7.30432)" fill="currentColor"/>
                 <rect x="7.30469" y="15.5524" width="11.6645" height="2.33291" transform="rotate(-45 7.30469 15.5524)" fill="currentColor"/>
                 <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="2"/>
@@ -353,7 +355,7 @@
                     <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="currentColor" stroke-width="2"/>
                   </svg>
             </button>
-            <button class="btn-reset header__close-btn js-close-search" type="button" aria-label="Кнопка закрыть окно поиска">
+            <button class="btn-reset header__search-btn header__close-btn js-close-search" type="button" aria-label="Кнопка закрыть окно поиска">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="8.9541" y="7.30432" width="11.6645" height="2.33291" transform="rotate(45 8.9541 7.30432)" fill="currentColor"/>
                 <rect x="7.30469" y="15.5524" width="11.6645" height="2.33291" transform="rotate(-45 7.30469 15.5524)" fill="currentColor"/>
@@ -1265,7 +1267,7 @@
     <section class="contacts" id="contacts">
       <div class="container">
         <div class="contacts__top flex">
-          <div class="contacts_adress">
+          <div class="contacts__adress">
             <h4 class="section-title contacts__title">Шоурум&nbsp;&#8470;4 </h4>
             <address class="adress"> Леонтьевский переулок, дом 5/1</address>
           </div>
