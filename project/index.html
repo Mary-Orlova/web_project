@@ -96,7 +96,7 @@
               <li class="header__menu-item"><a class="header__menu-link" href="#projects" aria-label="Перейти в раздел: Проекты">Проекты</a></li>
               <li class="header__menu-item"><a class="header__menu-link" href="#contacts" aria-label="Перейти в раздел: Контакты">Контакты</a></li>
             </ul>
-          </div>
+
 
           <div class="header__links-login">
             <a class="header__login" href="#" aria-label="Кнопка входа в личный кабинет">
@@ -111,27 +111,29 @@
               </span>
             </a>
           </div>
+        </div>
         </nav>
 
         <div class="header__top-search flex">
-          <button class="btn-reset header__search-btn header__search-btn-open" aria-label="Кнопка поиска">
-            <svg  class="header__search-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect  width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="currentColor"/>
-                <path  d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="currentColor" stroke-width="2"/>
+          <button class="btn-reset header__search-btn header__search-btn-open header__search-btn-top" aria-label="Кнопка поиска">
+              <svg class="header__search-icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58105 21.0461)" fill="currentColor"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="currentColor"/>
               </svg>
+
           </button>
 
           <form class="header__search-form header__search-form-top" action="/" method="GET">
 
-            <button class="btn-reset header__search-btn header__search-btn--right" type="submit" aria-label="Кнопка активации поиска">
-                <svg width="23" height="23" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="currentColor"/>
-                    <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="currentColor" stroke-width="2"/>
-                  </svg>
+            <button class="btn-reset header__search-btn--right-top" type="submit" aria-label="Кнопка активации поиска">
+              <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58105 21.0461)" fill="currentColor"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="currentColor"/>
+              </svg>
             </button>
             <input class="header__search-input header__search-input-top" type="text" placeholder="Поиск по сайту">
-            <button class="btn-reset header__search-btn header__close-btn header__close-btn-top"  type="button" aria-label="Кнопка закрыть окно поиска">
-              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="btn-reset header__search-btn header__close-btn-top"  type="button" aria-label="Кнопка закрыть окно поиска">
+              <svg viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="8.9541" y="7.30432" width="11.6645" height="2.33291" transform="rotate(45 8.9541 7.30432)" fill="currentColor"/>
                 <rect x="7.30469" y="15.5524" width="11.6645" height="2.33291" transform="rotate(-45 7.30469 15.5524)" fill="currentColor"/>
                 <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="2"/>
@@ -342,18 +344,18 @@
 
         <div class="header__bottom-search flex">
           <button class="btn-reset header__search-btn js-open-search" aria-label="Кнопка поиска">
-            <svg  class="header__search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect  width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="currentColor"/>
-                <path  d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="currentColor" stroke-width="2"/>
+              <svg class="header__search-icon" width="24" height="24" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58105 21.0461)" fill="currentColor"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="currentColor"/>
               </svg>
           </button>
           <form class="header__search-form js-form" action="/" method="GET">
             <input class="header__search-input" type="text" placeholder="Поиск по сайту">
             <button class="btn-reset header__search-btn header__search-btn--right" type="submit" aria-label="Кнопка активации поиска">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="currentColor"/>
-                    <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="currentColor" stroke-width="2"/>
-                  </svg>
+              <svg width="24" height="24" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58105 21.0461)" fill="currentColor"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="currentColor"/>
+              </svg>
             </button>
             <button class="btn-reset header__search-btn header__close-btn js-close-search" type="button" aria-label="Кнопка закрыть окно поиска">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -865,12 +867,12 @@
                       </a>
                     </li>
 
-                    <li class="accordion__tabs-item">
+                    <!-- <li class="accordion__tabs-item">
                       <a class="accordion__painter-link link link--text link--text-another js-tab-btn" href="#"
                         data-path="empty" onclick="scrollToTarget()">
                         <span class="link__text">Стефан Лохнер</span>
                       </a>
-                    </li>
+                    </li> -->
 
 
                   </ul>
@@ -1169,7 +1171,7 @@
             </div>
         </div>
 
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination swiper-event flex"></div>
         </div>
 
         <div class="events__navigation navigation">
@@ -1190,6 +1192,8 @@
           </button>
         </div>
       </div>
+
+
     </section>
 
     <section class="projects" id="projects">

@@ -132,10 +132,10 @@
 }
 
 .swiper-pagination-bullets .swiper-pagination-bullet {
-  display: none;
+  /* display: none; */
   width: 10px;
   height: 10px;
-  background-color: var(--white);
+  /* background-color: var(--white); */
 }
 
 @media (any-hover: hover) {

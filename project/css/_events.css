@@ -137,10 +137,10 @@
   position: unset;
 }
 
-.swiper-pagination-bullets .swiper-pagination-bullet {
+swiper-pagination-bullets .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  background-color: var(--white);
+  background-color: var(--black);
 }
 
 .events-prev,

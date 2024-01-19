@@ -2,6 +2,8 @@
   function setBurger(params) {
       const btn = document.querySelector(`.${params.btnClass}`);
       const menu = document.querySelector(`.${params.menuClass}`);
+      const menuLinks =  menu.querySelectorAll(`.${params.linksClass}`);
+
 
       btn.setAttribute('aria-expanded', false);
 
@@ -28,7 +30,18 @@
           btn.setAttribute('aria-expanded', false);
         }
       });
-    }
+
+      document.body.addEventListener('click', function (evt) {
+        if (evt.target.className === 'header__menu-link') {
+          menu.classList.add(params.hiddenClass);
+          document.body.removeAttribute('style');
+          btn.classList.remove('is-opened', 'burger--active');
+          btn.classList.add(hiddenClass);
+          btn.setAttribute('aria-expanded', false);
+        }
+      }, false);
+
+      }
 
     // здесь мы вызываем функцию и передаем в нее классы наших элементов
     setBurger({

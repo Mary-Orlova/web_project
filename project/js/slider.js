@@ -89,17 +89,24 @@ const gallerySlider = new Swiper(".js-gallery-slider", {
 
 (() => {
   const eventsSwiper = new Swiper('.js-events-swiper', {
+
     speed: 400,
     spaceBetween: 100,
     navigation: {
       nextEl: ".events-next",
       prevEl: ".events-prev"
     },
+
     pagination: {
-      el: '.events-swiper-pagination',
+      el: '.swiper-pagination',
       type: 'bullets',
       clickable: true
     },
+
+    a11y: {
+      paginationBulletMessage: 'Перейти к слайду {{index}}'
+    },
+
     breakpoints: {
       320: {
         slidesPerView: 1,
