@@ -3,15 +3,15 @@
     align-items: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
-  .contacts_adress,
-  .contacts__form {
+  .contacts__adress, .contacts__form {
     margin-bottom: 30px;
   }
 
-  .contacts__title {
-    margin-bottom: 10px;
+  .contacts__message {
+    padding-top: 0;
   }
 
   .swiper__partners-slide {
@@ -317,12 +317,12 @@
     bottom: 73px;
   }
 
-  swiper-pagination-bullets .swiper-pagination-bullet {
-    background-color: #666666;
+  .swiper-pagination-bullets .swiper-pagination-bullet {
+    background-color: var(--dark-gray);
   }
 
   .swiper-pagination-bullet-active {
-    background-color: #666666;
+    background-color: var(--dark-gray);
   }
 
   .swiper-event {
@@ -348,12 +348,20 @@
   }
 
   .contacts__top {
-    display: flex;
     padding-top: 43px;
   }
 
   .contacts__adress {
     margin-bottom: 26px;
+  }
+
+  .contacts__form {
+    margin-bottom: 18px;
+    align-items: flex-start;
+  }
+
+  .contacts__wrapper {
+    margin-bottom: 12px;
   }
 
   .contacts__title {
@@ -365,52 +373,32 @@
   }
 
   .contacts__btn {
-    padding-right: 55px;
-  }
-
-  .map__wrapper {
-    padding-top: 30px;
+    padding-right: 42px;
+    padding-left: 42px;
   }
 
   .contacts__message {
     padding: 0;
   }
 
-  .footer__wrapper {
-    align-items: end;
+  .footer__container {
+    padding-top: 45px;
+    padding-bottom: 45px;
   }
 
-  .footer__items {
+  .footer__items, .footer__link-img {
     width: 60px;
     height: 60px;
   }
 
-  .footer__link-img {
-    width: 60px;
-    height: 60px;
-  }
 }
-
-/* @media (max-width: 610px) {
-  :root {
-    --burger-line: 2px;
+/*
+@media (max-width: 962px) {
+    .header__container{
+      position: relative;
+    }
+  .header__search-btn-top {
+    width: 27px;
+    height: 27px;
   }
-
-  .burger {
-    width: 25px;
-    height: 18px;
-  }
-
-  .burger__line {
-    transform: scaleX(calc(16 / 25));
-  }
-
-  .burger::after {
-    transform: scaleX(calc(10 / 25));
-  }
-
-  .map {
-    max-height: 320px;
-  }
-
 } */

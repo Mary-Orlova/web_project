@@ -22,7 +22,7 @@
   justify-content: center;
 }
 
-.footer__link-img {
+.footer__items, .footer__link-img {
   width: 45px;
   height: 45px;
 }
@@ -32,21 +32,13 @@
 }
 
 .footer__link {
-  align-items: flex-start;
-  justify-content: center;
   width: 100%;
-  width: 45px;
   height: 100%;
-  height: 45px;
   outline: none;
   cursor: pointer;
   transition: fill var(--short);
 
   fill: var(--light-gray);
-}
-
-.footer__link:hover {
-  fill: var(--white);
 }
 
 .footer__link:focus:not(:active) {
@@ -55,4 +47,10 @@
 
 .footer__link:active {
   fill: var(--violet);
+}
+
+@media (any-hover: hover) {
+  .footer__link:hover {
+    fill: var(--white);
+  }
 }

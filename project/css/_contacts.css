@@ -64,13 +64,13 @@
   position: relative;
   align-items: center;
   height: 50px;
-  padding: 13px 35px;
-  padding-right: 36px;
+  padding: 11px 35px;
   border: 2px solid var(--deep-lavender);
   border-radius: 100px;
   font-size: var(--fs-18);
   font-weight: var(--bold);
   line-height: var(--lh-25);
+
   color: var(--deep-lavender);
   background-color: transparent;
   cursor: pointer;
@@ -110,11 +110,6 @@
   display: none;
 }
 
-.showroom__socials-title {
-  margin-top: 0;
-  font-size: var(--ls-24);
-  font-weight: var(--semibold);
-}
 
 .contacts__message {
   flex-direction: column;
