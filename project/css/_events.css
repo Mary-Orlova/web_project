@@ -135,6 +135,7 @@
 
 .swiper-pagination {
   position: unset;
+  display: none;
 }
 
 swiper-pagination-bullets .swiper-pagination-bullet {

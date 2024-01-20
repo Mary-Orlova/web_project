@@ -4,8 +4,3 @@
   padding-top: 26px;
 }
 
-@media (max-width: 610px) {
-  .map {
-    max-height: 320px;
-  }
-}

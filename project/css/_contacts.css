@@ -64,7 +64,8 @@
   position: relative;
   align-items: center;
   height: 50px;
-  padding: 12px 35px;
+  padding: 13px 35px;
+  padding-right: 36px;
   border: 2px solid var(--deep-lavender);
   border-radius: 100px;
   font-size: var(--fs-18);
