@@ -16,16 +16,12 @@
 }
 
 .burger:focus {
-  outline-offset: 2px;
   outline: 2px solid var(--deep-lavender);
+  outline-offset: 2px;
 }
 
 .burger:active {
   outline: none;
-}
-
-.burger.is-active:hover:not(:active) {
-  opacity: .7;
 }
 
 .burger.is-active .burger__inner,
@@ -35,9 +31,9 @@
 }
 
 .burger__box {
-  display: inline-block;
-  left: 2px;
   position: relative;
+  left: 2px;
+  display: inline-block;
   width: 36px;
   height: 28px;
 }
@@ -110,6 +106,10 @@
 
 @media (any-hover: hover) {
   .burger:hover:not(:active) {
+    opacity: .7;
+  }
+
+  .burger.is-active:hover:not(:active) {
     opacity: .7;
   }
 }

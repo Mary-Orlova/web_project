@@ -22,7 +22,8 @@
   justify-content: center;
 }
 
-.footer__items, .footer__link-img {
+.footer__items,
+.footer__link-img {
   width: 45px;
   height: 45px;
 }

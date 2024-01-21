@@ -66,8 +66,7 @@
   opacity: .25
 }
 
-.choices[data-type*=select-one] .choices__button:focus,
-.choices[data-type*=select-one] .choices__button:hover {
+.choices[data-type*=select-one] .choices__button:focus {
   opacity: 1
 }
 
@@ -131,9 +130,7 @@
 }
 
 .choices[data-type*=select-multiple] .choices__button:focus,
-.choices[data-type*=select-multiple] .choices__button:hover,
-.choices[data-type*=text] .choices__button:focus,
-.choices[data-type*=text] .choices__button:hover {
+.choices[data-type*=text] .choices__button:focus{
   opacity: 1
 }
 
@@ -368,4 +365,12 @@
 
 .choices__placeholder {
   opacity: .5
+}
+
+@media (any-hover: hover) {
+  .choices[data-type*=select-one] .choices__button:hover,
+  .choices[data-type*=select-multiple] .choices__button:hover,
+  .choices[data-type*=text] .choices__button:hover {
+    opacity: 1
+  }
 }

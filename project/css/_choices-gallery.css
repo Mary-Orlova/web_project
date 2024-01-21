@@ -1,20 +1,20 @@
 .choices[data-type*="select-one"]::after {
+  z-index: 10;
   right: 14.5px;
+  width: 8px;
+  height: 8px;
   margin-top: 0;
   border: solid var(--white);
   border-width: 0 1px 1px 0;
-  width: 8px;
-  height: 8px;
-  z-index: 10;
-  transform: translateY(-50%) rotate(45deg);
   transition: all var(--short) ease-in-out;
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .choices[data-type*="select-one"].is-open::after {
   margin: 0;
   border-color: var(--white);
-  transform: translateY(-50%) rotate(-135deg);
   transition: all var(--short) ease-in-out;
+  transform: translateY(-50%) rotate(-135deg);
 }
 
 .choices,
@@ -29,16 +29,15 @@
 }
 
 .choices__inner {
-  padding: 5px 7.5px 7.5px 10px;
-  background: unset;
-  border-radius: 6px;
-  min-height: auto;
   width: 94.5%;
+  min-height: auto;
+  padding: 5px 7.5px 7.5px 10px;
   border: none;
+  border-radius: 6px;
+  background: unset;
   transition: all var(--short) ease-in-out;
 }
 
-.choices:hover,
 .choices:focus:not(:active),
 .choices:active {
   background: var(--white);
@@ -69,13 +68,13 @@
 
 .choices__list--dropdown,
 .choices__list[aria-expanded] {
-  background: var(--black);
   margin-top: 0;
+  background: var(--black);
 }
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted,
 .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
-  background:  var(--white);
+  background: var(--white);
   transition: all var(--short) ease-in-out;
 }
 
@@ -86,4 +85,11 @@
 
 .is-active .is-selected {
   display: none;
+}
+
+@media (any-hover: hover) {
+  .choices:hover {
+    background: var(--white);
+    transition: all var(--short) ease-in-out;
+  }
 }

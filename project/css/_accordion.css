@@ -62,7 +62,6 @@
   transform: translateY(-50%);
 }
 
-
 .accordion__btn:focus:after {
   background-image: url("../img/arrow-up.svg");
 }
@@ -127,8 +126,7 @@
   padding-top: 60px;
 }
 
-
-.accordion-years:focus{
+.accordion-years:focus {
   color: var(--white);
   background-color: var(--deep-lavender);
   transition: all ease-in-out var(--short);
@@ -138,7 +136,6 @@
   color: var(--violet);
   transition: all ease-in-out var(--short);
 }
-
 
 .accordion__painter-link:focus {
   background-color: var(--deep-lavender);
@@ -151,24 +148,25 @@
 }
 
 @media (any-hover: hover) {
-.accordion__painter-link:hover {
-  border-bottom: 1px solid var(--violet);
-  background-color: var(--white);
-  transition: all ease-in-out var(--short);
-}
+  .accordion__painter-link:hover {
+    border-bottom: 1px solid var(--violet);
+    background-color: var(--white);
+    transition: all ease-in-out var(--short);
+  }
 
-.accordion-years:hover {
-  color: var(--deep-lavender);
-}
-.accordion__question:hover:not(:active) {
-  border-color: var(--deep-lavender);
-}
+  .accordion-years:hover {
+    color: var(--deep-lavender);
+  }
 
-.empty-gallery-btn:hover:not(:active) {
-  color: var(--light-lavender);
-}
-.accordion__btn:hover:not(:active)::after {
-  background-image: url("../img/arrow-focus.svg");
-}
+  .accordion__question:hover:not(:active) {
+    border-color: var(--deep-lavender);
+  }
 
+  .empty-gallery-btn:hover:not(:active) {
+    color: var(--light-lavender);
+  }
+
+  .accordion__btn:hover:not(:active)::after {
+    background-image: url("../img/arrow-focus.svg");
+  }
 }
