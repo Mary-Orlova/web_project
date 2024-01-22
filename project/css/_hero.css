@@ -1,5 +1,4 @@
 .hero {
-  /* position: relative; */
   z-index: 1;
 }
 
@@ -10,6 +9,7 @@
 }
 
 .hero__content {
+  max-width: 597px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -21,8 +21,6 @@
 }
 
 .hero__title {
-  display: inline-block;
-  max-width: 40%;
   margin-bottom: 0;
   font-size: var(--fs-72);
   font-weight: var(--bold);
@@ -32,7 +30,6 @@
 }
 
 .hero__text {
-  max-width: 36%;
   margin-bottom: 92px;
   font-size: var(--dafault-fs);
   font-weight: var(--bold);
@@ -90,6 +87,13 @@
   height: 100%;
 }
 
+.slide {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--black);
+}
+
 .hero__slider.hero__slider-container {
   position: absolute;
   top: 0;
@@ -115,27 +119,22 @@
 
 .hero__slide-one {
   max-height: 800px;
-  background-color: var(--black);
   background-image: url("../img/hero-slider-one@1920.jpg");
 }
 
 .hero__slide-two {
   max-height: 800px;
-  background-color: var(--black);
   background-image: url("../img/hero-slider-two@1920.jpg");
 }
 
 .hero__slide-three {
   max-height: 800px;
-  background-color: var(--black);
   background-image: url("../img/hero-slider-three@1920.jpg");
 }
 
 .swiper-pagination-bullets .swiper-pagination-bullet {
-  /* display: none; */
   width: 10px;
   height: 10px;
-  /* background-color: var(--white); */
 }
 
 @media (any-hover: hover) {

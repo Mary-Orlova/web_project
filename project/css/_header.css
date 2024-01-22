@@ -1,15 +1,14 @@
 .header {
   z-index: 50;
-  color: var(--white);
 }
 
 .header__top {
   position: relative;
-  z-index: 1;
   overflow: hidden;
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: var(--black);
+
 }
 
 .header__container,

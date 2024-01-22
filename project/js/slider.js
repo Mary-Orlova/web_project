@@ -45,6 +45,12 @@ const gallerySlider = new Swiper(".js-gallery-slider", {
       spaceBetween: 30
     },
 
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 38
+    },
+
     1200: {
       slidesPerView: 3,
       slidesPerGroup: 3,
