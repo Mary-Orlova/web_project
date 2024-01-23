@@ -436,6 +436,18 @@
     height: 27px;
   }
 
+  .hero__slide-one {
+    background-image: url("../img/hero-slider-one@768.jpg");
+  }
+
+  .hero__slide-two {
+    background-image: url("../img/hero-slider-two@768.jpg");
+  }
+
+  .hero__slide-three {
+    background-image: url("../img/hero-slider-three@768.jpg");
+  }
+
   .gallery {
     background-image: url("../img/gallery__background@768.jpg");
   }
@@ -567,5 +579,118 @@
 
   .contacts__form {
     margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 660px) {
+  .section-title {
+    margin-bottom: 12px;
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .section-descr {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .header__box {
+    width: 25px;
+    height: 18px;
+  }
+
+  .header__menu-wrap {
+    padding-left: 15px;
+  }
+
+  .header__menu-item {
+    margin-bottom: 0;
+  }
+
+  .header__menu-item:last-child {
+    margin-bottom: 304px;
+  }
+
+  .header__search-form-top {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .hero__container {
+    padding-top: 30px;
+    padding-bottom: 45px;
+  }
+
+  .hero__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+
+  .hero__title {
+    margin-bottom: 1px;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+  }
+
+  .hero__descr {
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: var(--regular);
+    line-height: 16px;
+  }
+
+  .hero__text:last-of-type {
+    margin-bottom: 40px;
+  }
+
+  .hero__btn {
+    margin-right: 0;
+    padding: 13px 16px 13px 19px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .accordion__tabs-list {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 540px) {
+  :root {
+    --container-padding: 15px;
+  }
+
+  .header__login {
+    width: 115px;
+  }
+
+  .header__link-text {
+    font-size: var(--fs-12);
+    font-weight: var(--semibold);
+  }
+
+  .hero__slide-one {
+    background-image: url("../img/hero-slider-one@320.jpg");
+  }
+
+  .hero__slide-two {
+    background-image: url("../img/hero-slider-two@320.jpg");
+  }
+
+  .hero__slide-three {
+    background-image: url("../img/hero-slider-three@320.jpg");
+  }
+
+  .about-us__container {
+    padding-top: 50px;
   }
 }
