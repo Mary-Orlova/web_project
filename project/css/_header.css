@@ -60,7 +60,7 @@
 .header__search-btn,
 .header__close-btn,
 .header__close-btn-top,
-.header__search-btn--right-top,
+.header__search-btn-top-left,
 .header__search-btn-top {
   flex-shrink: 0;
 }

@@ -57,7 +57,7 @@
   right: 0;
   width: 50px;
   height: 50px;
-  background-image: url("../img/arrow-down.svg");
+  /* background-image: url("../img/arrow-down.svg"); */
   transition: background-imag, var(--short), transform var(--medium);
   transform: translateY(-50%);
 }
@@ -166,7 +166,7 @@
     color: var(--light-lavender);
   }
 
-  .accordion__btn:hover:not(:active)::after {
+  /* .accordion__btn:hover:not(:active)::after {
     background-image: url("../img/arrow-focus.svg");
-  }
+  } */
 }
