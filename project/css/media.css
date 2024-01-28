@@ -675,15 +675,15 @@
   }
 
   .burger__box {
+    right: 0;
+    left: 0;
     width: 25px;
     height: 18px;
-    left: 0;
-    right: 0;
   }
 
   .burger__inner {
-    width: 16px;
     top: 12px;
+    width: 16px;
   }
 
   .burger__inner,
@@ -693,23 +693,23 @@
   }
 
   .burger__inner::before {
-    width: 25px;
     top: -7px;
+    width: 25px;
   }
 
   .burger__inner::after {
-    width: 10px;
     top: 7px;
+    width: 10px;
   }
 
   .burger--3dx.is-active .burger__inner::before {
-    width: 25px;
     top: -10px;
+    width: 25px;
   }
 
   .burger--3dx.is-active .burger__inner::after {
-    width: 24px;
     top: auto;
+    width: 24px;
   }
 
   .burger--3dx.is-active .burger__inner {
@@ -755,28 +755,25 @@
   }
 
   .hero__text {
+    padding-left: 8px;
     font-size: var(--fs-12);
     font-weight: var(--regular);
     line-height: var(--lh-16);
-    padding-left: 8px;
   }
 
 
   .hero__slide-one {
-    max-height:510px;
-    min-height: 320px;
+    height:310px;
     background-image: url("../img/hero-slider-one@320.jpg");
   }
 
   .hero__slide-two {
-    max-height:510px;
-    min-height: 320px;
+    height:310px;
     background-image: url("../img/hero-slider-two@320.jpg");
   }
 
   .hero__slide-three {
-    max-height:510px;
-    min-height: 320px;
+    height:310px;
     background-image: url("../img/hero-slider-three@320.jpg");
   }
 
@@ -795,8 +792,8 @@
   }
 
   .gallery__filter {
-    margin-bottom: 27px;
-    max-width: 300px;;
+    max-width: 300px;
+    margin-bottom: 27px;;
   }
 
   .gallery__filter-label {
@@ -808,8 +805,8 @@
   }
 
   .choices[data-type*=select-one] .choices__inner {
-    padding-bottom: 2px;
     max-width: 290px;
+    padding-bottom: 2px;
   }
 
   .gallery {
@@ -823,7 +820,7 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
+        flex-direction: column-reverse;
   }
 
   .gallery__nav {
@@ -846,7 +843,6 @@
     padding-bottom: unset;
   }
 
-
   .catalog__descr {
     display: none;
   }
@@ -856,13 +852,11 @@
   }
 
   .accordion__btn {
-    padding: 21px 64px 21px 0;
     min-height: auto;
+    padding: 21px 64px 21px 0;
   }
 
   .accordion-years {
     font-size: var(--fs-18);
   }
-
-
 }

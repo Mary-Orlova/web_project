@@ -118,17 +118,17 @@
 }
 
 .hero__slide-one {
-  max-height: 800px;
+  height: 800px;
   background-image: url("../img/hero-slider-one@1920.jpg");
 }
 
 .hero__slide-two {
-  max-height: 800px;
+  height: 800px;
   background-image: url("../img/hero-slider-two@1920.jpg");
 }
 
 .hero__slide-three {
-  max-height: 800px;
+  height: 800px;
   background-image: url("../img/hero-slider-three@1920.jpg");
 }
 

@@ -117,7 +117,7 @@
 .contacts__message-title {
   margin-bottom: 6px;
   font-size: var(--fs-24);
-  font-weight: var(--semibold);
+  font-weight: var(--bold);
   line-height: var(--lh-32);
 }
 
