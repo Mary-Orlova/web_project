@@ -313,13 +313,14 @@
 }
 
 .header__search-form {
+  position: absolute;
+  bottom: 0;
   z-index: 14;
   right: 10px;
+  width: 250px;
   display: none;
   align-items: center;
-  width: 250px;
   color: var(--white);
-  transform-origin: right;
 }
 
 .header__search-form.is-opened,
@@ -359,8 +360,10 @@
 }
 
 .header__search-input {
-  flex-grow: 1;
-  width: 222px;
+  /* flex-grow: 1; */
+  width: calc(218 / 251 * 100%);
+  padding: 0;
+  padding-bottom: 2;
   border: none;
   border-bottom: var(--violet);
   font-size: var(--fs-18);

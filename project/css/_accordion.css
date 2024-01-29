@@ -100,10 +100,6 @@
   stroke: var(--deep-lavender);
 }
 
-.accordion__question:first-child .accordion__item-title {
-  border-top: 1px solid var(--light-gray);
-}
-
 .accordion__tabs-list {
   display: block;
   padding-top: 25px;
