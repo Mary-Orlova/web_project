@@ -124,10 +124,6 @@
   margin-bottom: 30px;
 }
 
-.swiper-slide {
-  height: auto;
-}
-
 .events-prev.swiper-button-disabled,
 .events-next.swiper-button-disabled {
   opacity: 0;

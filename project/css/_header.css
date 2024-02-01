@@ -90,8 +90,7 @@
   transition: all ease-in-out var(--short);
 }
 
-.header__menu-link::before,
-.header__login::before {
+.header__menu-link::before{
   content: "";
   position: absolute;
   z-index: -10;
@@ -106,6 +105,17 @@
 .header__login {
   position: relative;
   flex-shrink: 0;
+}
+
+.header__login::before {
+  content: "";
+  position: absolute;
+  display: block;
+  z-index: 0;
+  left: -10%;
+  top: -15%;
+  width: 125%;
+  height: 29px;
 }
 
 .header__login-content {
@@ -126,16 +136,14 @@
   max-width: 220px;
 }
 
-.header__menu-link:focus:not(:active).header__menu-link::before,
-.header__login:focus:not(:active).header__login::before {
+.header__menu-link:focus:not(:active).header__menu-link::before {
   background-color: var(--violet);
   -webkit-transition: all ease-in-out var(--short);
        -o-transition: all ease-in-out var(--short);
           transition: all ease-in-out var(--short);
 }
 
-.header__menu-link:active,
-.header__login:active {
+.header__menu-link:active {
   color: var(--violet);
   transition: all ease-in-out var(--short);
 }
@@ -144,6 +152,14 @@
   margin-left: -4px;
   padding-left: 4px;
 }
+
+.header__login:focus:not(:active).header__login::before {
+  background-color: var(--violet);
+  -webkit-transition: all ease-in-out var(--short);
+  -o-transition: all ease-in-out var(--short);
+  transition: all ease-in-out var(--short);
+}
+
 
 .header__dropdown-link:active::before {
   background-color: var(--violet-dropdown);
@@ -318,7 +334,8 @@
   z-index: 14;
   right: 10px;
   width: 250px;
-  display: none;
+  display: inline-block;
+  /* display: none; */
   align-items: center;
   color: var(--white);
 }
@@ -573,7 +590,6 @@
 
 @media (any-hover: hover) {
   .header__menu-link:hover:not(:active),
-  .header__login:hover:not(:active) .header__login-content,
   .header__bottom-btn-text:hover:not(:active),
   .header__top-search-btn:hover:not(:active) {
     color: var(--lavender);
@@ -582,6 +598,18 @@
   .header__login:hover .header__login-content {
     margin-left: -4px;
     padding-left: 4px;
+  }
+
+  .header__login:hover,
+  .header__login:hover .header__login-arrow,
+  .header__login:hover.header__login::after,
+  .header__login:hover.header__login-arrow {
+    left: 0;
+    color: var(--secondary-purple);
+    fill: var(--secondary-purple);
+    -webkit-transition: all ease-in-out var(--short);
+    -o-transition: all ease-in-out var(--short);
+    transition: all ease-in-out var(--short);
   }
 
   .header__menu-link:hover:not(:active)::after {
