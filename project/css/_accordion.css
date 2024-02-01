@@ -133,7 +133,6 @@
 }
 
 .accordion__content-wrap--empty {
-  display: block;
   display: -webkit-box;
   display: -ms-flexbox;
   -webkit-box-orient: horizontal;
@@ -148,8 +147,15 @@
   padding-top: 25px;
 }
 
+.catalog__descr-empty {
+  margin-bottom: 0;
+}
+
 .accordion__empty-right {
-  max-width: 275px;
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  flex-wrap: wrap;
   padding-top: 60px;
 }
 

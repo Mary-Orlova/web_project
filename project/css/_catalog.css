@@ -29,9 +29,15 @@
   margin-bottom: 18px;
 }
 
+.catalog__img-empty {
+  padding: 6px;
+  border: solid 2px var(--gray);
+}
+
 .catalog__name {
   font-size: var(--fs-24);
   font-weight: var(--semibold);
+  letter-spacing: -.03em;
 }
 
 .catalog__years {
