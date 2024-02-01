@@ -8,7 +8,6 @@
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: var(--black);
-
 }
 
 .header__container,
@@ -167,6 +166,7 @@
 
 /* часть header__bottom */
 .header__bottom {
+  position: relative;
   padding-top: 23px;
   padding-bottom: 23px;
   background-color: var(--gray-dropdown);
@@ -294,6 +294,19 @@
 }
 
 /* кнопка поиска */
+.header__search-form-bottom {
+  position: absolute;
+  bottom: 0;
+  z-index: 14;
+  right: 160px;
+  width: 250px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+}
+
 .header__bottom-search,
 .header__top-search-btn {
   align-items: center;
@@ -328,17 +341,6 @@
   color: var(--white);
 }
 
-.header__search-form {
-  position: absolute;
-  bottom: 0;
-  z-index: 14;
-  right: 10px;
-  width: 250px;
-  display: inline-block;
-  /* display: none; */
-  align-items: center;
-  color: var(--white);
-}
 
 .header__search-form.is-opened,
 .header__search-form-top.form_active {
@@ -348,9 +350,6 @@
   animation-duration: var(--short);
 }
 
-.js-open-search.is-opened .header__search-btn {
-  display: none;
-}
 
 .header__search-form.is-opened .header__search-btn--right {
   display: none;
@@ -367,7 +366,8 @@
 }
 
 .header__search-form.is-opened .header__search-input:focus,
-.header__search-form-top.form__active .header__search-input-top:focus {
+.header__search-form-top.form__active .header__search-input-top:focus,
+.header__search-input:focus, .header__search-input:active {
   border-bottom: 2px solid var(--violet);
 }
 
@@ -570,9 +570,13 @@
       flex: 1;
   margin: 0;
   margin-right: 20px;
-  padding: 5px;
+  padding-bottom: 1px;
   border-bottom: 1px solid var(--white);
   background: transparent;
+}
+
+.header__search-input {
+  margin-right: 0;
 }
 
 .header__search-input-top:focus-visible, .header__search-input:focus-visible {
@@ -638,3 +642,4 @@
     outline: none;
   }
 }
+
