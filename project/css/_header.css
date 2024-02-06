@@ -1,5 +1,10 @@
 .header {
+  position: relative;
   z-index: 50;
+}
+
+.top-wrapper {
+  position: relative;
 }
 
 .header__top {
@@ -79,14 +84,14 @@
 }
 
 .header__menu-item:not(:last-child) {
-  margin-right: 60px;
+  margin-right: 62px;
 }
 
 .header__menu-link {
   position: relative;
   z-index: 5;
   color: var(--white);
-  transition: all ease-in-out var(--short);
+  transition: color ease-in-out var(--short);
 }
 
 .header__menu-link::before{
@@ -98,7 +103,7 @@
   display: block;
   width: 125%;
   height: 29px;
-  transition: all var(--medium) ease-in-out;
+  transition: color var(--medium) ease-in-out;
 }
 
 .header__login {
@@ -137,14 +142,14 @@
 
 .header__menu-link:focus:not(:active).header__menu-link::before {
   background-color: var(--violet);
-  -webkit-transition: all ease-in-out var(--short);
-       -o-transition: all ease-in-out var(--short);
-          transition: all ease-in-out var(--short);
+  -webkit-transition: color ease-in-out var(--short);
+       -o-transition: color ease-in-out var(--short);
+          transition: color ease-in-out var(--short);
 }
 
 .header__menu-link:active {
   color: var(--violet);
-  transition: all ease-in-out var(--short);
+  transition: color ease-in-out var(--short);
 }
 
 .header__login:active .header__login-content {
@@ -154,9 +159,9 @@
 
 .header__login:focus:not(:active).header__login::before {
   background-color: var(--violet);
-  -webkit-transition: all ease-in-out var(--short);
-  -o-transition: all ease-in-out var(--short);
-  transition: all ease-in-out var(--short);
+  -webkit-transition: color ease-in-out var(--short);
+  -o-transition: color ease-in-out var(--short);
+  transition: color ease-in-out var(--short);
 }
 
 
@@ -209,9 +214,9 @@
   outline: none;
   background-color: transparent;
   cursor: pointer;
-  -webkit-transition: all ease-in-out .3s;
-       -o-transition: all ease-in-out .3s;
-          transition: all ease-in-out .3s;
+  -webkit-transition: color ease-in-out .3s;
+       -o-transition: color ease-in-out .3s;
+          transition: color ease-in-out .3s;
 }
 
 .header__bottom-btn-text::before {
@@ -223,23 +228,23 @@
   display: block;
   width: 105%;
   height: 29px;
-  -webkit-transition: all ease-in-out .3s;
-       -o-transition: all ease-in-out .3s;
-          transition: all ease-in-out .3s;
+  -webkit-transition: color ease-in-out .3s;
+       -o-transition: color ease-in-out .3s;
+          transition: color ease-in-out .3s;
 }
 
 .header__bottom-btn:focus .header__bottom-btn-text::before {
   background-color: var(--deep-lavender);
-  -webkit-transition: all ease-in-out .3s;
-       -o-transition: all ease-in-out .3s;
-          transition: all ease-in-out .3s;
+  -webkit-transition: color ease-in-out .3s;
+       -o-transition: color ease-in-out .3s;
+          transition: color ease-in-out .3s;
 }
 
 .header__bottom-btn:active {
   color: var(--violet);
-  -webkit-transition: all ease-in-out .3s;
-       -o-transition: all ease-in-out .3s;
-          transition: all ease-in-out .3s;
+  -webkit-transition: color ease-in-out .3s;
+       -o-transition: color ease-in-out .3s;
+          transition: color ease-in-out .3s;
 }
 
 .header__bottom-btn {
@@ -258,9 +263,9 @@
   outline: none;
   background-color: transparent;
   cursor: pointer;
-  -webkit-transition: all ease-in-out .3s;
-       -o-transition: all ease-in-out .3s;
-          transition: all ease-in-out .3s;
+  -webkit-transition: color ease-in-out .3s;
+       -o-transition: color ease-in-out .3s;
+          transition: color ease-in-out .3s;
 }
 
 .header__bottom-btn-text {
@@ -558,7 +563,7 @@
   padding: 20px 20px;
   border-radius: 20px;
   opacity: 0;
-  transition: all var(--short) ease-in-out;
+  transition: color var(--short) ease-in-out;
   -webkit-transform: translateX(150%);
       -ms-transform: translateX(150%);
           transform: translateX(150%);
@@ -611,9 +616,9 @@
     left: 0;
     color: var(--secondary-purple);
     fill: var(--secondary-purple);
-    -webkit-transition: all ease-in-out var(--short);
-    -o-transition: all ease-in-out var(--short);
-    transition: all ease-in-out var(--short);
+    -webkit-transition: color ease-in-out var(--short);
+    -o-transition: color ease-in-out var(--short);
+    transition: color ease-in-out var(--short);
   }
 
   .header__menu-link:hover:not(:active)::after {
@@ -622,9 +627,9 @@
 
   .header__bottom-btn:hover:not(:focus) {
     color: var(--deep-lavender);
-    -webkit-transition: all ease-in-out .3s;
-         -o-transition: all ease-in-out .3s;
-            transition: all ease-in-out .3s;
+    -webkit-transition: color ease-in-out .3s;
+         -o-transition: color ease-in-out .3s;
+            transition: color ease-in-out .3s;
   }
 
   .header__search-btn:hover:not(:active),

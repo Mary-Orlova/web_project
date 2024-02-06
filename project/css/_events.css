@@ -73,7 +73,7 @@
   font-size: var(--fs-16);
   line-height: var(--lh-32);
   color: var(--deep-lavender);
-  transition: all var(--short) ease-in-out;
+  transition: color var(--short) ease-in-out;
 }
 
 .article__link::before {
@@ -86,30 +86,30 @@
   height: 170%;
   opacity: 0;
   background-color: var(--deep-lavender);
-  transition: all var(--short) ease-in-out;
+  transition: color var(--short) ease-in-out;
 }
 
 .article__link:focus {
   border-color: 1px solid var(--lavender);
   color: var(--white);
-  transition: all var(--short) ease-in-out;
-  transition: all var(--short) ease-in-out;
+  transition: color var(--short) ease-in-out;
+  transition: color var(--short) ease-in-out;
 }
 
 .article__link:focus.article__link::before {
   opacity: 1;
-  transition: all var(--short) ease-in-out;
+  transition: color var(--short) ease-in-out;
 }
 
 .article__link:active {
   border-color: 1px solid var(--lavender);
   color: var(--black);
-  transition: all var(--short) ease-in-out;
-  transition: all var(--short) ease-in-out;
+  transition: color var(--short) ease-in-out;
+  transition: color var(--short) ease-in-out;
 }
 
 .article__link:active.article__link::before {
-  transition: all var(--short) ease-in-out;
+  transition: color var(--short) ease-in-out;
 }
 
 .js-events-swiper {
@@ -127,7 +127,7 @@
 .events-prev.swiper-button-disabled,
 .events-next.swiper-button-disabled {
   opacity: 0;
-  transition: all .3s ease-in-out;
+  transition: color .3s ease-in-out;
 }
 
 .swiper-pagination {
@@ -147,7 +147,7 @@ swiper-pagination-bullets .swiper-pagination-bullet {
   z-index: 100;
   top: 52%;
   border-radius: 50%;
-  transition: all .3s ease-in-out;
+  transition: border .3s ease-in-out;
 }
 
 .events-prev {
@@ -161,19 +161,19 @@ swiper-pagination-bullets .swiper-pagination-bullet {
 .events-prev:focus .events-prev__icon,
 .events-next:focus .events-next__icon {
   border: 2px solid var(--light-lavender);
-  transition: all .3s ease-in-out;
+  transition: border .3s ease-in-out;
 }
 
 .events-next__icon,
 .events-prev__icon {
   border: 1px solid var(--fog);
   border-radius: 50%;
-  transition: all .3s ease-in-out;
+  transition: border .3s ease-in-out;
 }
 
 .events-next__icon:active path:not(:last-child),
 .events-prev__icon:active path:not(:last-child) {
-  transition: all .3s ease-in-out;
+  transition: color .3s ease-in-out;
 
   fill: var(--lavender);
 }
@@ -181,12 +181,12 @@ swiper-pagination-bullets .swiper-pagination-bullet {
 @media (any-hover: hover) {
   .article__link:hover {
     color: var(--violet);
-    transition: all var(--short) ease-in-out;
+    transition: color var(--short) ease-in-out;
   }
 
   .events-next__icon:hover path:not(:last-child),
   .events-prev__icon:hover path:not(:last-child) {
-    transition: all var(--short) ease-in-out;
+    transition: color var(--short) ease-in-out;
 
     fill: var(--lavender);
   }

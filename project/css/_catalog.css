@@ -37,7 +37,6 @@
 .catalog__name {
   font-size: var(--fs-24);
   font-weight: var(--semibold);
-  letter-spacing: -.03em;
 }
 
 .catalog__years {

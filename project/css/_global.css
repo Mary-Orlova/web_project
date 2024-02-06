@@ -48,7 +48,7 @@ svg {
 
 .visually-hidden {
   position: absolute;
-  display: none;
+  /* display: none; */
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   width: 1px;

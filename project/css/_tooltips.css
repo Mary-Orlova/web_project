@@ -9,7 +9,7 @@
   background-image: url("../img/tooltip.svg");
   background-repeat: no-repeat;
   background-position: center;
-  transition: all var(--short) ease-in-out;
+  transition: border var(--short) ease-in-out;
 }
 
 .tooltip:focus {

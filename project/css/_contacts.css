@@ -52,7 +52,7 @@
 
 .contacts__input:focus {
   color: var(--black);
-  background-color: var(--white);
+  background-color: var(--light-lavender);
 }
 
 .contacts__input:active {
@@ -80,7 +80,7 @@
 
 .contacts__btn:focus {
   outline: none;
-  background-color: var(--light-gray);
+  background-color: var(--light-lavender);
 }
 
 .contacts__btn:active {

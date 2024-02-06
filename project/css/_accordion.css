@@ -162,22 +162,22 @@
 .accordion-years:focus {
   color: var(--white);
   background-color: var(--deep-lavender);
-  transition: all ease-in-out var(--short);
+  transition: color ease-in-out var(--short);
 }
 
 .accordion-years:active {
   color: var(--violet);
-  transition: all ease-in-out var(--short);
+  transition: color ease-in-out var(--short);
 }
 
 .accordion__painter-link:focus {
   background-color: var(--deep-lavender);
-  transition: all ease-in-out var(--short);
+  transition: color ease-in-out var(--short);
 }
 
 .accordion__painter-link:active {
   border-bottom: 1px solid var(--violet);
-  transition: all ease-in-out var(--short);
+  transition: border ease-in-out var(--short);
 }
 
 @media (any-hover: hover) {
@@ -188,7 +188,7 @@
   .accordion__painter-link:hover {
     border-bottom: 1px solid var(--violet);
     background-color: var(--white);
-    transition: all ease-in-out var(--short);
+    transition: color ease-in-out var(--short);
   }
 
   .accordion-years:hover {

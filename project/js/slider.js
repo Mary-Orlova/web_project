@@ -30,12 +30,18 @@ const gallerySlider = new Swiper(".js-gallery-slider", {
   spaceBetween: 20,
   pagination: {
     el: ".js-gallery-pagination",
-    type: "fraction"
+    type: "fraction",
+    clickable: false
   },
+
+  a11y: {
+    paginationBulletMessage: 'Перейти к слайду {{index}}'
+  },
+
   navigation: {
-    nextEl: ".js-gallery-next",
-    prevEl: ".js-gallery-prev",
-    disabledClass: "navigation-btn_disabled"
+    nextEl: ".gallery__next",
+    prevEl: ".gallery__prev",
+    disabledClass: "swiper-button-disabled"
   },
 
   breakpoints: {

@@ -38,6 +38,8 @@ var myPlacemark = new ymaps.Placemark([55.76048628921842, 37.6150372910766], {},
     iconImageOffset: [-20, -40]
 });
 
+myMap.behaviors.disable("scrollZoom");
+
 // Размещение геообъекта на карте.
 myMap.geoObjects.add(myPlacemark);
 myMap.container.fitToViewport();

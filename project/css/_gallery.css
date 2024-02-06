@@ -189,7 +189,18 @@
   border-radius: 50%;
   background-color: var(--dark-gray);
   cursor: pointer;
-  transition: all var(--short) ease-in-out;
+  transition: border var(--short) ease-in-out;
+}
+
+.navigation-btn:focus:not(:active):not(.swiper-button-disabled) {
+  border: 2px solid var(--deep-lavender);
+  transition: border var(--short) ease-in-out;
+}
+
+.navigation-btn:active:not(.swiper-button-disabled) {
+  border: 2px solid var(--black);
+  background-color: var(--violet);
+  transition: border var(--short) ease-in-out;
 }
 
 .navigation-btn::before {
@@ -204,24 +215,6 @@
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
           transform-origin: center;
-}
-
-.navigation-btn:active {
-  border: 2px solid var(--black);
-  background-color: var(--violet);
-  transition: all var(--short) ease-in-out;
-}
-
-.navigation-btn:focus {
-  border: 2px solid var(--deep-lavender);
-  transition: all var(--short) ease-in-out;
-}
-
-.navigation-btn.swiper-button-disabled {
-  border: transparent;
-  background-color: var(--dark-gray);
-  cursor: auto;
-  transition: all var(--short) ease-in-out;
 }
 
 .gallery__pagination {
@@ -247,6 +240,12 @@
   left: calc(50% - 7px / 2);
   border-top: 1px solid var(--white);
   border-right: 1px solid var(--white);
+}
+
+.navigation-btn.swiper-button-disabled {
+  cursor: auto;
+  border: transparent;
+  background-color: var(--dark-gray);
 }
 
 .gallery__slide {
@@ -297,7 +296,7 @@
 }
 
 .gallery__slide:focus::before {
-  border-color: 3px solid var(--violet);
+  border-color: var(--violet);
 }
 
 .gallery__slide:active::before {
@@ -342,7 +341,7 @@
   background: var(--white);
   -webkit-box-shadow: 0 0 80px rgba(0, 0, 0, .8);
           box-shadow: 0 0 80px rgba(0, 0, 0, .8);
-  transition: all .3s cubic-bezier(.075, .82, .165, 1);
+  transition: color .3s cubic-bezier(.075, .82, .165, 1);
   -webkit-transform: translate(-50%, -50%) scale(0);
       -ms-transform: translate(-50%, -50%) scale(0);
           transform: translate(-50%, -50%) scale(0);
@@ -357,7 +356,7 @@
 
 .modal.modal-active {
   display: block;
-  transition: all .3s cubic-bezier(.075, .82, .165, 1);
+  transition: color var(--short) cubic-bezier(.075, .82, .165, 1);
   -webkit-transform: translate(-50%, -50%) scale(1);
       -ms-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
@@ -374,23 +373,23 @@
   top: 0;
   right: 1.5%;
   font-size: var(--fs-48);
-  -webkit-transition: all var(-short) ease-in-out;
-       -o-transition: all var(-short) ease-in-out;
-          transition: all var(-short) ease-in-out;
+  -webkit-transition: color var(-short) ease-in-out;
+       -o-transition: color var(-short) ease-in-out;
+          transition: color var(-short) ease-in-out;
 }
 
 .modal-close:focus {
   color: var(--violet-middle);
-  -webkit-transition: all var(-short) ease-in-out;
-       -o-transition: all var(-short) ease-in-out;
-          transition: all var(-short) ease-in-out;
+  -webkit-transition: color var(-short) ease-in-out;
+       -o-transition: color var(-short) ease-in-out;
+          transition: color var(-short) ease-in-out;
 }
 
 .modal-close:active {
   color: var(--violet-dark);
-  -webkit-transition: all var(-short) ease-in-out;
-       -o-transition: all var(-short) ease-in-out;
-          transition: all var(-short) ease-in-out;
+  -webkit-transition: color var(-short) ease-in-out;
+       -o-transition: color var(-short) ease-in-out;
+          transition: color var(-short) ease-in-out;
 }
 
 .modal-content {
@@ -432,9 +431,9 @@
   left: 0;
   opacity: 0;
   background-color: rgba(0, 0, 0, .8);
-  -webkit-transition: all .2s ease-in-out;
-       -o-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  -webkit-transition: color var(--short) ease-in-out;
+       -o-transition: color var(--short) ease-in-out;
+          transition: color var(--short) ease-in-out;
   pointer-events: none;
 }
 
@@ -449,10 +448,10 @@ body {
 }
 
 @media (any-hover: hover) {
-  .navigation-btn:hover {
+  .navigation-btn:hover:not(.swiper-button-disabled) {
     border: 2px solid var(--deep-lavender);
     background-color: var(--deep-lavender);
-    transition: all var(--short) ease-in-out;
+    transition: border var(--short) ease-in-out;
   }
 
   .gallery__slide:hover::after {
@@ -461,9 +460,9 @@ body {
 
   .modal-close:hover {
     color: var(--violet-middle);
-    -webkit-transition: all var(-short) ease-in-out;
-         -o-transition: all var(-short) ease-in-out;
-            transition: all var(-short) ease-in-out;
+    -webkit-transition: color var(-short) ease-in-out;
+         -o-transition: color var(-short) ease-in-out;
+            transition: color var(-short) ease-in-out;
   }
 
   .choices:hover {
