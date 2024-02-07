@@ -15,3 +15,14 @@
     max-height: 320px;
   }
 }
+
+@media (max-width: 540px) {
+  .map-wrapper {
+    padding-top: 5px;
+    position: relative;
+  }
+
+  .map {
+    min-height: 320px;
+  }
+}
