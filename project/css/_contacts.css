@@ -23,6 +23,7 @@
   font-size: var(--fs-16);
   font-weight: var(--regular);
   font-style: normal;
+  line-height: var(--lh-32);
 }
 
 .contacts__form {
@@ -111,13 +112,13 @@
 
 .contacts__message {
   flex-direction: column;
-  padding-top: 12px;
+  padding-top: 15px;
 }
 
 .contacts__message-title {
   margin-bottom: 6px;
   font-size: var(--fs-24);
-  font-weight: var(--bold);
+  font-weight: var(--semibold);
   line-height: var(--lh-32);
 }
 

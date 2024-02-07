@@ -1,28 +1,5 @@
-.accordion__title {
-  margin: 0;
-}
-
-.accordion__question {
-  margin-top: -1px;
-  border-bottom: 1px solid var(--light-gray);
-  transform: border-color var(--short);
-}
-
-.accordion__question:first-child {
+.accordion__question:first-child .accordion__btn {
   border-top: 1px solid var(--light-gray);
-}
-
-.accordion__question:not(:first-child) {
-  border-top: 1px solid transparent;
-}
-
-.accordion__question:focus-within {
-  border-color: var(--violet);
-}
-
-.accordion__item-title:focus:not(:active) {
-  color: var(--white);
-  outline: none;
 }
 
 .accordion__btn {
@@ -31,27 +8,63 @@
   display: block;
   width: 100%;
   min-height: 114px;
+  margin-top: -1px;
+  margin-bottom: 0;
   padding-top: 41px;
   padding-right: 90px;
   padding-bottom: 41px;
+  border-top: 1px solid transparent;
+  border-right: none;
+  border-bottom: 1px solid var(--light-gray);
+  border-left: none;
   font-size: var(--fs-24);
   font-weight: var(--semibold);
   line-height: var(--lh-32);
   text-align: left;
   outline: none;
+  background-color: transparent;
   transition: color var(--short);
 }
 
-.accordion__btn:focus {
-  color: var(--violet);
+.accordion__btn-text {
+  position: relative;
 }
 
-.accordion__btn:active .accordion-path {
-  fill: var(--violet);
+.accordion-years {
+  position: relative;
+  z-index: 1;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
 }
 
-.is-active .accordion__item-title {
-  border-bottom: 1px solid var(--violet);
+.accordion__btn-text::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 8px);
+  height: 100%;
+  transition: transform .3s ease;
+  transform: translate(-50%, -50%) scaleX(0);
+}
+
+.accordion__btn:focus:not(:active) {
+  color: var(--white);
+  outline: none;
+}
+
+.accordion__btn:focus:not(:active) .accordion__btn-text::before {
+  transform: translate(-50%, -50%) scaleX(1);
+  background-color: var(--deep-lavender);
+}
+
+.accordion__btn:active {
+  color: var(--black);
+}
+
+.accordion__btn:active .accordion__btn-text::before {
+  background-color: var(--white);
 }
 
 .accordion-img {
@@ -80,10 +93,9 @@
 
 .accordion__btn:focus .accordion-path {
   fill: var(--light-lavender);
+  stroke: var(--light-lavender);
 }
 
-.accordion__btn:hover .accordion-img::before,
-.accordion__btn:hover .accordion-img::after,
 .accordion__btn:focus .accordion-img::before,
 .accordion__btn:focus .accordion-img::after {
   background-color: var(--light-gray);
@@ -95,9 +107,29 @@
           transform: translateY(-50%) rotate(0);
 }
 
-.is-active .accordion-img {
-  fill: var(--light-lavender);
+.is-active .accordion__btn .accordion-path {
   stroke: var(--deep-lavender);
+  fill: var(--light-lavender);
+}
+
+.accordion__btn .accordion-path:focus {
+  stroke: none;
+}
+
+.accordion__btn .accordion-path:active {
+  stroke: none;
+}
+
+.accordion__content {
+  overflow: hidden;
+  visibility: hidden;
+  margin-top: -1px;
+  border-bottom: 1px solid transparent;
+}
+
+.is-active .accordion__content {
+  visibility: visible;
+  border-color: var(--light-gray);
 }
 
 .accordion__tabs-list {
@@ -119,11 +151,6 @@
   visibility: hidden;
   opacity: 0;
   transition-delay: var(--short);
-}
-
-.is-active .accordion__btn {
-  border-top: 1px solid var(--violet);
-  color: var(--violet);
 }
 
 .is-active .ac-panel {
@@ -154,20 +181,9 @@
 .accordion__empty-right {
   display: flex;
   flex-direction: column;
-  width: 35%;
   flex-wrap: wrap;
+  width: 35%;
   padding-top: 60px;
-}
-
-.accordion-years:focus {
-  color: var(--white);
-  background-color: var(--deep-lavender);
-  transition: color ease-in-out var(--short);
-}
-
-.accordion-years:active {
-  color: var(--violet);
-  transition: color ease-in-out var(--short);
 }
 
 .accordion__painter-link:focus {
@@ -181,8 +197,18 @@
 }
 
 @media (any-hover: hover) {
+  .accordion__btn:hover {
+    color: var(--deep-lavender);
+  }
+
+  .accordion__btn:hover .accordion-img::before,
+  .accordion__btn:hover .accordion-img::after {
+    background-color: var(--light-gray);
+  }
+
   .accordion__btn:hover .accordion-path {
     fill: var(--light-lavender);
+    stroke: var(--light-lavender);
   }
 
   .accordion__painter-link:hover {
@@ -191,11 +217,8 @@
     transition: color ease-in-out var(--short);
   }
 
-  .accordion-years:hover {
-    color: var(--deep-lavender);
-  }
-
-  .accordion__question:hover:not(:active) {
+  .accordion__question:first-child .accordion__btn:hover:not(:active),
+  .accordion__btn:hover:not(:active) {
     border-color: var(--deep-lavender);
   }
 

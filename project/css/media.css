@@ -231,6 +231,7 @@
 
   .gallery__title {
     font-size: var(--fs-48);
+    margin-bottom: 13px;
   }
 
   .gallery__filter {
@@ -303,8 +304,7 @@
   }
 
   .article__title {
-    margin-bottom: 8px;
-    font-weight: 700;
+    margin-bottom: 9px;
   }
 
   .article__content-info {
@@ -382,7 +382,7 @@
   }
 
   .contacts__adress {
-    margin-bottom: 26px;
+    margin-bottom: 22px;
   }
 
   .contacts__form {
@@ -395,7 +395,7 @@
   }
 
   .contacts__title {
-    margin-bottom: 7px;
+    margin-bottom: 4px;
   }
 
   .adress {
@@ -403,8 +403,8 @@
   }
 
   .contacts__btn {
-    padding-right: 42px;
-    padding-left: 42px;
+    padding-right: 40px;
+    padding-left: 40px;
   }
 
   .contacts__message {
@@ -483,7 +483,7 @@
   .gallery__left,
   .gallery__swiper {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
     margin-left: 0;
   }
 
@@ -552,7 +552,7 @@
   }
 
   .catalog__img {
-    margin-bottom: 10px;
+    margin-bottom: 14px;
   }
 
   .catalog__years {
