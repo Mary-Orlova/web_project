@@ -31,10 +31,7 @@
   align-items: center;
   -ms-flex-align: center;
   flex-wrap: wrap;
-}
-
-.contacts__wrapper {
-  margin-right: 20px;
+  gap: 12px 20px;
 }
 
 .contacts__input {
@@ -53,12 +50,12 @@
 
 .contacts__input:focus {
   color: var(--black);
-  background-color: var(--light-lavender);
+  background-color: var(--fog);
 }
 
 .contacts__input:active {
   color: var(--dark);
-  background-color: var(--light-gray);
+  background-color: var(--fog);
 }
 
 .contacts__btn {

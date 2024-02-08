@@ -549,8 +549,8 @@
 .header__search-form-top, .header__search-form {
   position: absolute;
   z-index: 2;
-  top: 0;
-  right: 20px;
+  top: 6px;
+  right: 28px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

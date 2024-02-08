@@ -194,13 +194,15 @@
 
 .navigation-btn:focus:not(:active):not(.swiper-button-disabled) {
   border: 2px solid var(--deep-lavender);
+  background-color: var(--dark-gray);
   transition: border var(--short) ease-in-out;
 }
 
 .navigation-btn:active:not(.swiper-button-disabled) {
-  border: 2px solid var(--black);
+  border: 2px solid var(--deep-lavender);
   background-color: var(--violet);
   transition: border var(--short) ease-in-out;
+
 }
 
 .navigation-btn::before {
@@ -242,10 +244,20 @@
   border-right: 1px solid var(--white);
 }
 
-.navigation-btn.swiper-button-disabled {
+.navigation-btn.swiper-button-disabled{
   cursor: auto;
   border: transparent;
-  background-color: var(--dark-gray);
+  background-color: var(--fog);
+}
+
+.navigation-btn.swiper-button-disabled.gallery__next::before{
+  border-top: 1px solid var(--light-gray);
+  border-right: 1px solid var(--light-gray);
+}
+
+.navigation-btn.swiper-button-disabled.gallery__prev::before{
+  border-bottom: 1px solid var(--light-gray);
+  border-left: 1px solid var(--light-gray);
 }
 
 .gallery__slide {

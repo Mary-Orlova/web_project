@@ -112,6 +112,23 @@
   transition: border var(--short) ease-in-out;
 }
 
+.projects__prev-icon.swiper-button-disabled,
+.projects__next-icon.swiper-button-disabled {
+  cursor: auto;
+  border: transparent;
+  border: 1px solid var(--light-gray);
+}
+
+.projects__prev.swiper-button-disabled.projects__prev-icon,
+.projects__next.swiper-button-disabled.projects__next-icon {
+  border: 1px solid var(--light-gray);
+}
+
+.projects__prev.swiper-button-disabled.gallery__prev.projects__prev-icon,
+.projects__next.swiper-button-disabled.projects__next-icon {
+  border: 1px solid var(--light-gray);
+}
+
 .projects__next-icon path:not(:last-child),
 .projects__prev-icon path:not(:last-child) {
   transition: border var(--short) ease-in-out;
@@ -129,6 +146,18 @@
 
   fill: var(--light-lavender);
 }
+
+.projects__prev.swiper-button-disabled,
+.projects__next.swiper-button-disabled {
+  cursor: auto;
+  border: transparent;
+}
+
+.projects__next.swiper-button-disabled .projects__next-icon path:last-child,
+.projects__prev.swiper-button-disabled .projects__next-icon path:last-child {
+ stroke: var(--light-gray);
+}
+
 
 @media (any-hover: hover) {
   .swiper__partners-slide:hover {
