@@ -202,7 +202,6 @@
   border: 2px solid var(--deep-lavender);
   background-color: var(--violet);
   transition: border var(--short) ease-in-out;
-
 }
 
 .navigation-btn::before {
@@ -244,18 +243,18 @@
   border-right: 1px solid var(--white);
 }
 
-.navigation-btn.swiper-button-disabled{
-  cursor: auto;
+.navigation-btn.swiper-button-disabled {
   border: transparent;
   background-color: var(--fog);
+  cursor: auto;
 }
 
-.navigation-btn.swiper-button-disabled.gallery__next::before{
+.navigation-btn.swiper-button-disabled.gallery__next::before {
   border-top: 1px solid var(--light-gray);
   border-right: 1px solid var(--light-gray);
 }
 
-.navigation-btn.swiper-button-disabled.gallery__prev::before{
+.navigation-btn.swiper-button-disabled.gallery__prev::before {
   border-bottom: 1px solid var(--light-gray);
   border-left: 1px solid var(--light-gray);
 }
@@ -359,15 +358,7 @@
           transform: translate(-50%, -50%) scale(0);
 }
 
-.modal.active {
-  top: 50%;
-  left: 50%;
-  display: block;
-  transform: translate(-50%, -50%) scale(1);
-}
-
 .modal.modal-active {
-  display: block;
   transition: color var(--short) cubic-bezier(.075, .82, .165, 1);
   -webkit-transform: translate(-50%, -50%) scale(1);
       -ms-transform: translate(-50%, -50%) scale(1);
@@ -385,26 +376,28 @@
   top: 0;
   right: 1.5%;
   font-size: var(--fs-48);
+  color: var(--black);
   -webkit-transition: color var(-short) ease-in-out;
        -o-transition: color var(-short) ease-in-out;
           transition: color var(-short) ease-in-out;
 }
 
 .modal-close:focus {
-  color: var(--violet-middle);
+  color: var(--deep-lavender);
   -webkit-transition: color var(-short) ease-in-out;
        -o-transition: color var(-short) ease-in-out;
           transition: color var(-short) ease-in-out;
 }
 
 .modal-close:active {
-  color: var(--violet-dark);
+  color: var(--violet);
   -webkit-transition: color var(-short) ease-in-out;
        -o-transition: color var(-short) ease-in-out;
           transition: color var(-short) ease-in-out;
 }
 
 .modal-content {
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -413,6 +406,10 @@
   -ms-flex-pack: center;
   justify-content: center;
   padding: 20px;
+}
+
+.modal-content:active {
+  display: block;
 }
 
 .modal-title {

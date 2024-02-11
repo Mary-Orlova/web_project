@@ -10,8 +10,8 @@
 
 .socials__link {
   position: relative;
-  max-width: 40px;
-  min-height: 40px;
+  display: flex;
+  width: 40px;
   transition: opacity var(--short);
 }
 
@@ -19,8 +19,6 @@
   content: "";
   position: absolute;
   left: 0;
-  width: 40px;
-  height: 40px;
   border: 1px solid var(--violet);
   border-radius: 50%;
   opacity: 0;

@@ -5,7 +5,8 @@
 .contacts__top {
   align-items: center;
   justify-content: space-between;
-  padding-top: 26px;
+  padding-top: 25px;
+  padding-bottom: 24px;
 }
 
 .contacts__adress {
@@ -31,6 +32,7 @@
   align-items: center;
   -ms-flex-align: center;
   flex-wrap: wrap;
+
   gap: 12px 20px;
 }
 

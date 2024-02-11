@@ -40,6 +40,7 @@ ul {
 img,
 svg {
   max-width: 100%;
+  height: auto;
 }
 
 [class*="ground-pane"] {

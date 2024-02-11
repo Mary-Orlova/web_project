@@ -93,17 +93,14 @@
 }
 
 .wrapper-slider__one {
-  height: 800px;
   background-image: url("../img/hero-slider-one@1920.jpg");
 }
 
 .wrapper-slider__two {
-  height: 800px;
   background-image: url("../img/hero-slider-two@1920.jpg");
 }
 
 .wrapper-slider__three {
-  height: 800px;
   background-image: url("../img/hero-slider-three@1920.jpg");
 }
 
