@@ -147,7 +147,8 @@ const gallerySlider = new Swiper(".js-gallery-slider", {
 (() => {
   const eventsSlider = new Swiper('.js-partners-slider', {
     speed: 400,
-    spaceBetween: 50,
+    slidesPerView: 1,
+    spaceBetween: 20,
     navigation: {
       nextEl: ".projects__next",
       prevEl: ".projects__prev"
@@ -157,10 +158,6 @@ const gallerySlider = new Swiper(".js-gallery-slider", {
     },
 
     breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
       640: {
         slidesPerView: 2,
         spaceBetween: 30
@@ -169,7 +166,7 @@ const gallerySlider = new Swiper(".js-gallery-slider", {
         slidesPerView: 2,
         spaceBetween: 50
       },
-      1920: {
+      1440: {
         slidesPerView: 3,
         spaceBetween: 50
       }
