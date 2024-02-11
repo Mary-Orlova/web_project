@@ -1,0 +1,141 @@
+.contacts {
+  border: 1px solid var(--light-gray);
+}
+
+.contacts__top {
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 25px;
+  padding-bottom: 24px;
+}
+
+.contacts__adress {
+  flex-direction: column;
+}
+
+.contacts__title {
+  margin: 0;
+  font-size: var(--fs-24);
+  font-weight: var(--semibold);
+  line-height: var(--lh-32);
+}
+
+.adress {
+  font-size: var(--fs-16);
+  font-weight: var(--regular);
+  font-style: normal;
+  line-height: var(--lh-32);
+}
+
+.contacts__form {
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  flex-wrap: wrap;
+
+  gap: 12px 20px;
+}
+
+.contacts__input {
+  width: 270px;
+  height: 50px;
+  padding: 9px 24px;
+  border: 1px solid var(--dark);
+  border-radius: 100px;
+  font-size: var(--fs-16);
+  font-weight: var(--regular);
+  color: var(--gray);
+  vertical-align: middle;
+  transition-duration: var(--short);
+  transition-property: background-color, color;
+}
+
+.contacts__input:focus {
+  color: var(--black);
+  background-color: var(--fog);
+}
+
+.contacts__input:active {
+  color: var(--dark);
+  background-color: var(--fog);
+}
+
+.contacts__btn {
+  position: relative;
+  align-items: center;
+  height: 50px;
+  padding: 11px 35px;
+  border: 2px solid var(--deep-lavender);
+  border-radius: 100px;
+  font-size: var(--fs-18);
+  font-weight: var(--bold);
+  line-height: var(--lh-25);
+  color: var(--deep-lavender);
+  background-color: transparent;
+  cursor: pointer;
+  transition: color var(--short);
+  transition-duration: var(--short);
+  transition-property: background-color, color, box-shadow;
+}
+
+.contacts__btn:focus {
+  outline: none;
+  background-color: var(--light-lavender);
+}
+
+.contacts__btn:active {
+  background-color: var(--deep-lavender);
+  box-shadow: inset 0 0 0 3px var(--light-lavender);
+}
+
+.contacts__btn::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  bottom: -7px;
+  left: -7px;
+  border: 2px solid var(--light-violet);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity var(--short);
+}
+
+.contacts__btn:focus:not(:active):not(:hover)::after {
+  opacity: 1;
+}
+
+.contacts__btn-mob {
+  display: none;
+}
+
+.contacts__message {
+  flex-direction: column;
+  padding-top: 15px;
+}
+
+.contacts__message-title {
+  margin-bottom: 6px;
+  font-size: var(--fs-24);
+  font-weight: var(--semibold);
+  line-height: var(--lh-32);
+}
+
+.is-label-invalid,
+.just-validate-error-label {
+  position: absolute;
+  top: -30px;
+  left: 20px;
+  font-size: var(--lf-12);
+}
+
+@media (any-hover: hover) {
+  .contacts__input:hover {
+    background-color: var(--light-gray);
+  }
+
+  .contacts__btn:hover {
+    color: var(--white);
+    background-color: var(--deep-lavender);
+  }
+}

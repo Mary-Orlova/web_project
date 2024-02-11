@@ -1,0 +1,133 @@
+.hero {
+  z-index: 1;
+  position: relative;
+}
+
+.hero__container {
+  padding-top: 63px;
+  padding-bottom: 120px;
+}
+
+.hero__content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  color: var(--white);
+}
+
+.hero__title {
+  margin-bottom: 0;
+  font-size: var(--fs-72);
+  font-weight: var(--bold);
+  line-height: var(--lh-98);
+  color: var(--white);
+  max-width: 40%;
+}
+
+.hero__text {
+  margin-bottom: 92px;
+  font-size: var(--dafault-fs);
+  font-weight: var(--bold);
+  line-height: var(--lh-30);
+  color: var(--white);
+  max-width: 36%;
+}
+
+.hero__btn {
+  position: relative;
+  max-width: 314px;
+  padding: 23px 25px;
+  border-radius: 100px;
+  font-size: var(--fs-18);
+  font-weight: var(--bold);
+  text-align: center;
+  background-color: var(--deep-lavender);
+  transition: box-shadow var(--short);
+}
+
+.hero__btn::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  border: 2px solid var(--lavender);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity var(--short);
+}
+
+.hero__btn:focus:focus:not(:hover):not(:active) {
+  outline: none;
+  box-shadow: inset 0 0 0 3px var(--light-lavender);
+}
+
+.hero__btn:focus:not(:hover):not(:active)::after {
+  opacity: 1;
+}
+
+.hero__btn:active:not(:hover):not(:focus) {
+  background-color: var(--violet);
+}
+
+.wrapper-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.slide {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--black);
+}
+
+.wrapper-slider__one {
+  background-image: url("../img/hero-slider-one@1920.jpg");
+}
+
+.wrapper-slider__two {
+  background-image: url("../img/hero-slider-two@1920.jpg");
+}
+
+.wrapper-slider__three {
+  background-image: url("../img/hero-slider-three@1920.jpg");
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: var(--white);
+}
+
+.wrapper-slider__slider.wrapper-slider__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-animation-name: resize;
+          animation-name: resize;
+  -webkit-animation-duration: var(--long);
+          animation-duration: var(--long);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@media (any-hover: hover) {
+  .hero__btn:hover {
+    box-shadow: inset 0 0 0 3px var(--light-lavender);
+  }
+}

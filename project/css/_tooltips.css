@@ -1,0 +1,42 @@
+.tooltip {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--deep-lavender);
+  border-radius: 50%;
+  font-size: var(--fs-12);
+  font-weight: var(--semibold);
+  background-image: url("../img/tooltip.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: border var(--short) ease-in-out;
+}
+
+.tooltip:focus {
+  outline: none;
+  background-color: var(--deep-lavender);
+  background-image: url("../img/tooltip-active.svg");
+}
+
+.tooltip:active {
+  background-color: var(--deep-lavender);
+  background-image: url("../img/tooltip-active.svg");
+}
+
+.tippy-tooltip {
+  border-radius: 0;
+  border-radius: 0;
+  text-align: center;
+  background-color: var(--deep-lavender);
+}
+
+.tippy-tooltip[data-placement^="top"] > .tippy-arrow {
+  border-top-color: var(--deep-lavender);
+}
+
+@media (any-hover: hover) {
+  .tooltip:hover {
+    background-color: var(--light-lavender);
+    background-image: url("../img/tooltip-active.svg");
+  }
+}

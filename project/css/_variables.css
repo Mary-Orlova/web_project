@@ -1,0 +1,57 @@
+:root {
+  /* Шрифт */
+  --regular: 400;
+  --semibold: 600;
+  --bold: 700;
+  --dafault-fs: 18px;
+  --fs-12: 12px;
+  --fs-14: 14px;
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-24: 24px;
+  --fs-28: 28px;
+  --fs-32: 32px;
+  --fs-48: 48px;
+  --fs-60: 60px;
+  --fs-72: 72px;
+  --default-lh: 24.5px;
+  --lh-16: 16px;
+  --lh-17: 17px;
+  --lh-25: 25px;
+  --lh-28: 28px;
+  --lh-30: 30px;
+  --lh-32: 32px;
+  --lh-38: 38px;
+  --lh-44: 44px;
+  --lh-65: 65px;
+  --lh-98: 98px;
+
+  /* Цвет */
+  --black: #000000;
+  --dark: #333333;
+  --dark-gray: #666666;
+  --gray: #999999;
+  --gray-dropdown:  rgba(0, 0, 0, 0.5);
+  --light-white: rgba(255, 255, 255, 0.2);
+  --violet-dropdown: rgba(194, 131, 243, 0.4);
+  --light-gray: #CACACA;
+  --fog: #ECECEC;
+  --light-lavender: #D1A9F0;
+  --lavender: #C283F3;
+  --deep-lavender: #9D5CD0;
+  --violet: #7943A4;
+  --green: #30BF39;
+  --blue: #26A5E4;
+  --red: #D11616;
+  --white: #ffffff;
+
+  /* Размеры*/
+  --body--min-width: 320px;
+  --container-max-width: 1700px;
+  --container-padding: 50px;
+
+  /* Анимация */
+  --short: 0.3s;
+  --medium: 0.5s;
+  --long: 8s;
+}

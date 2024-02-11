@@ -1,0 +1,115 @@
+.burger {
+  position: relative;
+  z-index: 100;
+  overflow: visible;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  margin: 0;
+  border: 0;
+  font: inherit;
+  text-transform: none;
+  cursor: pointer;
+  transition-timing-function: linear;
+  transition-duration: .15s;
+  transition-property: opacity, filter;
+}
+
+.burger:focus {
+  outline: 2px solid var(--deep-lavender);
+  outline-offset: 2px;
+}
+
+.burger:active {
+  outline: none;
+}
+
+.burger.is-active .burger__inner,
+.burger.is-active .burger__inner::before,
+.burger.is-active .burger__inner::after {
+  background-color: var(--white);
+}
+
+.burger__box {
+  position: relative;
+  left: 2px;
+  display: inline-block;
+  width: 36px;
+  height: 28px;
+}
+
+.burger__inner {
+  top: 50%;
+  display: block;
+  width: 28px;
+  margin-top: -2px;
+}
+
+.burger__inner,
+.burger__inner::before,
+.burger__inner::after {
+  position: absolute;
+  height: 3px;
+  border-radius: 4px;
+  background-color: var(--white);
+  transition-timing-function: ease;
+  transition-duration: .15s;
+  transition-property: transform;
+}
+
+.burger__inner::before,
+.burger__inner::after {
+  content: "";
+  display: block;
+}
+
+.burger__inner::before {
+  top: -10px;
+  width: 36px;
+}
+
+.burger__inner::after {
+  bottom: -10px;
+  width: 24px;
+}
+
+/*
+   * 3DX
+   */
+.burger--3dx .burger__box {
+  perspective: 80px;
+}
+
+.burger--3dx .burger__inner {
+  transition: transform .15s cubic-bezier(.645, .045, .355, 1), background-color 0s .1s cubic-bezier(.645, .045, .355, 1);
+}
+
+.burger--3dx .burger__inner::before,
+.burger--3dx .burger__inner::after {
+  transition: transform 0s .1s cubic-bezier(.645, .045, .355, 1);
+}
+
+.burger--3dx.is-active .burger__inner {
+  background-color: transparent !important;
+  transform: rotateY(180deg);
+}
+
+.burger--3dx.is-active .burger__inner::before {
+  width: 30px;
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
+.burger--3dx.is-active .burger__inner::after {
+  width: 30px;
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+
+@media (any-hover: hover) {
+  .burger:hover:not(:active) {
+    opacity: .7;
+  }
+
+  .burger.is-active:hover:not(:active) {
+    opacity: .7;
+  }
+}
